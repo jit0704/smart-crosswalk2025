@@ -1,0 +1,51 @@
+/*---------------------------------------------------------------
+* padding, margin 정의
+* p는 padding, m은 margin을 나타냄.
+* t는 상단 b는 하단 l은 왼쪽 r은 오른쪽의 방향
+* ex :
+* pt10 => padding-top:10px
+* mb24 => margin-bottom: 24px
+
+* ex) <div class="pt10 mb24"/>
+-----------------------------------------------------------------*/
+@function size($start, $end) {
+  $size: ();
+  @for $i from $start through $end {
+    $value: $i + 0;
+    $size: append($size, $value);
+  }
+  @return $size;
+}
+@function getPx($value) {
+  @if $value == 0 {
+    @return $value;
+  } @else {
+    @return $value + 0px;
+  }
+}
+$size: size(0, 50);
+$position: (
+  'l': 'left',
+  'r': 'right',
+  't': 'top',
+  'b': 'bottom',
+);
+$nameMap: (
+  'm': 'margin',
+  'p': 'padding',
+);
+@mixin generate($nameMap: (), $position: (), $size: ()) {
+  @each $preKey, $preValue in $nameMap {
+    @each $px in $size {
+      .#{$preKey}#{$px} {
+        #{$preValue}: getPx($px);
+      }
+      @each $sufKey, $sufValue in $position {
+        .#{$preKey}#{$sufKey}#{$px} {
+          #{$preValue}-#{$sufValue}: getPx($px) !important;
+        }
+      }
+    }
+  }
+}
+@include generate($nameMap, $position, $size);

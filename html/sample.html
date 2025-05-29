@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>샘플 페이지</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/lib/materialize.min.js"></script>
+    <script defer src="/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="pt10 mb24">
+      <h4 class="truncate">This is an extremely long title that will be truncated</h4>
+      <ul id="dropdown2" class="dropdown-content">
+        <li>
+          <a href="#!">one<span class="badge">1</span></a>
+        </li>
+        <li>
+          <a href="#!">two<span class="new badge">1</span></a>
+        </li>
+        <li><a href="#!">three</a></li>
+      </ul>
+      <a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+    </div>
+
+    <div>
+      <form action="#">
+        <p>
+          <label>
+            <input type="checkbox" />
+            <span>Red</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" checked="checked" />
+            <span>Yellow</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span>Filled in</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input id="indeterminate-checkbox" type="checkbox" />
+            <span>Indeterminate Style</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" checked="checked" disabled="disabled" />
+            <span>Green</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" disabled="disabled" />
+            <span>Brown</span>
+          </label>
+        </p>
+      </form>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const elems = document.querySelectorAll('.dropdown-trigger');
+        const instances = M.Dropdown.init(elems, {
+          hover: true,
+        });
+      });
+    </script>
+  </body>
+</html>
