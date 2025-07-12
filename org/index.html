@@ -24,7 +24,12 @@
         text-align: center;
       }
       .ia-tab-content tr:hover td {
-        background: #c1ddef !important;
+        background: #666;
+      }
+      .ia-tab-content tr:hover td {
+        color: #fff;
+        font-weight: bold;
+        border: 0;
       }
       .col-memo p {
         color: red;
@@ -46,7 +51,7 @@
             <div class="ia-in-sec">
               <h1 class="ia-h1">2025년도 스마트 횡단보도 제어 시스템 퍼블리싱 현황판</h1>
               <div class="ia-guideLink">
-                <button type="button" class="ia-top" onclick="$(window).scrollTop(0)">TOP</button>
+                <button type="button" class="ia-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">TOP</button>
                 <!-- <a href="index.html" class="is-current">현황판</a>
               <a href="../_convention/index.html">퍼블리싱가이드</a> -->
               </div>
@@ -138,40 +143,26 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type="-"></td>
-                          <td class="col-url">common/.html</td>
+                          <td class="col-url">org/common/error.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete="">대기</td>
                           <!-- <td class="col-worker"></td> -->
                           <td class="col-memo"></td>
                         </tr>
-                        <!-- <tr>
-                          <td class="col-num"></td>
-                          <td class="col-1depth">에러페이지</td>
-                          <td class="col-2depth"></td>
+                        <tr>
+                          <td class="col-num"><!--자동입력--></td>
+                          <td class="col-1depth">-</td>
+                          <td class="col-2depth">-</td>
                           <td class="col-3depth"></td>
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">common/error.html</td>
-                          <td class="col-date"></td>
-                          <td class="col-complete" data-complete=""></td>
-                          <td class="col-worker"></td>
+                          <td class="col-type" data-type="-"></td>
+                          <td class="col-url">org/common/gnb.html</td>
+                          <!-- <td class="col-date"></td> -->
+                          <td class="col-complete" data-complete="">대기</td>
+                          <!-- <td class="col-worker"></td> -->
                           <td class="col-memo"></td>
-                        </tr> -->
-                        <!-- <tr>
-                        <td class="col-num"></td>
-                        <td class="col-1depth">아이콘 모음</td>
-                        <td class="col-2depth"></td>
-                        <td class="col-3depth"></td>
-                        <td class="col-4depth"></td>
-                        <td class="col-5depth"></td>
-                        <td class="col-type" data-type=""></td>
-                        <td class="col-url">common/icon.html</td>
-                        <td class="col-date"></td>
-                        <td class="col-complete" data-complete=""></td>
-                        <td class="col-worker"></td>
-                        <td class="col-memo"></td>
-                      </tr> -->
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -228,12 +219,14 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">login.html</td>
+                          <td class="col-url">org/login/login.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
                           <td class="col-memo"></td>
                         </tr>
+
+                        <!-- ################################ 모니터링 ################################ -->
                         <tr>
                           <td class="col-num"><!--자동입력--></td>
                           <td class="col-1depth">모니터링</td>
@@ -242,7 +235,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">monitoring-info.html</td>
+                          <td class="col-url">org/mntr/information.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -251,12 +244,12 @@
                         <tr>
                           <td class="col-num"><!--자동입력--></td>
                           <td class="col-1depth"></td>
-                          <td class="col-2depth">검지 현황</td>
+                          <td class="col-2depth">검지현황</td>
                           <td class="col-3depth"></td>
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">monitoring-gumji.html</td>
+                          <td class="col-url">org/mntr/scanning.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -265,73 +258,19 @@
                         <tr>
                           <td class="col-num"><!--자동입력--></td>
                           <td class="col-1depth"></td>
-                          <td class="col-2depth">제어 현황</td>
+                          <td class="col-2depth">제어현황</td>
                           <td class="col-3depth"></td>
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">monitoring-control.html</td>
+                          <td class="col-url">org/mntr/controller.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
                           <td class="col-memo"></td>
                         </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth">분석관리</td>
-                          <td class="col-2depth">일별 검지</td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">analysis-manage-day.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete=""></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">시간별 검지</td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">analysis-manage-time.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete=""></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">시간별 통계</td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">analysis-manage-time-stats.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete=""></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">일일 통계</td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">analysis-manage-day-stats.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete=""></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
+
+                        <!-- ################################ 장비 관리 ################################ -->
                         <tr>
                           <td class="col-num"><!--자동입력--></td>
                           <td class="col-1depth">장비 관리</td>
@@ -340,7 +279,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">camera-manage.html</td>
+                          <td class="col-url">org/eqpmn/cameraMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -354,7 +293,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">camera-manage-sw.html</td>
+                          <td class="col-url">org/eqpmn/cameraSwSetupMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -368,7 +307,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">camera-manage-lati.html</td>
+                          <td class="col-url">org/eqpmn/cameraSwCrdntMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -382,7 +321,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">control-equipment-manage.html</td>
+                          <td class="col-url">org/eqpmn/cteqMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -396,7 +335,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">rtu-manage.html</td>
+                          <td class="col-url">org/eqpmn/rtuMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -410,7 +349,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">rtu-default-manage.html</td>
+                          <td class="col-url">org/eqpmn/rtuBassMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -424,7 +363,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">rtu-advanced-manage.html</td>
+                          <td class="col-url">org/eqpmn/rtuAdvnMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -433,12 +372,12 @@
                         <tr>
                           <td class="col-num"><!--자동입력--></td>
                           <td class="col-1depth"></td>
-                          <td class="col-2depth">장비 상태 관리</td>
-                          <td class="col-3depth"></td>
+                          <td class="col-2depth">장비 상태</td>
+                          <td class="col-3depth">관리</td>
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">equipment-status-manage.html</td>
+                          <td class="col-url">org/eqpmn/eqpmnSttusMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -452,21 +391,23 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">equipment-status-antec.html</td>
+                          <td class="col-url">org/eqpmn/eqpmnSttusHist.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
                           <td class="col-memo"></td>
                         </tr>
+
+                        <!-- ################################ 제어 관리 ################################ -->
                         <tr>
                           <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth">ROI 설정</td>
-                          <td class="col-2depth">차량 ROI 탭</td>
-                          <td class="col-3depth"></td>
+                          <td class="col-1depth">제어 관리</td>
+                          <td class="col-2depth">ROI 설정</td>
+                          <td class="col-3depth">ROI 보행자</td>
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">roi-tab1.html</td>
+                          <td class="col-url">org/ctrl/roiPedTab.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -475,12 +416,12 @@
                         <tr>
                           <td class="col-num"><!--자동입력--></td>
                           <td class="col-1depth"></td>
-                          <td class="col-2depth">보행자 ROI 탭</td>
-                          <td class="col-3depth"></td>
+                          <td class="col-2depth"></td>
+                          <td class="col-3depth">ROI 차량</td>
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">roi-tab2.html</td>
+                          <td class="col-url">org/ctrl/roiVhcleTab.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -494,7 +435,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">movement-manage.html</td>
+                          <td class="col-url">org/ctrl/cteqOpertMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -508,7 +449,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">movement-item-manage.html</td>
+                          <td class="col-url">org/ctrl/cteqIemMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -522,7 +463,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">movement-linked-manage.html</td>
+                          <td class="col-url">org/ctrl/cteqIntrlckMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -536,7 +477,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">movement-operate-manage.html</td>
+                          <td class="col-url">org/ctrl/cteqOperTimeMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -550,7 +491,21 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">signal-operate-manage.html</td>
+                          <td class="col-url">org/ctrl/pseOperTimeMng.html</td>
+                          <!-- <td class="col-date"></td> -->
+                          <td class="col-complete" data-complete=""></td>
+                          <!-- <td class="col-worker"></td> -->
+                          <td class="col-memo"></td>
+                        </tr>
+                        <tr>
+                          <td class="col-num"><!--자동입력--></td>
+                          <td class="col-1depth"></td>
+                          <td class="col-2depth">집중조명 운영 시간 관리</td>
+                          <td class="col-3depth"></td>
+                          <td class="col-4depth"></td>
+                          <td class="col-5depth"></td>
+                          <td class="col-type" data-type=""></td>
+                          <td class="col-url">org/ctrl/spotlightOperTimeMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -564,7 +519,23 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">volume-manage.html</td>
+                          <td class="col-url">org/ctrl/voiceVolumeMng.html</td>
+                          <!-- <td class="col-date"></td> -->
+                          <td class="col-complete" data-complete=""></td>
+                          <!-- <td class="col-worker"></td> -->
+                          <td class="col-memo"></td>
+                        </tr>
+
+                        <!-- ################################ 분석 관리 ################################ -->
+                        <tr>
+                          <td class="col-num"><!--자동입력--></td>
+                          <td class="col-1depth">분석 관리</td>
+                          <td class="col-2depth">일별 검지</td>
+                          <td class="col-3depth"></td>
+                          <td class="col-4depth"></td>
+                          <td class="col-5depth"></td>
+                          <td class="col-type" data-type=""></td>
+                          <td class="col-url">org/anals/dayScan.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -572,13 +543,57 @@
                         </tr>
                         <tr>
                           <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth">설정관리</td>
+                          <td class="col-1depth"></td>
+                          <td class="col-2depth">시간별 검지</td>
+                          <td class="col-3depth"></td>
+                          <td class="col-4depth"></td>
+                          <td class="col-5depth"></td>
+                          <td class="col-type" data-type=""></td>
+                          <td class="col-url">org/anals/hourScan.html</td>
+                          <!-- <td class="col-date"></td> -->
+                          <td class="col-complete" data-complete=""></td>
+                          <!-- <td class="col-worker"></td> -->
+                          <td class="col-memo"></td>
+                        </tr>
+                        <tr>
+                          <td class="col-num"><!--자동입력--></td>
+                          <td class="col-1depth"></td>
+                          <td class="col-2depth">일별 검지 목록</td>
+                          <td class="col-3depth"></td>
+                          <td class="col-4depth"></td>
+                          <td class="col-5depth"></td>
+                          <td class="col-type" data-type=""></td>
+                          <td class="col-url">org/anals/dayScanList.html</td>
+                          <!-- <td class="col-date"></td> -->
+                          <td class="col-complete" data-complete=""></td>
+                          <!-- <td class="col-worker"></td> -->
+                          <td class="col-memo"></td>
+                        </tr>
+                        <tr>
+                          <td class="col-num"><!--자동입력--></td>
+                          <td class="col-1depth"></td>
+                          <td class="col-2depth">시간별 검지 목록</td>
+                          <td class="col-3depth"></td>
+                          <td class="col-4depth"></td>
+                          <td class="col-5depth"></td>
+                          <td class="col-type" data-type=""></td>
+                          <td class="col-url">org/anals/hourScanList.html</td>
+                          <!-- <td class="col-date"></td> -->
+                          <td class="col-complete" data-complete=""></td>
+                          <!-- <td class="col-worker"></td> -->
+                          <td class="col-memo"></td>
+                        </tr>
+
+                        <!-- ################################ 설정 관리 ################################ -->
+                        <tr>
+                          <td class="col-num"><!--자동입력--></td>
+                          <td class="col-1depth">설정 관리</td>
                           <td class="col-2depth">운영자 관리</td>
                           <td class="col-3depth"></td>
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">administrator-manage.html</td>
+                          <td class="col-url">org/setup/oprtrMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -588,11 +603,11 @@
                           <td class="col-num"><!--자동입력--></td>
                           <td class="col-1depth"></td>
                           <td class="col-2depth"></td>
-                          <td class="col-3depth">비밀번호 변경</td>
+                          <td class="col-3depth">비밀번호 변경 팝업</td>
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">pw-change.html</td>
+                          <td class="col-type" data-type="">모달 팝업</td>
+                          <td class="col-url">org/setup/passwordChangePop.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -606,7 +621,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">spot-manage.html</td>
+                          <td class="col-url">org/setup/spotMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -620,7 +635,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">code-manage.html</td>
+                          <td class="col-url">org/setup/codeMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -634,7 +649,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">preferences-manage.html</td>
+                          <td class="col-url">org/setup/envrnSetupMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -648,7 +663,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">log.html</td>
+                          <td class="col-url">org/setup/logMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -662,1843 +677,9 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">batch-manage.html</td>
+                          <td class="col-url">org/setup/schdulMng.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth" style="color: #fff; background: #222">장비관리</td>
-                          <td class="col-2depth">카메라 관리</td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">camera-manage-list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete=""></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">등록</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">camera-manage-regi-popup.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete=""></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">수정</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">camera-manage-edit-popup.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete=""></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">카메라SW 설정 관리</td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url"></td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete=""></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo">- camera-manage-sw.html과 동일.</td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">코드 수정</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">set_code_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">RTU 설정</td>
-                          <td class="col-3depth">목록</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">rtu_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">상세</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">rtu_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">추가</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">rtu_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">수정</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">rtu_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">관리자 관리</td>
-                          <td class="col-3depth">목록</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">admin_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">알림 설정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">admin_noti.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">상세</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">admin_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">추가</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">admin_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">수정</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">admin_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">비밀번호 변경</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">admin_change_pw.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">환경 설정</td>
-                          <td class="col-3depth">목록</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">set_config_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">상세</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">set_config_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">추가</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">set_config_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">수정</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">set_config_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">배치 작업</td>
-                          <td class="col-3depth">목록</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">bj_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">상세</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">bj_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">추가</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">bj_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">수정</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">bj_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth">교차로</td>
-                          <td class="col-2depth">시스템 관리</td>
-                          <td class="col-3depth">도로 관리</td>
-                          <td class="col-4depth">도로 정보 설정 상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/road_set_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">도로 정보 설정 추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/road_set_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">도로 정보 설정 수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/road_set_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">도로 목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/road_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">도로 상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/road_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">도로 추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/road_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">도로 수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/road_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">카메라 관리</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/camera_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/camera_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/camera_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/camera_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">맵 설정</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/map_setting.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo">
-                            <ul style="font-weight: bold">
-                              <li>- 카메라 관리, 레이더 관리, 신호 정보 관리, LOS 관리</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">카메라 정보 설정 상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/camera_map_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo">
-                            <ul style="font-weight: bold">
-                              <li>- 지도 위에 노출되는 팝업 CASE 참고</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">카메라 정보 설정 추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/camera_map_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo">
-                            <ul style="font-weight: bold">
-                              <li>- 지도 위에 노출되는 팝업 CASE 참고</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">카메라 정보 설정 수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/camera_map_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo">
-                            <ul style="font-weight: bold">
-                              <li>- 지도 위에 노출되는 팝업 CASE 참고</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">레이더 관리</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/radar_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/radar_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/radar_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/radar_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">연동제어 관리</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/linkage_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/linkage_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/linkage_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/linkage_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">sw 연동 관리</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/sw_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/sw_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/sw_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/sw_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">연계 카메라 등록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/sw_camera_register.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">신호 정보 관리</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/signal_info_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세1</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/signal_info_view1.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세2</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/signal_info_view2.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가1</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/signal_info_add1.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가2</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/signal_info_add2.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정1</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/signal_info_edit1.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정2</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/signal_info_edit2.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">신호등 정보 설정(상세)</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/traffic_lights_info_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">신호등 정보 설정(추가)</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/traffic_lights_info_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">신호등 정보 설정(수정)</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/traffic_lights_info_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">LOS 정보 설정</td>
-                          <td class="col-4depth">상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/los_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/los_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/los_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">장비 상태이력</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/check_equipment_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">이력 조회</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/check_equipment_list2.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">시스템 설정</td>
-                          <td class="col-3depth">영상인식 ROI 설정</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/crossroads_roi_set_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">객체ROI/돌발ROI/교차로ROI</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/crossroads_roi_set_tab.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">통계</td>
-                          <td class="col-3depth">교차로 통계</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/crossroads_stats_main.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">교차로 상세 통계</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/crossroads_stats_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">교차로 비교 통계</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/crossroads_stats_comparison.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">교차로 비교 통계<br />(차트2개일경우)</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/crossroads_stats_comparison2.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">비교 지점 선택</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/comparison_popup.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">교차로 원시 이력</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/crossroads_stats_primitive.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">Excel Down 검색 조건</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/primitive_popup.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">교차로 유출입 교통량</td>
-                          <td class="col-4depth">2, 3, 4차로</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/crossroads_flow.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">5차로</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/crossroads_flow2.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">6차로</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/crossroads_flow3.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">돌발</td>
-                          <td class="col-3depth">실시간 돌발 조회</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/real_time_outbreak.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">돌발 발생이력</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">is/outbreak_record_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">돌발 상태 확인</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/outbreak_situation.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">돌발 영상</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/outbreak_video.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">돌발 스냅</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">is/outbreak_snap.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth">횡단보도</td>
-                          <td class="col-2depth">횡단보도 상세</td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/map_cw_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">횡단보도 상세(분할 화면 4개)</td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/map_cw_view2.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">영상인식 상세설정</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달 팝업"></td>
-                          <td class="col-url">cw/image_reco_set.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">인식 SW</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달 팝업"></td>
-                          <td class="col-url">cw/reco_sw.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">시스템 관리</td>
-                          <td class="col-3depth">카메라 관리</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_camera_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_camera_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_camera_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_camera_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">맵 설정</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_map_setting.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">카메라 정보 설정 상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_camera_map_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo">
-                            <ul style="font-weight: bold">
-                              <li>- 지도 위에 노출되는 팝업 CASE 참고</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">카메라 정보 설정 추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_camera_map_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo">
-                            <ul style="font-weight: bold">
-                              <li>- 지도 위에 노출되는 팝업 CASE 참고</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">카메라 정보 설정 수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_camera_map_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo">
-                            <ul style="font-weight: bold">
-                              <li>- 지도 위에 노출되는 팝업 CASE 참고</li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">시설물 관리</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/facility_manag.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/facility_manag_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/facility_manag_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/facility_manag_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">sw 연동 관리</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_sw_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_sw_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_sw_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_sw_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">신호 정보 관리</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_signal_info_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_signal_info_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_signal_info_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_signal_info_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">장비 상태 조회</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_check_equipment_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">이력 조회</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_check_equipment_list2.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">횡단보도 관리</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_admin_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_admin_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_admin_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/cw_admin_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">시스템 설정</td>
-                          <td class="col-3depth">영상인식 ROI 설정</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_roiset_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">차량 ROI/보행자 ROI</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_roiset_tab.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">영상인식 위경도 설정</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/position_set_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">설정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/position_set.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">시나리오 동작 설정</td>
-                          <td class="col-4depth">목록</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/scenario_list.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">상세</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/scenario_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">추가</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/scenario_add.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">수정</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달팝업"></td>
-                          <td class="col-url">cw/scenario_edit.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">시나리오 항목 설정</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/scenario_item_set.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">시나리오 장비 연동 설정</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/scenario_equipment_set.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth">통계</td>
-                          <td class="col-3depth">횡단보도 통계</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_stats_main.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">횡단보도 상세 통계</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_stats_view.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">횡단보도 비교 통계</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_stats_comparison.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">비교 지점 선택</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달 팝업"></td>
-                          <td class="col-url">cw/cw_comparison_popup.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth">횡단보도 원시 이력</td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">cw/cw_stats_primitive.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth"></td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth">Excel Down 검색 조건</td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type="모달 팝업"></td>
-                          <td class="col-url">cw/cw_primitive_popup.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete="완료"></td>
                           <!-- <td class="col-worker"></td> -->
                           <td class="col-memo"></td>
                         </tr>
