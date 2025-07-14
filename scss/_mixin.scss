@@ -1,0 +1,11 @@
+// 유틸 mixin
+@mixin font-style($num) {
+  font-weight: $num;
+}
+
+@mixin flexbox($direction: row, $justi-con: flex-start, $align-item: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justi-con;
+  align-items: $align-item;
+}

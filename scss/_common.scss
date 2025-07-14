@@ -28,7 +28,90 @@
 /*---------------------------------------------------------------
   [css 초기화 커스텀]
 -----------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
-  font-size: 10px;
+  height: 100%;
+  font-family: $font-name;
+  font-size: 16px;
+  @include font-style(400);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 1920px;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-name;
+  margin: 0;
+  line-height: 1.2;
+}
+
+input {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/*---------------------------------------------------------------
+  [웹폰트 KoPubWorldDotum]
+-----------------------------------------------------------------*/
+@font-face {
+  font-family: 'KoPubWorldDotum';
+  font-style: normal;
+  font-weight: 300;
+  src: local('KoPubWorldDotum'), url('/font/KoPubWorld-Dotum-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'KoPubWorldDotum';
+  font-style: normal;
+  font-weight: 400;
+  src: local('KoPubWorldDotum'), url('/font/KoPubWorld-Dotum-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'KoPubWorldDotum';
+  font-style: normal;
+  font-weight: 700;
+  src: local('KoPubWorldDotum'), url('/font/KoPubWorld-Dotum-Bold.woff2') format('woff2');
+}
+
+/*---------------------------------------------------------------
+  [help class]
+-----------------------------------------------------------------*/
+.screen-out {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
 }
