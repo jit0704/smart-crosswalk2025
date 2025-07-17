@@ -22,6 +22,7 @@
       background: $c-gray1;
       border: 1px solid $c-gray2;
       border-radius: 10px;
+      font-size: 16px;
 
       &::placeholder {
         color: $c-gray3;
@@ -42,9 +43,11 @@
       height: 65px;
       line-height: 65px;
       margin-top: 50px;
+      text-align: center;
+      color: $c-white0;
       border-radius: 10px;
       font-size: 24px;
-      background: $c-black2;
+      background: $c-blue2;
     }
   }
 }

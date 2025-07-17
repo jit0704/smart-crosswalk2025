@@ -79,6 +79,10 @@ img {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
   width: 100%;
   border: 0;
@@ -115,6 +119,7 @@ optgroup,
 select,
 textarea {
   font-family: KoPubWorldDotum, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 input[type=date] {
@@ -225,6 +230,7 @@ video {
   background: #f1f2f5;
   border: 1px solid #c5c8cf;
   border-radius: 10px;
+  font-size: 16px;
 }
 .login-container main input::placeholder {
   color: #aeaeae;
@@ -241,9 +247,11 @@ video {
   height: 65px;
   line-height: 65px;
   margin-top: 50px;
+  text-align: center;
+  color: #fff;
   border-radius: 10px;
   font-size: 24px;
-  background: #394250;
+  background: #1c3d74;
 }
 
 .is-edge-browser {
