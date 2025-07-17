@@ -1,31 +1,5 @@
 @charset "UTF-8";
 /*---------------------------------------------------------------
-  [Google Icon Font] fallback
------------------------------------------------------------------*/
-@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialicons/v143/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
-}
-.material-icons {
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: "liga";
-  font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
-}
-
-/*---------------------------------------------------------------
   [css 초기화 커스텀]
 -----------------------------------------------------------------*/
 * {
@@ -38,6 +12,7 @@ body {
   height: 100%;
   font-family: KoPubWorldDotum, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 16px;
+  color: #272727;
   font-weight: 400;
 }
 
@@ -71,13 +46,84 @@ h5 {
   line-height: 1.2;
 }
 
-input {
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+table {
   width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table tbody {
+  vertical-align: top;
 }
 
 img {
   max-width: 100%;
   box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-family: KoPubWorldDotum, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  background: transparent;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+}
+
+select {
+  outline: 0;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  outline: 0;
+  resize: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+input,
+optgroup,
+select,
+textarea {
+  font-family: KoPubWorldDotum, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+input[type=date] {
+  border: 0;
+  outline: 0;
+}
+
+video {
+  object-fit: fill;
 }
 
 /*---------------------------------------------------------------
@@ -111,6 +157,43 @@ img {
   height: 0;
   line-height: 0;
   text-indent: -9999px;
+}
+
+/*---------------------------------------------------------------
+  [화면 레이아웃 정의]
+-----------------------------------------------------------------*/
+.ly-container {
+  margin-bottom: 0;
+}
+.ly-container footer {
+  margin-top: 11px;
+  line-height: 30px;
+  text-align: right;
+}
+
+.gnb-container {
+  height: 80px;
+  line-height: normal;
+  background: #f1f2f5;
+  box-shadow: none;
+  color: #666;
+  border-bottom: 1px solid #004;
+}
+
+.main-container > section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0 20px;
+  width: 100%;
+  height: calc(100vh - 136px);
+}
+.main-container .administer .ly-left {
+  width: 1081px;
+}
+.main-container .administer .ly-right {
+  flex: 1;
 }
 
 /*---------------------------------------------------------------

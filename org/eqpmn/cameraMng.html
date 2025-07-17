@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카메라 관리</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="row ly-container">
+      <nav class="col s12 gnb-container">gnb 작업중</nav>
+      <main class="main-container">
+        <section class="administer camera-mng-container">
+          <div class="ly-left">
+            <article class="list-container">
+              <header class="row">
+                <em class="col s11">카메라 목록</em>
+                <span class="col s1">
+                  <button>삭제</button>
+                  <button>추가</button>
+                </span>
+              </header>
+              <main>
+                <table>
+                  <colgroup>
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                    <col style="width: 14.28%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>NO</th>
+                      <th>카메라 ID</th>
+                      <th>카메라 명</th>
+                      <th>채널 ID</th>
+                      <th>IP 주소</th>
+                      <th>카메라 방향</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="filled-in" checked="checked" />
+                          <span><i class="screen-out">체크박스</i></span>
+                        </label>
+                      </td>
+                      <td>1</td>
+                      <td>CAM0000001</td>
+                      <td>CAM1</td>
+                      <td>1</td>
+                      <td>192.168.200.101</td>
+                      <td>동</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </main>
+            </article>
+          </div>
+          <div class="ly-right">right</div>
+        </section>
+      </main>
+      <footer>Copyright 2025, AIR CO.,LTD All rights reserved.</footer>
+    </div>
+  </body>
+</html>

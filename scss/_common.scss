@@ -1,31 +1,4 @@
 /*---------------------------------------------------------------
-  [Google Icon Font] fallback
------------------------------------------------------------------*/
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialicons/v143/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-}
-
-/*---------------------------------------------------------------
   [css 초기화 커스텀]
 -----------------------------------------------------------------*/
 * {
@@ -38,6 +11,7 @@ body {
   height: 100%;
   font-family: $font-name;
   font-size: 16px;
+  color: $c-black3;
   @include font-style(400);
 }
 
@@ -71,13 +45,87 @@ h5 {
   line-height: 1.2;
 }
 
-input {
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+table {
   width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  tbody {
+    vertical-align: top;
+  }
 }
 
 img {
   max-width: 100%;
   box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-family: $font-name;
+  background: transparent;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+}
+
+select {
+  outline: 0;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  // border: 1px solid $c-gray5;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  // color: $c-gray2;
+  outline: 0;
+  resize: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-name;
+}
+
+input[type='date'] {
+  border: 0;
+  outline: 0;
+}
+
+video {
+  object-fit: fill;
 }
 
 /*---------------------------------------------------------------

@@ -1,0 +1,40 @@
+/*---------------------------------------------------------------
+  [화면 레이아웃 정의]
+-----------------------------------------------------------------*/
+.ly-container {
+  margin-bottom: 0;
+
+  footer {
+    margin-top: 11px;
+    line-height: 30px;
+    text-align: right;
+  }
+}
+
+.gnb-container {
+  height: 80px;
+  line-height: normal;
+  background: $c-white1;
+  box-shadow: none;
+  color: $c-gray4;
+  border-bottom: 1px solid $c-blue1;
+}
+
+.main-container {
+  & > section {
+    @include flexbox(row, flex-start, flex-start);
+    gap: 0 20px;
+    width: 100%;
+    height: calc(100vh - 136px);
+  }
+
+  .administer {
+    .ly-left {
+      width: 1081px;
+    }
+
+    .ly-right {
+      flex: 1;
+    }
+  }
+}
