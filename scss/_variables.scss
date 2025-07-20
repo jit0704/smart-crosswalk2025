@@ -1,17 +1,33 @@
-// variable
+// ------------------------------------------------
+// [scss 변수 정의]
+//-------------------------------------------------
+
+// 폰트명
 $font-name: KoPubWorldDotum, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
+// colors
 $c-black1: #000;
 $c-black2: #394250;
 $c-black3: #272727;
 
 $c-white0: #fff;
 $c-white1: #f1f2f5;
+$c-white2: #f4f7ff;
 
 $c-gray1: #f1f2f5;
 $c-gray2: #c5c8cf;
 $c-gray3: #aeaeae;
 $c-gray4: #666;
+$c-gray5: #ced4dd;
+$c-gray6: #777897;
+$c-gray7: #959da9;
+$c-gray8: #e4e5e9;
+$c-gray9: #838a97;
+$c-gray10: #e6e9ee;
 
 $c-blue1: #004;
 $c-blue2: #1c3d74;
+$c-blue3: #0b2755;
+$c-blue4: #5388f4;
+
+$c-brown: #3a0506;

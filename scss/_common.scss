@@ -1,5 +1,5 @@
 /*---------------------------------------------------------------
-  [css 초기화 커스텀]
+  [css initial]
 -----------------------------------------------------------------*/
 * {
   margin: 0;
@@ -70,7 +70,12 @@ table {
   border-spacing: 0;
 
   tbody {
-    vertical-align: top;
+    vertical-align: middle;
+  }
+
+  th,
+  td {
+    box-sizing: border-box;
   }
 }
 
@@ -84,7 +89,6 @@ a {
 }
 
 button {
-  width: 100%;
   border: 0;
   outline: 0;
   font-family: $font-name;
@@ -94,6 +98,10 @@ button {
 
 input {
   width: 100%;
+
+  &[type='radio'] {
+    cursor: pointer;
+  }
 }
 
 select {
@@ -122,6 +130,7 @@ select,
 textarea {
   font-family: $font-name;
   box-sizing: border-box;
+  outline: 0;
 }
 
 input[type='date'] {

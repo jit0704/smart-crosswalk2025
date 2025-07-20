@@ -1,0 +1,16 @@
+/*---------------------------------------------------------------
+  [아이콘]
+-----------------------------------------------------------------*/
+.icon {
+  &-del {
+    @include bgurl($w: 16px, $h: 18px, $img: 'icon_del.png');
+  }
+
+  &-add {
+    @include bgurl($w: 18px, $h: 18px, $img: 'icon_add.png');
+  }
+
+  &-save {
+    @include bgurl($w: 16px, $h: 15px, $img: 'icon_save.png');
+  }
+}

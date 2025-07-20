@@ -1,0 +1,50 @@
+/*---------------------------------------------------------------
+  [목록, 상세 공통]
+-----------------------------------------------------------------*/
+.administer-header {
+  @include flexbox(row, space-between, center);
+
+  .title {
+    line-height: 24px;
+    font-size: 22px;
+    font-weight: 700;
+    color: $c-blue3;
+  }
+}
+
+/*---------------------------------------------------------------
+  [목록]
+-----------------------------------------------------------------*/
+.list-container {
+  main {
+    overflow-y: auto;
+    height: calc(100vh - 195px);
+    // border: 1px solid red;
+    border-bottom: 1px solid $c-gray7;
+    margin-top: 10px;
+
+    .tbl-centered {
+      tr.active {
+        background: $c-white2;
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------------------
+  [상세]
+-----------------------------------------------------------------*/
+.view-container {
+  main {
+    height: calc(100vh - 195px);
+    margin-top: 10px;
+
+    .tbl-details {
+      height: 100%;
+
+      table {
+        height: 100%;
+      }
+    }
+  }
+}

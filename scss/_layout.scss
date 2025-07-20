@@ -4,15 +4,19 @@
 .ly-container {
   margin-bottom: 0;
 
-  footer {
-    margin-top: 11px;
-    line-height: 30px;
+  .ly-footer {
+    width: calc(100% - 60px);
+    margin: 11px auto 0;
+    line-height: 29px;
     text-align: right;
+    font-size: 13px;
+    color: $c-gray9;
+    border-top: 1px solid $c-gray8;
   }
 }
 
 .gnb-container {
-  height: 80px;
+  height: 79px;
   line-height: normal;
   background: $c-white1;
   box-shadow: none;
@@ -21,20 +25,25 @@
 }
 
 .main-container {
+  padding: 0 30px;
+
   & > section {
     @include flexbox(row, flex-start, flex-start);
     gap: 0 20px;
     width: 100%;
-    height: calc(100vh - 136px);
+    height: calc(100vh - 122px);
   }
 
+  // 목록/상세
   .administer {
     .ly-left {
       width: 1081px;
+      margin-top: 28px;
     }
 
     .ly-right {
       flex: 1;
+      margin-top: 28px;
     }
   }
 }

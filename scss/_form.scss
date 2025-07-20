@@ -1,0 +1,87 @@
+/*---------------------------------------------------------------
+  [form]
+-----------------------------------------------------------------*/
+.inp {
+  &-chkbox {
+    display: none;
+
+    & + i {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+      border: 1px solid $c-gray6;
+      background: $c-white0;
+      vertical-align: middle;
+    }
+
+    &:checked + i {
+      @include bgurl($w: 25px, $h: 25px, $img: 'chkbox_active.png');
+      border: 1px solid transparent;
+    }
+  }
+
+  &-radio {
+    display: none;
+
+    & + i {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      border: 1px solid $c-gray5;
+      background: $c-white0;
+      vertical-align: middle;
+    }
+
+    &:checked + i {
+      @include bgurl($w: 20px, $h: 20px, $img: 'radio_active.png');
+      border: 1px solid transparent;
+    }
+  }
+
+  &-radio-group {
+    @include flexbox(row, flex-start, center);
+    gap: 0 57px;
+
+    label {
+      font-size: 18px;
+
+      i {
+        margin-right: 7px;
+      }
+    }
+  }
+}
+
+.txt-field {
+  padding: 0 10px;
+  line-height: 38px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid $c-gray5;
+  background: $c-white0;
+}
+
+.opt {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid $c-gray5;
+
+  &:disabled {
+    background: rgba(247, 248, 249, 0.96);
+  }
+}
+
+.resolution {
+  @include flexbox(row, flex-start, center);
+  gap: 0 7px;
+
+  .txt-field {
+    width: 100px;
+    text-align: center;
+  }
+}

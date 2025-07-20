@@ -1,0 +1,17 @@
+/*---------------------------------------------------------------
+  [버튼]
+-----------------------------------------------------------------*/
+.btn {
+  @include flexbox(row, flex-start, center);
+  gap: 0 10px;
+  padding: 6px 20px;
+  color: $c-white0;
+  font-weight: 700;
+  border-radius: 8px;
+  background: $c-blue2;
+
+  &-group {
+    @include flexbox(row, flex-start, center);
+    gap: 0 10px;
+  }
+}
