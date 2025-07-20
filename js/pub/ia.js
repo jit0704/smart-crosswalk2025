@@ -43,13 +43,19 @@ var ia = {
     var element = document.querySelector(obj);
     // col-complete체크
     if (element.querySelectorAll('[data-complete=완료]').length > 0) {
-      element.querySelector('[data-complete=완료]').parentNode.classList.add('row-done');
+      element.querySelectorAll('[data-complete=완료]').forEach((item) => {
+        item.parentNode.classList.add('row-done');
+      });
     }
     if (element.querySelectorAll('[data-complete=삭제]').length > 0) {
-      element.querySelector('[data-complete=삭제]').parentNode.classList.add('row-del');
+      element.querySelectorAll('[data-complete=삭제]').forEach((item) => {
+        item.parentNode.classList.add('row-del');
+      });
     }
     if (element.querySelectorAll('[data-complete=제외]').length > 0) {
-      element.querySelector('[data-complete=제외]').parentNode.classList.add('row-except');
+      element.querySelectorAll('[data-complete=제외]').forEach((item) => {
+        item.parentNode.classList.add('row-except');
+      });
     }
     element.querySelectorAll('.row-del .col-num').forEach(function (num) {
       num.classList.remove('col-num');

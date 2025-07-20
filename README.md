@@ -12,4 +12,4 @@ $ git clone https://github.com/jit0704/smart-crosswalk2025.git
 
 ## 퍼블리싱 현황판 링크
 
-[클릭하세요.](https://zingy-nougat-e25759.netlify.app/org/)
+[클릭하세요.](https://zingy-nougat-e25759.netlify.app/org/){:target="\_blank"}
