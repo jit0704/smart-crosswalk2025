@@ -14,3 +14,60 @@
     @include bgurl($w: 16px, $h: 15px, $img: 'icon_save.png');
   }
 }
+
+.roi-mark {
+  @include flexbox(row, flex-start, center);
+  gap: 0 10px;
+
+  span {
+    width: 145px;
+    padding: 7px 0 8px 0;
+    border-radius: 5px;
+    background: $c-blue5;
+    @include flexbox(row, center, center);
+
+    &::before {
+      content: '';
+    }
+
+    em {
+      display: block;
+      width: 75px;
+      text-align: center;
+      border-radius: 5px;
+      background: $c-white0;
+    }
+  }
+
+  .car {
+    gap: 0 15px;
+
+    &.c-red::before {
+      @include bgurl($w: 27px, $h: 20px, $img: 'icon_car_red.png');
+    }
+
+    &.c-yellow-green::before {
+      @include bgurl($w: 27px, $h: 20px, $img: 'icon_car_yellowgreen.png');
+    }
+
+    &.c-gray::before {
+      @include bgurl($w: 27px, $h: 20px, $img: 'icon_car_gray.png');
+    }
+  }
+
+  .pedestrian {
+    gap: 0 21px;
+
+    &.c-red::before {
+      @include bgurl($w: 16px, $h: 25px, $img: 'icon_pedestrian_red.png');
+    }
+
+    &.c-yellow-green::before {
+      @include bgurl($w: 16px, $h: 25px, $img: 'icon_pedestrian_yellowgreen.png');
+    }
+
+    &.c-gray::before {
+      @include bgurl($w: 16px, $h: 25px, $img: 'icon_pedestrian_gray.png');
+    }
+  }
+}

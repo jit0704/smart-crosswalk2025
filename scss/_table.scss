@@ -21,8 +21,8 @@ table {
         font-size: 18px;
         font-weight: 400;
         text-align: center;
-        border-top: 1px solid $c-black2;
-        border-bottom: 1px solid $c-black2;
+        border-top: 2px solid $c-black2;
+        border-bottom: 2px solid $c-black2;
         background: $c-white0;
       }
     }
@@ -33,6 +33,25 @@ table {
         font-size: 18px;
         text-align: center;
         border-bottom: 1px solid $c-gray5;
+      }
+
+      tr.active {
+        background: $c-white2;
+      }
+    }
+
+    &.sm {
+      thead {
+        th {
+          font-size: 16px;
+        }
+      }
+
+      tbody {
+        td {
+          height: 60px;
+          font-size: 16px;
+        }
       }
     }
   }
@@ -52,7 +71,7 @@ table {
         i {
           display: inline-block;
           padding-left: 3px;
-          color: $c-brown;
+          color: $c-brown1;
         }
       }
 

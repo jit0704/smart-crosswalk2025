@@ -1,0 +1,45 @@
+/*---------------------------------------------------------------
+  [모니터링 - 정보]
+  /mntr/information.html
+-----------------------------------------------------------------*/
+.monitoring-container {
+  .tbl-bind {
+    overflow-y: auto;
+    height: 300px;
+    border-bottom: 1px solid $c-black2;
+  }
+
+  .tbl-centered {
+    tbody {
+      tr:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+
+      .info-state1 {
+        color: $c-blue6;
+      }
+
+      .info-state2 {
+        color: $c-red1;
+      }
+
+      .info-state3 {
+        color: $c-brown2;
+      }
+    }
+  }
+
+  .administer-header {
+    margin: 20px 0 6px;
+  }
+
+  .view-container .tbl-details {
+    height: calc(100vh - 541px);
+
+    table {
+      height: 100%;
+    }
+  }
+}

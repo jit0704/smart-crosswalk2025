@@ -52,6 +52,54 @@
       }
     }
   }
+
+  &-switch-bind {
+    @include flexbox(row, flex-start, center);
+    gap: 0 10px;
+  }
+
+  &-switch-wrap {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+
+    .inp-switch {
+      display: none;
+
+      &-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $c-gray11;
+        border-radius: 15px;
+        transition: 0.2s;
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 15px;
+          height: 15px;
+          left: 5px;
+          bottom: 5px;
+          background-color: $c-white0;
+          border-radius: 100%;
+          transition: 0.2s;
+        }
+      }
+
+      &:checked + .inp-switch-slider {
+        background-color: $c-blue4;
+
+        &::before {
+          transform: translateX(24px);
+        }
+      }
+    }
+  }
 }
 
 .txt-field {

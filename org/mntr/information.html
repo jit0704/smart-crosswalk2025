@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모니터링 - 정보</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/lib/includeHTML.js"></script>
+    <script defer src="/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/gnb.html"></nav>
+      <main class="main-container">
+        <section class="monitoring-container">
+          <div class="ly-left" include-html="/org/common/include/monitoring.html"></div>
+          <div class="ly-right">
+            <article class="tab-container">
+              <header class="tab-header">
+                <a href="/org/mntr/information.html" class="active">정보</a>
+                <a href="/org/mntr/scanning.html">검지 현황</a>
+                <a href="/org/mntr/controller.html">제어 현황</a>
+              </header>
+              <main class="information-container">
+                <div class="tbl-bind">
+                  <table class="tbl-centered sm">
+                    <colgroup>
+                      <col style="width: 70px" />
+                      <col />
+                      <col />
+                      <col style="width: 72px" />
+                    </colgroup>
+                    <thead>
+                      <th>채널</th>
+                      <th>IP주소</th>
+                      <th>상태</th>
+                      <th>설정</th>
+                    </thead>
+                    <tbody>
+                      <tr class="no-data">
+                        <td colspan="4">데이터가 없습니다.</td>
+                      </tr>
+                      <tr class="active">
+                        <td>1</td>
+                        <td>192.168.172.125</td>
+                        <td><em class="info-state1">객체인식중</em></td>
+                        <td>
+                          <a href="# " class="btn c-gray">ROI</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>192.168.172.125</td>
+                        <td><em class="info-state2">연결불가</em></td>
+                        <td>
+                          <a href="#" class="btn c-gray">ROI</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>192.168.172.125</td>
+                        <td><em class="info-state3">인식준비중</em></td>
+                        <td>
+                          <a href="#" class="btn c-gray">ROI</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>192.168.172.125</td>
+                        <td><em class="info-state3">인식준비중</em></td>
+                        <td>
+                          <a href="#" class="btn c-gray">ROI</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //tbl-bind -->
+                <div class="view-container">
+                  <header class="administer-header">
+                    <em class="title sm bul">카메라 정보</em>
+                  </header>
+                  <div class="tbl-details">
+                    <table>
+                      <colgroup>
+                        <col style="width: 130px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>채널</th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>IP 주소</th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>RTSP 주소</th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>카메라 ID</th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>카메라 명</th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>카메라 방향</th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>해상도<i>*</i></th>
+                          <td>
+                            <span class="resolution">
+                              <input type="text" class="txt-field" />
+                              X
+                              <input type="text" class="txt-field" />
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- //view-container -->
+              </main>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/copyright.html"></footer>
+    </div>
+  </body>
+</html>

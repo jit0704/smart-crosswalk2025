@@ -1,4 +1,26 @@
 /*---------------------------------------------------------------
+  [모니터링 영상]
+-----------------------------------------------------------------*/
+.monitoring {
+  &-content {
+    @include flexbox(row, flex-start, center);
+    gap: 3px;
+    flex-wrap: wrap;
+    height: calc(100vh - 223px);
+    margin-top: 8px;
+    padding: 15px;
+    border-radius: 5px;
+    background: $c-gray12;
+  }
+
+  &-video-bind {
+    flex: calc(50% - 3px);
+    height: calc(100% / 2);
+    font-size: 0;
+  }
+}
+
+/*---------------------------------------------------------------
   [목록, 상세 공통]
 -----------------------------------------------------------------*/
 .administer-header {
@@ -9,6 +31,20 @@
     font-size: 22px;
     font-weight: 700;
     color: $c-blue3;
+
+    &.sm {
+      font-size: 18px;
+    }
+
+    &.bul {
+      @include flexbox(row, flex-start, center);
+      gap: 0 10px;
+
+      &::before {
+        content: '';
+        @include bgurl($w: 15px, $h: 15px, $img: 'icon_bul1.png');
+      }
+    }
   }
 }
 
@@ -22,12 +58,6 @@
     // border: 1px solid red;
     border-bottom: 1px solid $c-gray7;
     margin-top: 10px;
-
-    .tbl-centered {
-      tr.active {
-        background: $c-white2;
-      }
-    }
   }
 }
 

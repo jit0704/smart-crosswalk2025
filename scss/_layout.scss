@@ -34,6 +34,23 @@
     height: calc(100vh - 122px);
   }
 
+  // 모니터링
+  .monitoring-container {
+    .ly-left {
+      width: 1330px;
+      margin-top: 23px;
+
+      & > aside {
+        @include flexbox(row, space-between, center);
+      }
+    }
+
+    .ly-right {
+      flex: 1;
+      margin-top: 23px;
+    }
+  }
+
   // 목록/상세
   .administer {
     .ly-left {

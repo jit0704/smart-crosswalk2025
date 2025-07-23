@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모니터링 - 제어현황</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/lib/includeHTML.js"></script>
+    <script defer src="/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/gnb.html"></nav>
+      <main class="main-container">
+        <section class="monitoring-container">
+          <div class="ly-left" include-html="/org/common/include/monitoring.html"></div>
+          <div class="ly-right">
+            <article class="tab-container">
+              <header class="tab-header">
+                <a href="/org/mntr/information.html">정보</a>
+                <a href="/org/mntr/scanning.html">검지 현황</a>
+                <a href="/org/mntr/controller.html" class="active">제어 현황</a>
+              </header>
+              <main class="controller-container">제어 현황 탭</main>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/copyright.html"></footer>
+    </div>
+  </body>
+</html>
