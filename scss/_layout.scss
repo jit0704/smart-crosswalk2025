@@ -16,12 +16,61 @@
 }
 
 .gnb-container {
-  height: 79px;
+  @include flexbox(row, space-between, center);
+  padding: 20px 30px 19px;
   line-height: normal;
   background: $c-white1;
   box-shadow: none;
   color: $c-gray4;
   border-bottom: 1px solid $c-blue1;
+
+  h1 {
+    width: 85px;
+    font-size: 0;
+  }
+
+  aside {
+    @include flexbox(row, flex-start, center);
+    gap: 0 20px;
+
+    .admin-id {
+      @include flexbox(row, flex-start, center);
+      gap: 0 9px;
+      color: $c-black3;
+
+      &::before {
+        content: '';
+        @include bgurl($w: 22px, $h: 22px, $img: 'icon_avatar.png');
+      }
+    }
+  }
+}
+
+.gnb-wrap {
+  @include flexbox(row, space-around, center);
+  width: 1110px;
+
+  .mega-menu {
+    font-size: 22px;
+    color: $c-gray4;
+
+    &.active {
+      position: relative;
+      font-weight: 700;
+      color: $c-blue1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -36px;
+        right: -36px;
+        bottom: -22px;
+        height: 5px;
+        border-radius: 5px 5px 0 0;
+        background: $c-blue1;
+      }
+    }
+  }
 }
 
 .main-container {

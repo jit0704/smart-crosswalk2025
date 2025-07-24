@@ -109,6 +109,10 @@
   border-radius: 5px;
   border: 1px solid $c-gray5;
   background: $c-white0;
+
+  &:disabled {
+    background: rgba(247, 248, 249, 0.96);
+  }
 }
 
 .opt {

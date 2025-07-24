@@ -10,6 +10,10 @@
   border-radius: 8px;
   background: $c-blue2;
 
+  &-logout {
+    @include bgurl($w: 35px, $h: 35px, $img: 'icon_logout.png');
+  }
+
   &-group {
     @include flexbox(row, flex-start, center);
     gap: 0 10px;

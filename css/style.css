@@ -188,12 +188,71 @@ video {
 }
 
 .gnb-container {
-  height: 79px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px 19px;
   line-height: normal;
   background: #f1f2f5;
   box-shadow: none;
   color: #666;
   border-bottom: 1px solid #004;
+}
+.gnb-container h1 {
+  width: 85px;
+  font-size: 0;
+}
+.gnb-container aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 20px;
+}
+.gnb-container aside .admin-id {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 9px;
+  color: #272727;
+}
+.gnb-container aside .admin-id::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url("/images/icon_avatar.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.gnb-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 1110px;
+}
+.gnb-wrap .mega-menu {
+  font-size: 22px;
+  color: #666;
+}
+.gnb-wrap .mega-menu.active {
+  position: relative;
+  font-weight: 700;
+  color: #004;
+}
+.gnb-wrap .mega-menu.active::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  right: -36px;
+  bottom: -22px;
+  height: 5px;
+  border-radius: 5px 5px 0 0;
+  background: #004;
 }
 
 .main-container {
@@ -380,6 +439,14 @@ video {
   border-radius: 8px;
   background: #1c3d74;
 }
+.btn-logout {
+  width: 35px;
+  height: 35px;
+  background-image: url("/images/icon_logout.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 .btn-group {
   display: flex;
   flex-direction: row;
@@ -564,7 +631,8 @@ table tr.no-data {
   color: #3a0506;
 }
 .tbl-details tbody td {
-  padding: 1% 16px;
+  height: 52px;
+  padding: 0 16px;
   font-size: 18px;
 }
 
@@ -678,6 +746,9 @@ table tr.no-data {
   border-radius: 5px;
   border: 1px solid #ced4dd;
   background: #fff;
+}
+.txt-field:disabled {
+  background: rgba(247, 248, 249, 0.96);
 }
 
 .opt {
