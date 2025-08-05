@@ -10,7 +10,7 @@ html,
 body {
   height: 100%;
   font-family: $font-name;
-  font-size: 16px;
+  font-size: 14px;
   color: $c-black3;
   @include font-style(400);
 }

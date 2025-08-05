@@ -43,14 +43,14 @@ table {
     &.sm {
       thead {
         th {
-          font-size: 16px;
+          font-size: 14px;
         }
       }
 
       tbody {
         td {
           height: 60px;
-          font-size: 16px;
+          font-size: 14px;
         }
       }
     }
@@ -63,7 +63,6 @@ table {
     tbody {
       th {
         padding: 0 20px;
-        font-size: 18px;
         text-align: left;
         font-weight: 400;
         background: $c-gray10;
@@ -78,7 +77,6 @@ table {
       td {
         height: 52px;
         padding: 0 16px;
-        font-size: 18px;
       }
     }
   }

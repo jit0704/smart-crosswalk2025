@@ -11,7 +11,7 @@ html,
 body {
   height: 100%;
   font-family: KoPubWorldDotum, "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #272727;
   font-weight: 400;
 }
@@ -375,8 +375,8 @@ video {
   align-items: center;
 }
 .administer-header .title {
-  line-height: 24px;
-  font-size: 22px;
+  line-height: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: #0b2755;
 }
@@ -434,6 +434,7 @@ video {
   align-items: center;
   gap: 0 10px;
   padding: 6px 20px;
+  font-size: 14px;
   color: #fff;
   font-weight: 700;
   border-radius: 8px;
@@ -516,6 +517,7 @@ video {
   display: block;
   width: 75px;
   text-align: center;
+  font-size: 16px;
   border-radius: 5px;
   background: #fff;
 }
@@ -608,11 +610,11 @@ table tr.no-data {
   background: #f4f7ff;
 }
 .tbl-centered.sm thead th {
-  font-size: 16px;
+  font-size: 14px;
 }
 .tbl-centered.sm tbody td {
   height: 60px;
-  font-size: 16px;
+  font-size: 14px;
 }
 .tbl-details {
   border: 1px solid #ced4dd;
@@ -620,7 +622,6 @@ table tr.no-data {
 }
 .tbl-details tbody th {
   padding: 0 20px;
-  font-size: 18px;
   text-align: left;
   font-weight: 400;
   background: #e6e9ee;
@@ -633,7 +634,6 @@ table tr.no-data {
 .tbl-details tbody td {
   height: 52px;
   padding: 0 16px;
-  font-size: 18px;
 }
 
 /*---------------------------------------------------------------
@@ -689,7 +689,7 @@ table tr.no-data {
   gap: 0 57px;
 }
 .inp-radio-group label {
-  font-size: 18px;
+  font-size: 14px;
 }
 .inp-radio-group label i {
   margin-right: 7px;
@@ -742,7 +742,7 @@ table tr.no-data {
 .txt-field {
   padding: 0 10px;
   line-height: 38px;
-  font-size: 18px;
+  font-size: 14px;
   border-radius: 5px;
   border: 1px solid #ced4dd;
   background: #fff;
@@ -755,7 +755,7 @@ table tr.no-data {
   width: 100%;
   height: 40px;
   padding: 0 10px;
-  font-size: 18px;
+  font-size: 14px;
   border-radius: 5px;
   border: 1px solid #ced4dd;
 }
