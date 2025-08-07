@@ -26,5 +26,16 @@
         }
       }
     }
+
+    &.bot-line {
+      border-bottom: 1px solid $c-black2;
+    }
+
+    &.no-flex {
+      a {
+        flex: none;
+        min-width: 170px;
+      }
+    }
   }
 }

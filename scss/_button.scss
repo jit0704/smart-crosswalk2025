@@ -20,6 +20,24 @@
     gap: 0 10px;
   }
 
+  &-search {
+    @include bgurl($w: 35px, $h: 35px, $img: 'icon_search.png');
+  }
+
+  &.rounded {
+    font-weight: 400;
+    border-radius: 5px;
+    background: $c-gray16;
+
+    &:disabled {
+      background: $c-gray16;
+    }
+
+    &.active {
+      background: $c-gray15;
+    }
+  }
+
   &.c-gray {
     display: inline-block;
     padding: 4px 11px;

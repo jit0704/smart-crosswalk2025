@@ -32,3 +32,12 @@
   background-position: $bg-pos;
   background-size: $bg-size;
 }
+
+@mixin bgurl-roi($w, $h, $img, $bg-pos: 0 0, $bg-size: contain) {
+  width: $w;
+  height: $h;
+  background-image: url('/images/roi/#{$img}');
+  background-repeat: no-repeat;
+  background-position: $bg-pos;
+  background-size: $bg-size;
+}

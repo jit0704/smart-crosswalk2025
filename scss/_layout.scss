@@ -98,6 +98,45 @@
       flex: 1;
       margin-top: 23px;
     }
+
+    // 모니터링과 비슷한 레이아웃 타입2
+    &.type2 {
+      .ly-left {
+        width: 1260px;
+        margin-top: 33px;
+
+        & > aside {
+          height: 65px;
+          padding: 0 10px;
+          border-radius: 5px;
+          background: $c-white3;
+
+          .bind {
+            @include flexbox(row, flex-start, center);
+            gap: 0 20px;
+
+            .opt {
+              width: 200px;
+            }
+
+            .btn-bind {
+              @include flexbox(row, flex-start, center);
+              gap: 0 10px;
+            }
+          }
+        }
+      }
+
+      .monitoring-content {
+        height: calc(100vh - 285px);
+        margin-top: 19px;
+        padding: 10px;
+      }
+
+      .ly-right {
+        margin-top: 53px;
+      }
+    }
   }
 
   // 목록/상세
@@ -110,6 +149,24 @@
     .ly-right {
       flex: 1;
       margin-top: 28px;
+    }
+
+    &.filter {
+      position: relative;
+      height: calc(100vh - 220px);
+      padding-top: 98px;
+
+      .filter-area-container {
+        position: absolute;
+        top: 34px;
+        left: 0;
+        right: 0;
+      }
+
+      .list-container main,
+      .view-container main {
+        height: calc(100vh - 293px);
+      }
     }
   }
 }

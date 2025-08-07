@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제어관리 - ROI 설정 - 보행자</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/pub/includeHTML.js"></script>
+    <script defer src="/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/gnb.html"></nav>
+      <main class="main-container">
+        <section class="monitoring-container type2">
+          <div class="ly-left" include-html="/org/common/include/monitoring_type2.html"></div>
+          <div class="ly-right">
+            <article class="tab-container">
+              <header class="tab-header bot-line no-flex">
+                <a href="/org/ctrl/roiPedTab.html">차량 ROI</a>
+                <a href="/org/ctrl/roiVhcleTab.html" class="active">보행자 ROI</a>
+              </header>
+              <main class="information-container">
+                <div class="roi-container">
+                  <div class="row">
+                    <button type="button" class="btn-roi">횡단보도</button>
+                    <button type="button" class="btn-roi" disabled>도로</button>
+                    <button type="button" class="btn-roi active">구역</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="btn-roi">A 구역</button>
+                    <button type="button" class="btn-roi" disabled>B 구역</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="ic east">동</button>
+                    <button type="button" class="ic west">서</button>
+                    <button type="button" class="ic south">남</button>
+                    <button type="button" class="ic north">북</button>
+                    <button type="button" class="ic northeast">북동</button>
+                    <button type="button" class="ic southwest">남서</button>
+                    <button type="button" class="ic northwest">북서</button>
+                    <button type="button" class="ic southeast">남동</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="btn-roi">검지영역</button>
+                    <button type="button" class="btn-roi" disabled>대기영역</button>
+                    <button type="button" class="btn-roi" active>위험영역</button>
+                  </div>
+                  <div class="row result">
+                    <em class="txt-result">진입영역, 좌회전, 4차로</em>
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <button type="button">ROI 설정</button>
+                    <button type="button">취소</button>
+                    <button type="button">완료</button>
+                  </div>
+                </div>
+                <!-- //roi-container -->
+                <div class="view-container">
+                  <header class="administer-header">
+                    <em class="title sm bul">ROI 목록</em>
+                    <button type="button" class="btn"><i class="icon-save"></i>저장</button>
+                  </header>
+                  <div class="tbl-bind">
+                    <table class="tbl-centered sm">
+                      <colgroup>
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col style="width: 72px" />
+                      </colgroup>
+                      <thead>
+                        <th>Type</th>
+                        <th>영역</th>
+                        <th>방향</th>
+                        <th>점개수</th>
+                        <th>삭제</th>
+                      </thead>
+                      <tbody>
+                        <tr class="no-data">
+                          <td colspan="5">데이터가 없습니다.</td>
+                        </tr>
+                        <tr class="active">
+                          <td>횡단보도</td>
+                          <td>검지</td>
+                          <td>동</td>
+                          <td>5</td>
+                          <td>
+                            <a href="# " class="btn c-gray">삭제</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>횡단보도</td>
+                          <td>검지</td>
+                          <td>동</td>
+                          <td>5</td>
+                          <td>
+                            <a href="# " class="btn c-gray">삭제</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>횡단보도</td>
+                          <td>검지</td>
+                          <td>동</td>
+                          <td>5</td>
+                          <td>
+                            <a href="# " class="btn c-gray">삭제</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>횡단보도</td>
+                          <td>검지</td>
+                          <td>동</td>
+                          <td>5</td>
+                          <td>
+                            <a href="# " class="btn c-gray">삭제</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //tbl-bind -->
+                </div>
+                <!-- //view-container -->
+              </main>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/copyright.html"></footer>
+    </div>
+  </body>
+</html>

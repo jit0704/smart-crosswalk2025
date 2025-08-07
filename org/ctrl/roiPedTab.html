@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제어관리 - ROI 설정 - 차량</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/pub/includeHTML.js"></script>
+    <script defer src="/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/gnb.html"></nav>
+      <main class="main-container">
+        <section class="monitoring-container type2">
+          <div class="ly-left" include-html="/org/common/include/monitoring_type2.html"></div>
+          <div class="ly-right">
+            <article class="tab-container">
+              <header class="tab-header bot-line no-flex">
+                <a href="/org/ctrl/roiPedTab.html" class="active">차량 ROI</a>
+                <a href="/org/ctrl/roiVhcleTab.html">보행자 ROI</a>
+              </header>
+              <main class="information-container">
+                <div class="roi-container">
+                  <div class="row">
+                    <button type="button" class="btn-roi">진입영역</button>
+                    <button type="button" class="btn-roi" disabled>정지영역</button>
+                    <button type="button" class="btn-roi active">진출영역</button>
+                    <button type="button" class="btn-roi">반대영역</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="ic lane-straight">직진</button>
+                    <button type="button" class="ic lane-left-turn" disabled>좌회전</button>
+                    <button type="button" class="ic lane-right-turn active">우회전</button>
+                    <button type="button" class="ic lane-u-turn">유턴</button>
+                    <button type="button" class="ic lane-straight_left">직 · 좌</button>
+                    <button type="button" class="ic lane-straight_right">직 · 우</button>
+                    <button type="button" class="ic lane-left-uturn">좌 · 유</button>
+                    <button type="button" class="ic bus">버스</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="ic road1">1차로</button>
+                    <button type="button" class="ic road2">2차로</button>
+                    <button type="button" class="ic road3">3차로</button>
+                    <button type="button" class="ic road4">4차로</button>
+                    <button type="button" class="ic road5">5차로</button>
+                    <button type="button" class="ic road6">6차로</button>
+                    <button type="button" class="ic road7">7차로</button>
+                    <button type="button" class="ic road8">8차로</button>
+                  </div>
+                  <div class="row result">
+                    <em class="txt-result">진입영역, 좌회전, 4차로</em>
+                    <i>거리(m)</i>
+                    <input type="text" class="txt-field" />
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <button type="button">ROI 설정</button>
+                    <button type="button">취소</button>
+                    <button type="button">완료</button>
+                  </div>
+                </div>
+                <!-- //roi-container -->
+                <div class="view-container">
+                  <header class="administer-header">
+                    <em class="title sm bul">ROI 목록</em>
+                    <button type="button" class="btn"><i class="icon-save"></i>저장</button>
+                  </header>
+                  <div class="tbl-bind">
+                    <table class="tbl-centered sm">
+                      <colgroup>
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col style="width: 72px" />
+                      </colgroup>
+                      <thead>
+                        <th>Type</th>
+                        <th>차로</th>
+                        <th>방향</th>
+                        <th>점개수</th>
+                        <th>삭제</th>
+                      </thead>
+                      <tbody>
+                        <tr class="no-data">
+                          <td colspan="5">데이터가 없습니다.</td>
+                        </tr>
+                        <tr class="active">
+                          <td>진입</td>
+                          <td>1</td>
+                          <td>직진</td>
+                          <td>5</td>
+                          <td>
+                            <a href="# " class="btn c-gray">삭제</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>진입</td>
+                          <td>1</td>
+                          <td>직진</td>
+                          <td>5</td>
+                          <td>
+                            <a href="# " class="btn c-gray">삭제</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>진입</td>
+                          <td>1</td>
+                          <td>직진</td>
+                          <td>5</td>
+                          <td>
+                            <a href="# " class="btn c-gray">삭제</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>진입</td>
+                          <td>1</td>
+                          <td>직진</td>
+                          <td>5</td>
+                          <td>
+                            <a href="# " class="btn c-gray">삭제</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //tbl-bind -->
+                </div>
+                <!-- //view-container -->
+              </main>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/copyright.html"></footer>
+    </div>
+  </body>
+</html>

@@ -43,3 +43,19 @@
     }
   }
 }
+
+/*---------------------------------------------------------------
+  [제어관리 - 제어장비 동작 관리]
+  org\ctrl\cteqOpertMng.html
+-----------------------------------------------------------------*/
+.cteq-opert-mng-container {
+  .filter-area-container {
+    .opt {
+      width: 200px;
+    }
+  }
+
+  .view-container main .tbl-details {
+    height: auto;
+  }
+}

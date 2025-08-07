@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제어 관리</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/pub/includeHTML.js"></script>
+    <script defer src="/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/gnb.html"></nav>
+      <main class="main-container">
+        <section class="administer filter cteq-opert-mng-container">
+          <div class="filter-area-container">
+            <select class="opt sm">
+              <option value="">제어장비 유형</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <button type="button" class="btn-search"><span class="screen-out">검색 버튼</span></button>
+          </div>
+          <!-- //filter-area-container -->
+          <div class="ly-left">
+            <article class="list-container">
+              <header class="administer-header">
+                <em class="title">제어장비 동작</em>
+                <span class="btn-group">
+                  <button class="btn"><i class="icon-del"></i>삭제</button>
+                  <button class="btn"><i class="icon-add"></i>추가</button>
+                </span>
+              </header>
+              <main>
+                <table class="tbl-centered sm">
+                  <colgroup>
+                    <col style="width: 80px" />
+                    <col style="width: 80px" />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>NO</th>
+                      <th>제어장비 유형</th>
+                      <th>동작 코드</th>
+                      <th>동작 내용</th>
+                      <th>상시 동작</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="no-data">
+                      <td colspan="6">데이터가 없습니다.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>1</td>
+                      <td>VMS</td>
+                      <td>1</td>
+                      <td>안전운전 캠페인</td>
+                      <td>상시</td>
+                    </tr>
+                    <!-- 체크박스 활성화시 active 클래스 추가해주시면 됩니다 -->
+                    <tr class="active">
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>1</td>
+                      <td>VMS</td>
+                      <td>1</td>
+                      <td>안전운전 캠페인</td>
+                      <td>상시</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </main>
+            </article>
+          </div>
+          <div class="ly-right">
+            <article class="view-container">
+              <header class="administer-header">
+                <em class="title">상세정보</em>
+                <button class="btn"><i class="icon-save"></i>저장</button>
+              </header>
+              <main>
+                <div class="tbl-details">
+                  <table>
+                    <colgroup>
+                      <col style="width: 174px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>제어장비 유형 <i>*</i></th>
+                        <td>
+                          <select class="opt" disabled>
+                            <option value="">VMS</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>동작 코드<i>*</i></th>
+                        <td><input type="text" class="txt-field" disabled /></td>
+                      </tr>
+                      <tr>
+                        <th>동작 내용<i>*</i></th>
+                        <td>
+                          <textarea class="txt-area"></textarea>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>상시 동작<i>*</i></th>
+                        <td>
+                          <label>
+                            <input type="checkbox" class="inp-chkbox" />
+                            <i></i>&nbsp;&nbsp;상시
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>수정일시</th>
+                        <td>2021-11-01 10:35:01</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </main>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/copyright.html"></footer>
+    </div>
+  </body>
+</html>

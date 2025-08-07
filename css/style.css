@@ -281,6 +281,41 @@ video {
   flex: 1;
   margin-top: 23px;
 }
+.main-container .monitoring-container.type2 .ly-left {
+  width: 1260px;
+  margin-top: 33px;
+}
+.main-container .monitoring-container.type2 .ly-left > aside {
+  height: 65px;
+  padding: 0 10px;
+  border-radius: 5px;
+  background: #f2f6ff;
+}
+.main-container .monitoring-container.type2 .ly-left > aside .bind {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 20px;
+}
+.main-container .monitoring-container.type2 .ly-left > aside .bind .opt {
+  width: 200px;
+}
+.main-container .monitoring-container.type2 .ly-left > aside .bind .btn-bind {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 10px;
+}
+.main-container .monitoring-container.type2 .monitoring-content {
+  height: calc(100vh - 285px);
+  margin-top: 19px;
+  padding: 10px;
+}
+.main-container .monitoring-container.type2 .ly-right {
+  margin-top: 53px;
+}
 .main-container .administer .ly-left {
   width: 1081px;
   margin-top: 28px;
@@ -288,6 +323,21 @@ video {
 .main-container .administer .ly-right {
   flex: 1;
   margin-top: 28px;
+}
+.main-container .administer.filter {
+  position: relative;
+  height: calc(100vh - 220px);
+  padding-top: 98px;
+}
+.main-container .administer.filter .filter-area-container {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+}
+.main-container .administer.filter .list-container main,
+.main-container .administer.filter .view-container main {
+  height: calc(100vh - 293px);
 }
 
 /*---------------------------------------------------------------
@@ -363,6 +413,122 @@ video {
   flex: calc(50% - 3px);
   height: 50%;
   font-size: 0;
+}
+
+/*---------------------------------------------------------------
+  [필터 컴포넌트]
+-----------------------------------------------------------------*/
+.filter-area-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  height: 65px;
+  padding: 0 10px;
+  background: #f2f6ff;
+}
+
+/*---------------------------------------------------------------
+  [ROI 컴포넌트]
+-----------------------------------------------------------------*/
+.roi-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #f2f6ff;
+}
+.roi-container .row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+.roi-container .row button {
+  flex: 1;
+}
+.roi-container .btn-roi {
+  line-height: 35px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #1c3d74;
+  background: #fff;
+}
+.roi-container .btn-roi:disabled {
+  color: #adb4c4;
+  background: #e6eaf3;
+}
+.roi-container .btn-roi.active {
+  color: #fff;
+  background: #576376;
+}
+.roi-container .ic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 15px 0;
+  color: #1c3d74;
+  border-radius: 5px;
+  background: #fff;
+}
+.roi-container .ic::after {
+  content: "";
+}
+.roi-container .ic.lane-straight::after {
+  width: 9px;
+  height: 21px;
+  background-image: url("/images/roi/straight.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-straight:disabled {
+  opacity: 0.4;
+  background: #adb4c4;
+}
+.roi-container .ic.lane-straight.active {
+  color: #fff;
+  background: #576376;
+}
+.roi-container .ic.lane-straight.active::after {
+  width: 9px;
+  height: 21px;
+  background-image: url("/images/roi/straight_white.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-left-turn::after {
+  width: 15px;
+  height: 15px;
+  background-image: url("/images/roi/left_utern.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-left-turn:disabled {
+  opacity: 0.4;
+  background: #adb4c4;
+}
+.roi-container .ic.lane-left-turn.active {
+  color: #fff;
+  background: #576376;
+}
+.roi-container .ic.lane-left-turn.active::after {
+  width: 15px;
+  height: 15px;
+  background-image: url("/images/roi/left_utern_white.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
 }
 
 /*---------------------------------------------------------------
@@ -454,6 +620,25 @@ video {
   justify-content: flex-start;
   align-items: center;
   gap: 0 10px;
+}
+.btn-search {
+  width: 35px;
+  height: 35px;
+  background-image: url("/images/icon_search.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.btn.rounded {
+  font-weight: 400;
+  border-radius: 5px;
+  background: #d5ddef;
+}
+.btn.rounded:disabled {
+  background: #d5ddef;
+}
+.btn.rounded.active {
+  background: #768fca;
 }
 .btn.c-gray {
   display: inline-block;
@@ -751,6 +936,15 @@ table tr.no-data {
   background: rgba(247, 248, 249, 0.96);
 }
 
+.txt-area {
+  height: 100px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ced4dd;
+  background: #fff;
+}
+
 .opt {
   width: 100%;
   height: 40px;
@@ -761,6 +955,9 @@ table tr.no-data {
 }
 .opt:disabled {
   background: rgba(247, 248, 249, 0.96);
+}
+.opt.sm {
+  height: 35px;
 }
 
 .resolution {
@@ -803,6 +1000,13 @@ table tr.no-data {
   border-radius: 5px 5px 0px 0px;
   background: #1c3d74;
 }
+.tab-header.bot-line {
+  border-bottom: 1px solid #394250;
+}
+.tab-header.no-flex a {
+  flex: none;
+  min-width: 170px;
+}
 
 /*---------------------------------------------------------------
   [모니터링 - 정보]
@@ -833,6 +1037,17 @@ table tr.no-data {
 }
 .monitoring-container .view-container .tbl-details table {
   height: 100%;
+}
+
+/*---------------------------------------------------------------
+  [제어관리 - 제어장비 동작 관리]
+  org\ctrl\cteqOpertMng.html
+-----------------------------------------------------------------*/
+.cteq-opert-mng-container .filter-area-container .opt {
+  width: 200px;
+}
+.cteq-opert-mng-container .view-container main .tbl-details {
+  height: auto;
 }
 
 .is-edge-browser {

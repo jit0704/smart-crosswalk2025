@@ -21,6 +21,109 @@
 }
 
 /*---------------------------------------------------------------
+  [필터 컴포넌트]
+-----------------------------------------------------------------*/
+.filter-area-container {
+  @include flexbox(row, flex-start, center);
+  gap: 10px;
+  height: 65px;
+  padding: 0 10px;
+  background: $c-white3;
+}
+
+/*---------------------------------------------------------------
+  [ROI 컴포넌트]
+-----------------------------------------------------------------*/
+.roi-container {
+  @include flexbox(column, flex-start, flex-start);
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background: $c-white3;
+
+  .row {
+    width: 100%;
+    @include flexbox(row, flex-start, flex-start);
+    gap: 10px;
+
+    button {
+      flex: 1;
+    }
+  }
+
+  .btn-roi {
+    line-height: 35px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: $c-blue2;
+    background: $c-white0;
+
+    &:disabled {
+      color: $c-gray18;
+      background: $c-gray17;
+    }
+
+    &.active {
+      color: $c-white0;
+      background: $c-black4;
+    }
+  }
+
+  .ic {
+    @include flexbox(column, space-between, center);
+    height: 80px;
+    padding: 15px 0;
+    color: $c-blue2;
+    border-radius: 5px;
+    background: $c-white0;
+
+    &::after {
+      content: '';
+    }
+
+    &.lane-straight {
+      &::after {
+        @include bgurl-roi($w: 9px, $h: 21px, $img: 'straight.png');
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        background: $c-gray18;
+      }
+
+      &.active {
+        color: $c-white0;
+        background: $c-black4;
+
+        &::after {
+          @include bgurl-roi($w: 9px, $h: 21px, $img: 'straight_white.png');
+        }
+      }
+    }
+
+    &.lane-left-turn {
+      &::after {
+        @include bgurl-roi($w: 15px, $h: 15px, $img: 'left_utern.png');
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        background: $c-gray18;
+      }
+
+      &.active {
+        color: $c-white0;
+        background: $c-black4;
+
+        &::after {
+          @include bgurl-roi($w: 15px, $h: 15px, $img: 'left_utern_white.png');
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------------------
   [목록, 상세 공통]
 -----------------------------------------------------------------*/
 .administer-header {
