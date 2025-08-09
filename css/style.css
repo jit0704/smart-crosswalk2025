@@ -192,7 +192,7 @@ video {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px 19px;
+  padding: 0 30px;
   line-height: normal;
   background: #f1f2f5;
   box-shadow: none;
@@ -228,30 +228,87 @@ video {
   background-size: contain;
 }
 
-.gnb-wrap {
+.gnb-depth-1 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 1110px;
 }
-.gnb-wrap .mega-menu {
-  font-size: 22px;
-  color: #666;
+.gnb-depth-1 .depth-1 {
+  position: relative;
+  z-index: 10;
+  line-height: 78px;
 }
-.gnb-wrap .mega-menu.active {
+.gnb-depth-1 .depth-1.active {
   position: relative;
   font-weight: 700;
+}
+.gnb-depth-1 .depth-1.active .depth-1-link {
   color: #004;
 }
-.gnb-wrap .mega-menu.active::before {
+.gnb-depth-1 .depth-1.active::before {
   content: "";
   position: absolute;
   left: -36px;
   right: -36px;
-  bottom: -22px;
+  bottom: 0;
   height: 5px;
   border-radius: 5px 5px 0 0;
+  background: #004;
+}
+.gnb-depth-1 .depth-1.active .depth-item,
+.gnb-depth-1 .depth-1.active .gnb-depth-2 {
+  visibility: visible;
+  opacity: 1;
+}
+.gnb-depth-1 .depth-1-link {
+  font-size: 22px;
+  color: #666;
+}
+.gnb-depth-1 .depth-item {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: 90px;
+  left: -65px;
+  width: 210px;
+  height: 0;
+  text-align: center;
+  border: 0.5px solid #ced4dd;
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.gnb-depth-1 .gnb-depth-2 {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.gnb-depth-1 .gnb-depth-2 .depth-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px 0;
+}
+.gnb-depth-1 .gnb-depth-2 .depth-2 .depth-2-link {
+  line-height: 20px;
+  font-size: 20px;
+  color: #666;
+  font-weight: 400;
+}
+.gnb-depth-1 .gnb-depth-2 .depth-2 .depth-2-link:first-child {
+  color: #004;
+  font-weight: 700;
+}
+.gnb-depth-1 .gnb-depth-2 .depth-2 .depth-2-link:first-child::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  margin: 20px auto;
   background: #004;
 }
 
