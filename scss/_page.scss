@@ -45,6 +45,43 @@
 }
 
 /*---------------------------------------------------------------
+  [모니터링 - 검지 현황]
+  org\mntr\scanning.html
+-----------------------------------------------------------------*/
+.scanning-container {
+  .tbl-bind {
+    height: calc(100vh - 649px);
+    border-top: 1px solid $c-black2;
+  }
+
+  & > .view-container {
+    &:first-child {
+      .administer-header {
+        margin: 16px 0 10px;
+      }
+    }
+
+    &:last-child {
+      margin-top: 41px;
+
+      .administer-header {
+        margin: 0 0 15px;
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------------------
+  [모니터링 - 제어 현황]
+  org\mntr\controller.html
+-----------------------------------------------------------------*/
+.controller-container {
+  .administer-header {
+    margin: 26px 0 14px;
+  }
+}
+
+/*---------------------------------------------------------------
   [제어관리 - 제어장비 동작 관리]
   org\ctrl\cteqOpertMng.html
 -----------------------------------------------------------------*/
@@ -57,5 +94,25 @@
 
   .view-container main .tbl-details {
     height: auto;
+  }
+}
+
+/*---------------------------------------------------------------
+  [설정관리 - 로그 확인]
+  org\setup\logMng.html
+-----------------------------------------------------------------*/
+.log-mng-container.administer {
+  .ly-left {
+    width: 505px;
+  }
+
+  .view-container main {
+    height: calc(100vh - 205px);
+  }
+
+  .log-container {
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid $c-gray5;
   }
 }

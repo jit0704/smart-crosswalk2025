@@ -13,6 +13,18 @@
   &-save {
     @include bgurl($w: 16px, $h: 15px, $img: 'icon_save.png');
   }
+
+  &-reset {
+    @include bgurl($w: 17px, $h: 19px, $img: 'icon_spin_arrow.png');
+  }
+
+  &-lock {
+    @include bgurl($w: 15px, $h: 19px, $img: 'icon_lock.png');
+  }
+
+  &-down {
+    @include bgurl($w: 15px, $h: 19px, $img: 'icon_down.png');
+  }
 }
 
 .roi-mark {

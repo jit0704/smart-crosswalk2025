@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>제어장비 동작 관리</title>
+    <title>운영자 관리</title>
     <link rel="stylesheet" href="/css/common.css" />
     <script defer src="/js/pub/includeHTML.js"></script>
     <script defer src="/js/util/ui.js"></script>
@@ -12,21 +12,11 @@
     <div class="ly-container">
       <nav class="gnb-container" include-html="/org/common/include/gnb.html"></nav>
       <main class="main-container">
-        <section class="administer filter cteq-opert-mng-container">
-          <div class="filter-area-container">
-            <select class="opt sm">
-              <option value="">제어장비 유형</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-            </select>
-            <button type="button" class="btn-search"><span class="screen-out">검색 버튼</span></button>
-          </div>
-          <!-- //filter-area-container -->
+        <section class="administer oprtr-mng-container">
           <div class="ly-left">
             <article class="list-container">
               <header class="administer-header">
-                <em class="title">제어장비 동작</em>
+                <em class="title">운영자</em>
                 <span class="btn-group">
                   <button class="btn"><i class="icon-del"></i>삭제</button>
                   <button class="btn"><i class="icon-add"></i>추가</button>
@@ -46,10 +36,10 @@
                     <tr>
                       <th></th>
                       <th>NO</th>
-                      <th>제어장비 유형</th>
-                      <th>동작 코드</th>
-                      <th>동작 내용</th>
-                      <th>상시 동작</th>
+                      <th>운영자 ID</th>
+                      <th>운영자 명</th>
+                      <th>이메일 주소</th>
+                      <th>전화번호</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -64,10 +54,10 @@
                         </label>
                       </td>
                       <td>1</td>
-                      <td>VMS</td>
-                      <td>1</td>
-                      <td>안전운전 캠페인</td>
-                      <td>상시</td>
+                      <td>manager</td>
+                      <td>운영자</td>
+                      <td>1234@test.com</td>
+                      <td>010-1234-5698</td>
                     </tr>
                     <!-- 체크박스 활성화시 active 클래스 추가해주시면 됩니다 -->
                     <tr class="active">
@@ -78,10 +68,10 @@
                         </label>
                       </td>
                       <td>1</td>
-                      <td>VMS</td>
-                      <td>1</td>
-                      <td>안전운전 캠페인</td>
-                      <td>상시</td>
+                      <td>manager</td>
+                      <td>운영자</td>
+                      <td>1234@test.com</td>
+                      <td>010-1234-5698</td>
                     </tr>
                   </tbody>
                 </table>
@@ -92,10 +82,13 @@
             <article class="view-container">
               <header class="administer-header">
                 <em class="title">상세정보</em>
-                <button class="btn"><i class="icon-save"></i>저장</button>
+                <span class="btn-group">
+                  <button class="btn"><i class="icon-lock"></i>비밀번호 변경</button>
+                  <button class="btn"><i class="icon-save"></i>저장</button>
+                </span>
               </header>
               <main>
-                <div class="tbl-details">
+                <div class="tbl-details h-auto">
                   <table>
                     <colgroup>
                       <col style="width: 174px" />
@@ -103,33 +96,38 @@
                     </colgroup>
                     <tbody>
                       <tr>
-                        <th>제어장비 유형 <i>*</i></th>
+                        <th>운영자 ID <i>*</i></th>
                         <td>
-                          <select class="opt" disabled>
-                            <option value="">VMS</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                          </select>
+                          <span class="txt-field-group">
+                            <input type="text" class="txt-field" />
+                            <button type="button" class="btn md c-gray">중복확인</button>
+                          </span>
                         </td>
                       </tr>
                       <tr>
-                        <th>동작 코드<i>*</i></th>
-                        <td><input type="text" class="txt-field" disabled /></td>
+                        <th>운영자 명<i>*</i></th>
+                        <td><input type="text" class="txt-field" /></td>
                       </tr>
                       <tr>
-                        <th>동작 내용<i>*</i></th>
+                        <th>이메일 주소<i>*</i></th>
                         <td>
-                          <textarea class="txt-area"></textarea>
+                          <span class="txt-field-group">
+                            <input type="text" class="txt-field" />
+                            <button type="button" class="btn md c-gray">중복확인</button>
+                          </span>
                         </td>
                       </tr>
                       <tr>
-                        <th>상시 동작<i>*</i></th>
-                        <td>
-                          <label>
-                            <input type="checkbox" class="inp-chkbox" />
-                            <i></i>&nbsp;&nbsp;상시
-                          </label>
-                        </td>
+                        <th>전화번호<i>*</i></th>
+                        <td><input type="text" class="txt-field" /></td>
+                      </tr>
+                      <tr>
+                        <th>최종접속일시</th>
+                        <td>2021-07-21 15:23:21</td>
+                      </tr>
+                      <tr>
+                        <th>수정자 ID</th>
+                        <td>운영자</td>
                       </tr>
                       <tr>
                         <th>수정일시</th>

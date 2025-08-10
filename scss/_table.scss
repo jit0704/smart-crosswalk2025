@@ -54,6 +54,15 @@ table {
         }
       }
     }
+
+    &.xs {
+      tbody {
+        td {
+          height: 38px;
+          font-size: 14px;
+        }
+      }
+    }
   }
 
   &-details {

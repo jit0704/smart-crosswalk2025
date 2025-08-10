@@ -24,6 +24,26 @@
     @include bgurl($w: 35px, $h: 35px, $img: 'icon_search.png');
   }
 
+  &-close {
+    @include bgurl($w: 16px, $h: 16px, $img: 'icon_close_gray.png');
+  }
+
+  &.positive {
+    display: block;
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
+    font-weight: 400;
+  }
+
+  &.cancel {
+    display: block;
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
+    color: $c-gray14;
+    font-weight: 400;
+    background: $c-gray10;
+  }
+
   &.rounded {
     font-weight: 400;
     border-radius: 5px;
@@ -46,5 +66,10 @@
     border: 0.5px solid $c-gray13;
     background: $c-gray14;
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+
+    &.md {
+      min-width: 100px;
+      padding: 8px 11px;
+    }
   }
 }

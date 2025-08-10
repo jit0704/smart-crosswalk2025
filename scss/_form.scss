@@ -110,8 +110,25 @@
   border: 1px solid $c-gray5;
   background: $c-white0;
 
+  &.lg {
+    line-height: 50px;
+  }
+
+  &::placeholder {
+    color: $c-gray3;
+  }
+
   &:disabled {
     background: rgba(247, 248, 249, 0.96);
+  }
+}
+
+.txt-field-group {
+  @include flexbox(row, flex-start, center);
+  gap: 0 10px;
+
+  .txt-field {
+    flex: 1;
   }
 }
 

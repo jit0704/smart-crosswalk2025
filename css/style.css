@@ -138,6 +138,10 @@ video {
   object-fit: fill;
 }
 
+dialog {
+  border: 0;
+}
+
 /*---------------------------------------------------------------
   [웹폰트 KoPubWorldDotum]
 -----------------------------------------------------------------*/
@@ -487,6 +491,57 @@ video {
 }
 
 /*---------------------------------------------------------------
+  [VMS 제어 컴포넌트]
+-----------------------------------------------------------------*/
+.controller-display-container {
+  overflow-y: auto;
+  height: calc(100vh - 250px);
+  padding: 20px 10px;
+  border-radius: 5px;
+  background: #f2f6ff;
+  box-sizing: border-box;
+}
+.controller-display-container li {
+  padding: 12px 20px 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4dd;
+  background: #fff;
+}
+.controller-display-container li + li {
+  margin-top: 17px;
+}
+.controller-display-container .display-item {
+  margin-top: 10px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 5px;
+  background: #262626;
+}
+.controller-display-container .display-item.c-red {
+  color: #fa4242;
+}
+.controller-display-container .display-item.c-yellow {
+  color: #fff600;
+}
+.controller-display-container .display-item.c-yellow-green {
+  color: #a6ff00;
+}
+.controller-display-container .display-item.bg-brown {
+  color: #fff;
+  background: #570000;
+}
+.controller-display-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #1c3d74;
+  font-weight: 700;
+}
+
+/*---------------------------------------------------------------
   [ROI 컴포넌트]
 -----------------------------------------------------------------*/
 .roi-container {
@@ -597,6 +652,10 @@ video {
   justify-content: space-between;
   align-items: center;
 }
+.administer-header.bot-line {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #394250;
+}
 .administer-header .title {
   line-height: 22px;
   font-size: 20px;
@@ -622,6 +681,13 @@ video {
   background-position: 0 0;
   background-size: contain;
 }
+.administer-header .bind {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 10px;
+}
 
 /*---------------------------------------------------------------
   [목록]
@@ -642,6 +708,9 @@ video {
 }
 .view-container main .tbl-details {
   height: 100%;
+}
+.view-container main .tbl-details.h-auto {
+  height: auto;
 }
 .view-container main .tbl-details table {
   height: 100%;
@@ -686,6 +755,28 @@ video {
   background-position: 0 0;
   background-size: contain;
 }
+.btn-close {
+  width: 16px;
+  height: 16px;
+  background-image: url("/images/icon_close_gray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.btn.positive {
+  display: block;
+  padding-top: 11.5px;
+  padding-bottom: 11.5px;
+  font-weight: 400;
+}
+.btn.cancel {
+  display: block;
+  padding-top: 11.5px;
+  padding-bottom: 11.5px;
+  color: #8795b2;
+  font-weight: 400;
+  background: #e6e9ee;
+}
 .btn.rounded {
   font-weight: 400;
   border-radius: 5px;
@@ -705,6 +796,10 @@ video {
   border: 0.5px solid #5f687c;
   background: #8795b2;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+.btn.c-gray.md {
+  min-width: 100px;
+  padding: 8px 11px;
 }
 
 /*---------------------------------------------------------------
@@ -730,6 +825,30 @@ video {
   width: 16px;
   height: 15px;
   background-image: url("/images/icon_save.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.icon-reset {
+  width: 17px;
+  height: 19px;
+  background-image: url("/images/icon_spin_arrow.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.icon-lock {
+  width: 15px;
+  height: 19px;
+  background-image: url("/images/icon_lock.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.icon-down {
+  width: 15px;
+  height: 19px;
+  background-image: url("/images/icon_down.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -856,6 +975,10 @@ table tr.no-data {
 }
 .tbl-centered.sm tbody td {
   height: 60px;
+  font-size: 14px;
+}
+.tbl-centered.xs tbody td {
+  height: 38px;
   font-size: 14px;
 }
 .tbl-details {
@@ -989,8 +1112,25 @@ table tr.no-data {
   border: 1px solid #ced4dd;
   background: #fff;
 }
+.txt-field.lg {
+  line-height: 50px;
+}
+.txt-field::placeholder {
+  color: #aeaeae;
+}
 .txt-field:disabled {
   background: rgba(247, 248, 249, 0.96);
+}
+
+.txt-field-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 10px;
+}
+.txt-field-group .txt-field {
+  flex: 1;
 }
 
 .txt-area {
@@ -1066,6 +1206,44 @@ table tr.no-data {
 }
 
 /*---------------------------------------------------------------
+  [모달 팝업]
+-----------------------------------------------------------------*/
+.dialog-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 44px 38px 30px;
+  border: 1px solid #ced4dd;
+  border-top-color: #004;
+}
+.dialog-modal .btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.dialog-modal-container header {
+  margin-bottom: 3px;
+  color: #0b2755;
+  font-size: 20px;
+  font-weight: 700;
+}
+.dialog-modal-body .txt-field + .txt-field {
+  margin-top: 10px;
+}
+.dialog-modal-btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 8px;
+  margin-top: 30px;
+}
+.dialog-modal-btn-group .btn {
+  flex: 1;
+}
+
+/*---------------------------------------------------------------
   [모니터링 - 정보]
   /mntr/information.html
 -----------------------------------------------------------------*/
@@ -1097,6 +1275,32 @@ table tr.no-data {
 }
 
 /*---------------------------------------------------------------
+  [모니터링 - 검지 현황]
+  org\mntr\scanning.html
+-----------------------------------------------------------------*/
+.scanning-container .tbl-bind {
+  height: calc(100vh - 649px);
+  border-top: 1px solid #394250;
+}
+.scanning-container > .view-container:first-child .administer-header {
+  margin: 16px 0 10px;
+}
+.scanning-container > .view-container:last-child {
+  margin-top: 41px;
+}
+.scanning-container > .view-container:last-child .administer-header {
+  margin: 0 0 15px;
+}
+
+/*---------------------------------------------------------------
+  [모니터링 - 제어 현황]
+  org\mntr\controller.html
+-----------------------------------------------------------------*/
+.controller-container .administer-header {
+  margin: 26px 0 14px;
+}
+
+/*---------------------------------------------------------------
   [제어관리 - 제어장비 동작 관리]
   org\ctrl\cteqOpertMng.html
 -----------------------------------------------------------------*/
@@ -1105,6 +1309,22 @@ table tr.no-data {
 }
 .cteq-opert-mng-container .view-container main .tbl-details {
   height: auto;
+}
+
+/*---------------------------------------------------------------
+  [설정관리 - 로그 확인]
+  org\setup\logMng.html
+-----------------------------------------------------------------*/
+.log-mng-container.administer .ly-left {
+  width: 505px;
+}
+.log-mng-container.administer .view-container main {
+  height: calc(100vh - 205px);
+}
+.log-mng-container.administer .log-container {
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #ced4dd;
 }
 
 .is-edge-browser {

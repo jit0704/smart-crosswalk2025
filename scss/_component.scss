@@ -32,6 +32,64 @@
 }
 
 /*---------------------------------------------------------------
+  [VMS 제어 컴포넌트]
+-----------------------------------------------------------------*/
+.controller-display {
+  &-container {
+    overflow-y: auto;
+    height: calc(100vh - 250px);
+    padding: 20px 10px;
+    border-radius: 5px;
+    background: $c-white3;
+    box-sizing: border-box;
+
+    li {
+      padding: 12px 20px 10px;
+      border-radius: 5px;
+      border: 1px solid $c-gray5;
+      background: $c-white0;
+
+      & + li {
+        margin-top: 17px;
+      }
+    }
+
+    .display-item {
+      margin-top: 10px;
+      line-height: 45px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      border-radius: 5px;
+      background: $c-black5;
+
+      &.c-red {
+        color: $c-red2;
+      }
+
+      &.c-yellow {
+        color: $c-yellow1;
+      }
+
+      &.c-yellow-green {
+        color: $c-yellow-green;
+      }
+
+      &.bg-brown {
+        color: $c-white0;
+        background: $c-brown3;
+      }
+    }
+  }
+
+  &-header {
+    @include flexbox(row, space-between, center);
+    color: $c-blue2;
+    font-weight: 700;
+  }
+}
+
+/*---------------------------------------------------------------
   [ROI 컴포넌트]
 -----------------------------------------------------------------*/
 .roi-container {
@@ -129,6 +187,11 @@
 .administer-header {
   @include flexbox(row, space-between, center);
 
+  &.bot-line {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $c-black2;
+  }
+
   .title {
     line-height: 22px;
     font-size: 20px;
@@ -148,6 +211,11 @@
         @include bgurl($w: 15px, $h: 15px, $img: 'icon_bul1.png');
       }
     }
+  }
+
+  .bind {
+    @include flexbox(row, flex-start, center);
+    gap: 0 10px;
   }
 }
 
@@ -174,6 +242,10 @@
 
     .tbl-details {
       height: 100%;
+
+      &.h-auto {
+        height: auto;
+      }
 
       table {
         height: 100%;

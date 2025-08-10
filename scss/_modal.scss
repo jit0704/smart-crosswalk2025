@@ -1,0 +1,45 @@
+/*---------------------------------------------------------------
+  [모달 팝업]
+-----------------------------------------------------------------*/
+.dialog-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 44px 38px 30px;
+  border: 1px solid $c-gray5;
+  border-top-color: $c-blue1;
+
+  .btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  &-container {
+    header {
+      margin-bottom: 3px;
+      color: $c-blue3;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  &-body {
+    .txt-field {
+      & + .txt-field {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &-btn-group {
+    @include flexbox(row, flex-start, center);
+    gap: 0 8px;
+    margin-top: 30px;
+
+    .btn {
+      flex: 1;
+    }
+  }
+}
