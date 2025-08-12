@@ -98,6 +98,118 @@
 }
 
 /*---------------------------------------------------------------
+  [제어관리 - 제어장비 항목 관리]
+  org/ctrl/cteqIemMng.html
+-----------------------------------------------------------------*/
+.cteq-lem-mng-container {
+  .filter-area-container {
+    .opt {
+      width: 200px;
+    }
+  }
+
+  .ly-right {
+    margin-top: 16px !important;
+
+    .view-container main {
+      height: auto !important;
+      margin-top: 0;
+
+      & > .tbl-centered {
+        margin-top: 9px;
+      }
+    }
+
+    .tbl-centered ~ .administer-header {
+      margin-top: 43px;
+    }
+
+    .tbl-bind {
+      overflow-y: auto;
+      height: calc(100vh - 475px);
+      margin-top: 8px;
+      border-bottom: 1px solid $c-gray7;
+
+      .tbl-centered {
+        .opt {
+          width: 300px;
+        }
+
+        .txt-field {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------------------
+  [제어관리 - 제어장비 연동 관리]
+  org/ctrl/cteqIntrlckMng.html
+-----------------------------------------------------------------*/
+.cteq-intrlck-mng-container {
+  .filter-area-container {
+    .opt {
+      width: 200px;
+    }
+  }
+
+  .ly-right {
+    margin-top: 16px !important;
+
+    .view-container main {
+      height: calc(100vh - 249px) !important;
+      margin-top: 0;
+      border-bottom: 1px solid $c-gray7;
+    }
+
+    .sec1 {
+      .tbl-centered {
+        margin-top: 9px;
+
+        &.fields {
+          tbody {
+            td {
+              height: 60px;
+            }
+          }
+
+          .txt-field {
+            width: 120px;
+            line-height: 43px;
+            text-align: center;
+            color: $c-red3;
+          }
+        }
+      }
+    }
+
+    .sec2 {
+      margin-top: 36px;
+
+      .tbl-centered {
+        margin-top: 7px;
+      }
+    }
+
+    .sec3 {
+      margin-top: 38px;
+
+      .administer-header {
+        .bind {
+          font-size: 13px;
+          color: $c-gray19;
+        }
+      }
+    }
+  }
+
+  .movement-select-container {
+    margin-top: 5px;
+  }
+}
+
+/*---------------------------------------------------------------
   [설정관리 - 로그 확인]
   org\setup\logMng.html
 -----------------------------------------------------------------*/

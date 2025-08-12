@@ -644,6 +644,41 @@ dialog {
 }
 
 /*---------------------------------------------------------------
+  [동작 코드]
+-----------------------------------------------------------------*/
+.movement-select-container {
+  border-top: 1px solid #394250;
+}
+.movement-select-container label {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #ced4dd;
+}
+.movement-select-container label input {
+  display: none;
+}
+.movement-select-container label input:checked + .movement {
+  background: #f4f7ff;
+}
+.movement-select-container label .movement {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0 20px;
+  line-height: 50px;
+  background: #fff;
+  transition: background 0.2s;
+}
+.movement-select-container label .movement span:first-child {
+  width: 100px;
+  text-align: center;
+}
+.movement-select-container label .movement span:last-child {
+  flex: 1;
+}
+
+/*---------------------------------------------------------------
   [목록, 상세 공통]
 -----------------------------------------------------------------*/
 .administer-header {
@@ -970,12 +1005,24 @@ table tr.no-data {
 .tbl-centered tbody tr.active {
   background: #f4f7ff;
 }
+.tbl-centered.bg thead th {
+  background: #f3f5f9;
+}
 .tbl-centered.sm thead th {
   font-size: 14px;
 }
 .tbl-centered.sm tbody td {
   height: 60px;
   font-size: 14px;
+}
+.tbl-centered.sm.fields thead th {
+  background: #f3f5f9;
+}
+.tbl-centered.sm.fields tbody td {
+  height: 50px;
+}
+.tbl-centered.sm.fields tbody td .txt-field {
+  line-height: 33px;
 }
 .tbl-centered.xs tbody td {
   height: 38px;
@@ -1309,6 +1356,83 @@ table tr.no-data {
 }
 .cteq-opert-mng-container .view-container main .tbl-details {
   height: auto;
+}
+
+/*---------------------------------------------------------------
+  [제어관리 - 제어장비 항목 관리]
+  org/ctrl/cteqIemMng.html
+-----------------------------------------------------------------*/
+.cteq-lem-mng-container .filter-area-container .opt {
+  width: 200px;
+}
+.cteq-lem-mng-container .ly-right {
+  margin-top: 16px !important;
+}
+.cteq-lem-mng-container .ly-right .view-container main {
+  height: auto !important;
+  margin-top: 0;
+}
+.cteq-lem-mng-container .ly-right .view-container main > .tbl-centered {
+  margin-top: 9px;
+}
+.cteq-lem-mng-container .ly-right .tbl-centered ~ .administer-header {
+  margin-top: 43px;
+}
+.cteq-lem-mng-container .ly-right .tbl-bind {
+  overflow-y: auto;
+  height: calc(100vh - 475px);
+  margin-top: 8px;
+  border-bottom: 1px solid #959da9;
+}
+.cteq-lem-mng-container .ly-right .tbl-bind .tbl-centered .opt {
+  width: 300px;
+}
+.cteq-lem-mng-container .ly-right .tbl-bind .tbl-centered .txt-field {
+  width: 150px;
+}
+
+/*---------------------------------------------------------------
+  [제어관리 - 제어장비 연동 관리]
+  org/ctrl/cteqIntrlckMng.html
+-----------------------------------------------------------------*/
+.cteq-intrlck-mng-container .filter-area-container .opt {
+  width: 200px;
+}
+.cteq-intrlck-mng-container .ly-right {
+  margin-top: 16px !important;
+}
+.cteq-intrlck-mng-container .ly-right .view-container main {
+  height: calc(100vh - 249px) !important;
+  margin-top: 0;
+  border-bottom: 1px solid #959da9;
+}
+.cteq-intrlck-mng-container .ly-right .sec1 .tbl-centered {
+  margin-top: 9px;
+}
+.cteq-intrlck-mng-container .ly-right .sec1 .tbl-centered.fields tbody td {
+  height: 60px;
+}
+.cteq-intrlck-mng-container .ly-right .sec1 .tbl-centered.fields .txt-field {
+  width: 120px;
+  line-height: 43px;
+  text-align: center;
+  color: #ff6060;
+}
+.cteq-intrlck-mng-container .ly-right .sec2 {
+  margin-top: 36px;
+}
+.cteq-intrlck-mng-container .ly-right .sec2 .tbl-centered {
+  margin-top: 7px;
+}
+.cteq-intrlck-mng-container .ly-right .sec3 {
+  margin-top: 38px;
+}
+.cteq-intrlck-mng-container .ly-right .sec3 .administer-header .bind {
+  font-size: 13px;
+  color: #707070;
+}
+.cteq-intrlck-mng-container .movement-select-container {
+  margin-top: 5px;
 }
 
 /*---------------------------------------------------------------

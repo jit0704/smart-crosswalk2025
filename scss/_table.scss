@@ -40,6 +40,14 @@ table {
       }
     }
 
+    &.bg {
+      thead {
+        th {
+          background: #f3f5f9;
+        }
+      }
+    }
+
     &.sm {
       thead {
         th {
@@ -51,6 +59,24 @@ table {
         td {
           height: 60px;
           font-size: 14px;
+        }
+      }
+
+      &.fields {
+        thead {
+          th {
+            background: #f3f5f9;
+          }
+        }
+
+        tbody {
+          td {
+            height: 50px;
+
+            .txt-field {
+              line-height: 33px;
+            }
+          }
         }
       }
     }

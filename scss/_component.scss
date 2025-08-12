@@ -182,6 +182,48 @@
 }
 
 /*---------------------------------------------------------------
+  [동작 코드]
+-----------------------------------------------------------------*/
+.movement-select-container {
+  border-top: 1px solid $c-black2;
+
+  label {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $c-gray5;
+
+    input {
+      display: none;
+
+      &:checked {
+        & + .movement {
+          background: $c-white2;
+        }
+      }
+    }
+
+    .movement {
+      @include flexbox(row, flex-start, flex-start);
+      gap: 0 20px;
+      line-height: 50px;
+      background: $c-white0;
+      transition: background 0.2s;
+
+      span {
+        &:first-child {
+          width: 100px;
+          text-align: center;
+        }
+
+        &:last-child {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------------------
   [목록, 상세 공통]
 -----------------------------------------------------------------*/
 .administer-header {
