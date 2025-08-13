@@ -82,6 +82,57 @@
 }
 
 /*---------------------------------------------------------------
+  [장비 관리 - 카메라SW 설정 관리	]
+  /org/eqpmn/cameraSwSetupMng.html
+-----------------------------------------------------------------*/
+.camera-sw-setup-mng-container {
+  .ly-right {
+    .view-container > main {
+      @include flexbox(column, flex-start, flex-start);
+      gap: 18px 0;
+      height: calc(100vh - 163px);
+      margin-top: 0;
+
+      & > section {
+        width: 100%;
+      }
+    }
+
+    .sec1 {
+      .tbl-details {
+        height: auto;
+        margin-top: 10px;
+
+        .opt {
+          width: 130px;
+        }
+
+        .integer {
+          font-size: 18px;
+          color: $c-gray20;
+        }
+
+        .stuck {
+          color: $c-blue2;
+          text-align: center;
+        }
+      }
+    }
+
+    .sec2 {
+      flex: 1;
+    }
+
+    .log-container {
+      height: calc(100% - 43px);
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid $c-gray5;
+    }
+  }
+}
+
+/*---------------------------------------------------------------
   [제어관리 - 제어장비 동작 관리]
   org\ctrl\cteqOpertMng.html
 -----------------------------------------------------------------*/

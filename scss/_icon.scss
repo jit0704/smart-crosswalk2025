@@ -25,6 +25,18 @@
   &-down {
     @include bgurl($w: 15px, $h: 19px, $img: 'icon_down.png');
   }
+
+  &-set {
+    @include bgurl($w: 17px, $h: 17px, $img: 'icon_set.png');
+  }
+
+  &-search {
+    @include bgurl($w: 17px, $h: 17px, $img: 'icon_search2.png');
+  }
+
+  &-reboot {
+    @include bgurl($w: 17px, $h: 23px, $img: 'icon_double_spin_arrow.png');
+  }
 }
 
 .roi-mark {

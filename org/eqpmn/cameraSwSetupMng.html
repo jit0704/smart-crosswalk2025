@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카메라SW 설정 관리</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/pub/includeHTML.js"></script>
+    <script defer src="/js/pub/pubUi.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/include/gnb.html"></nav>
+      <main class="main-container">
+        <section class="administer camera-sw-setup-mng-container">
+          <div class="ly-left">
+            <article class="list-container">
+              <header class="administer-header">
+                <em class="title">카메라SW 설정 목록</em>
+              </header>
+              <main>
+                <table class="tbl-centered sm">
+                  <colgroup>
+                    <col style="width: 85px" />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>설정 항목</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- <tr class="no-data">
+                      <td colspan="2">데이터가 없습니다.</td>
+                    </tr> -->
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>검지 모드 설정</td>
+                    </tr>
+                    <!-- 체크박스 활성화시 active 클래스 추가해주시면 됩니다 -->
+                    <tr class="active">
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>인식박스 모드 설정</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </main>
+            </article>
+          </div>
+          <div class="ly-right">
+            <article class="view-container">
+              <main>
+                <section class="sec1">
+                  <header class="administer-header">
+                    <em class="title">상세정보</em>
+                    <span class="btn-group">
+                      <button class="btn"><i class="icon-reboot"></i>재부팅</button>
+                      <button class="btn"><i class="icon-del"></i>삭제</button>
+                      <button class="btn"><i class="icon-search"></i>조회</button>
+                      <button class="btn"><i class="icon-set"></i>설정</button>
+                    </span>
+                  </header>
+                  <div class="tbl-details">
+                    <table>
+                      <colgroup>
+                        <col style="width: 200px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>채널</th>
+                          <td>
+                            <select class="opt">
+                              <option value="">전체</option>
+                              <option value=""></option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Operation Mode</th>
+                          <td>
+                            <span class="inp-radio-group">
+                              <label>
+                                <input type="radio" name="video-mode" class="inp-radio" />
+                                <i></i>
+                                인식 동작 모드
+                              </label>
+                              <label>
+                                <input type="radio" name="video-mode" class="inp-radio" />
+                                <i></i>
+                                설정 모드
+                              </label>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>학습파일명</th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>Detection</th>
+                          <td>
+                            <span class="txt-field-group">
+                              <input type="text" class="txt-field" />
+                              <em class="integer">(0~100)</em>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>인식 SW</th>
+                          <td>
+                            <p class="stuck">인식 SW를 재부팅 하거나 종료, 시작 처리합니다.</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+                <section class="sec2">
+                  <header class="administer-header">
+                    <em class="title bul">로그</em>
+                    <button class="btn"><i class="icon-reset"></i>초기화</button>
+                  </header>
+                  <div class="log-container"></div>
+                </section>
+              </main>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/include/copyright.html"></footer>
+    </div>
+  </body>
+</html>

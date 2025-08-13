@@ -888,6 +888,30 @@ dialog {
   background-position: 0 0;
   background-size: contain;
 }
+.icon-set {
+  width: 17px;
+  height: 17px;
+  background-image: url("/images/icon_set.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.icon-search {
+  width: 17px;
+  height: 17px;
+  background-image: url("/images/icon_search2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.icon-reboot {
+  width: 17px;
+  height: 23px;
+  background-image: url("/images/icon_double_spin_arrow.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 
 .roi-mark {
   display: flex;
@@ -1345,6 +1369,47 @@ table tr.no-data {
 -----------------------------------------------------------------*/
 .controller-container .administer-header {
   margin: 26px 0 14px;
+}
+
+/*---------------------------------------------------------------
+  [장비 관리 - 카메라SW 설정 관리	]
+  /org/eqpmn/cameraSwSetupMng.html
+-----------------------------------------------------------------*/
+.camera-sw-setup-mng-container .ly-right .view-container > main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18px 0;
+  height: calc(100vh - 163px);
+  margin-top: 0;
+}
+.camera-sw-setup-mng-container .ly-right .view-container > main > section {
+  width: 100%;
+}
+.camera-sw-setup-mng-container .ly-right .sec1 .tbl-details {
+  height: auto;
+  margin-top: 10px;
+}
+.camera-sw-setup-mng-container .ly-right .sec1 .tbl-details .opt {
+  width: 130px;
+}
+.camera-sw-setup-mng-container .ly-right .sec1 .tbl-details .integer {
+  font-size: 18px;
+  color: #909090;
+}
+.camera-sw-setup-mng-container .ly-right .sec1 .tbl-details .stuck {
+  color: #1c3d74;
+  text-align: center;
+}
+.camera-sw-setup-mng-container .ly-right .sec2 {
+  flex: 1;
+}
+.camera-sw-setup-mng-container .ly-right .log-container {
+  height: calc(100% - 43px);
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4dd;
 }
 
 /*---------------------------------------------------------------
