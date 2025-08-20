@@ -133,6 +133,60 @@
 }
 
 /*---------------------------------------------------------------
+  [장비 관리 - 카메라SW 위경도 관리	]
+  /org/eqpmn/cameraSwCrdntMng.html
+-----------------------------------------------------------------*/
+.camera-sw-crdnt-mng-container {
+  .monitoring-content {
+    height: calc(100vh - 260px) !important;
+  }
+
+  .ly-right {
+    main {
+      margin-top: 0;
+    }
+
+    .sec1 {
+      .administer-header {
+        margin-top: 0;
+      }
+
+      .tbl-details {
+        height: auto;
+
+        .txt-field-group {
+          .opt {
+            width: 120px;
+          }
+        }
+      }
+    }
+
+    .sec2 {
+      margin-top: 20px;
+
+      .administer-header {
+        margin: 0 0 10px;
+      }
+
+      .tbl-bind {
+        height: calc(100vh - 440px);
+      }
+
+      .tbl-centered {
+        .txt-field-group {
+          width: 170px;
+
+          .opt {
+            width: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------------------
   [제어관리 - 제어장비 동작 관리]
   org\ctrl\cteqOpertMng.html
 -----------------------------------------------------------------*/

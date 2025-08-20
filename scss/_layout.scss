@@ -224,6 +224,20 @@
         top: 34px;
         left: 0;
         right: 0;
+
+        .btn-bind {
+          @include flexbox(row, flex-start, center);
+          gap: 0 10px;
+
+          .opt {
+            width: 200px;
+          }
+
+          .btn-bind {
+            @include flexbox(row, flex-start, center);
+            gap: 0 10px;
+          }
+        }
       }
 
       .list-container main,

@@ -10,6 +10,35 @@
   border: 1px solid $c-gray5;
   border-top-color: $c-blue1;
 
+  &.alert {
+    width: 450px;
+    min-height: 205px;
+    padding: 64px 40px 36px;
+    border-top-color: $c-red2;
+    box-sizing: border-box;
+
+    .dialog-modal-body {
+      font-size: 18px;
+      font-weight: 700;
+      color: $c-red2;
+      text-align: center;
+    }
+  }
+
+  &.confirm {
+    width: 450px;
+    min-height: 205px;
+    padding: 64px 40px 36px;
+    box-sizing: border-box;
+
+    .dialog-modal-body {
+      font-size: 18px;
+      font-weight: 700;
+      color: $c-blue2;
+      text-align: center;
+    }
+  }
+
   .btn-close {
     position: absolute;
     top: 15px;

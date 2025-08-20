@@ -396,6 +396,23 @@ dialog {
   left: 0;
   right: 0;
 }
+.main-container .administer.filter .filter-area-container .btn-bind {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 10px;
+}
+.main-container .administer.filter .filter-area-container .btn-bind .opt {
+  width: 200px;
+}
+.main-container .administer.filter .filter-area-container .btn-bind .btn-bind {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 10px;
+}
 .main-container .administer.filter .list-container main,
 .main-container .administer.filter .view-container main {
   height: calc(100vh - 293px);
@@ -466,7 +483,7 @@ dialog {
   flex-wrap: wrap;
   height: calc(100vh - 223px);
   margin-top: 8px;
-  padding: 15px;
+  padding: 10px;
   border-radius: 5px;
   background: #cfd4da;
 }
@@ -912,6 +929,14 @@ dialog {
   background-position: 0 0;
   background-size: contain;
 }
+.icon-coordi {
+  width: 16px;
+  height: 19px;
+  background-image: url("/images/icon_coordi.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 
 .roi-mark {
   display: flex;
@@ -1288,6 +1313,31 @@ table tr.no-data {
   border: 1px solid #ced4dd;
   border-top-color: #004;
 }
+.dialog-modal.alert {
+  width: 450px;
+  min-height: 205px;
+  padding: 64px 40px 36px;
+  border-top-color: #fa4242;
+  box-sizing: border-box;
+}
+.dialog-modal.alert .dialog-modal-body {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fa4242;
+  text-align: center;
+}
+.dialog-modal.confirm {
+  width: 450px;
+  min-height: 205px;
+  padding: 64px 40px 36px;
+  box-sizing: border-box;
+}
+.dialog-modal.confirm .dialog-modal-body {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c3d74;
+  text-align: center;
+}
 .dialog-modal .btn-close {
   position: absolute;
   top: 15px;
@@ -1410,6 +1460,41 @@ table tr.no-data {
   margin-top: 10px;
   border-radius: 5px;
   border: 1px solid #ced4dd;
+}
+
+/*---------------------------------------------------------------
+  [장비 관리 - 카메라SW 위경도 관리	]
+  /org/eqpmn/cameraSwCrdntMng.html
+-----------------------------------------------------------------*/
+.camera-sw-crdnt-mng-container .monitoring-content {
+  height: calc(100vh - 260px) !important;
+}
+.camera-sw-crdnt-mng-container .ly-right main {
+  margin-top: 0;
+}
+.camera-sw-crdnt-mng-container .ly-right .sec1 .administer-header {
+  margin-top: 0;
+}
+.camera-sw-crdnt-mng-container .ly-right .sec1 .tbl-details {
+  height: auto;
+}
+.camera-sw-crdnt-mng-container .ly-right .sec1 .tbl-details .txt-field-group .opt {
+  width: 120px;
+}
+.camera-sw-crdnt-mng-container .ly-right .sec2 {
+  margin-top: 20px;
+}
+.camera-sw-crdnt-mng-container .ly-right .sec2 .administer-header {
+  margin: 0 0 10px;
+}
+.camera-sw-crdnt-mng-container .ly-right .sec2 .tbl-bind {
+  height: calc(100vh - 440px);
+}
+.camera-sw-crdnt-mng-container .ly-right .sec2 .tbl-centered .txt-field-group {
+  width: 170px;
+}
+.camera-sw-crdnt-mng-container .ly-right .sec2 .tbl-centered .txt-field-group .opt {
+  width: 70px;
 }
 
 /*---------------------------------------------------------------

@@ -37,6 +37,10 @@
   &-reboot {
     @include bgurl($w: 17px, $h: 23px, $img: 'icon_double_spin_arrow.png');
   }
+
+  &-coordi {
+    @include bgurl($w: 16px, $h: 19px, $img: 'icon_coordi.png');
+  }
 }
 
 .roi-mark {

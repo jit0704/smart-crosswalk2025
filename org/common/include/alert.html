@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alert 팝업</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/pub/includeHTML.js"></script>
+    <script defer src="/js/pub/pubUi.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/include/gnb.html"></nav>
+    </div>
+    <dialog class="dialog-modal alert" open>
+      <button type="button" class="btn-close"><span class="screen-out">닫기</span></button>
+      <div class="dialog-modal-container">
+        <div class="dialog-modal-body">아이디 시작은 무조건 영어나 숫자로,<br />5~20자 영문, 숫자, 특수문자 '-_.' 만 허용합니다.</div>
+        <form method="dialog" class="dialog-modal-btn-group">
+          <button type="submit" class="btn positive">확인</button>
+        </form>
+      </div>
+      <!-- //dialog-modal-container -->
+    </dialog>
+  </body>
+</html>
