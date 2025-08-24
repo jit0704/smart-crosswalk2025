@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장비 상태 관리 - 이력</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/pub/includeHTML.js"></script>
+    <script defer src="/js/pub/pubUi.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/include/gnb.html"></nav>
+      <main class="main-container">
+        <section class="administer filter eqpmn-sttus-hist-container">
+          <div class="filter-area-container">
+            <select class="opt sm">
+              <option value="">장비 유형</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <select class="opt sm">
+              <option value="">장비 ID</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <select class="opt sm">
+              <option value="">IP 주소</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+            <input type="date" class="inp-date" />
+            <input type="date" class="inp-date" />
+            <button type="button" class="btn-search"><span class="screen-out">검색 버튼</span></button>
+          </div>
+          <!-- //filter-area-container -->
+          <div class="administer-body">
+            <article class="list-container">
+              <header class="administer-header mt17">
+                <em class="title">장비 상태 이력</em>
+                <span class="btn-group">
+                  <button class="btn-excel-down"><i class="screen-out">엑셀파일 다운받기</i></button>
+                  <button class="btn"><i class="icon-back"></i>돌아가기</button>
+                </span>
+              </header>
+              <main>
+                <table class="tbl-centered sm">
+                  <colgroup>
+                    <col style="width: 80px" />
+                    <col style="width: 80px" />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>NO</th>
+                      <th>장비 ID</th>
+                      <th>장비 명</th>
+                      <th>장비 유형</th>
+                      <th>IP 주소</th>
+                      <th>방향</th>
+                      <th>상태</th>
+                      <th>일시</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="no-data">
+                      <td colspan="9">데이터가 없습니다.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>1</td>
+                      <td>CAM0000001</td>
+                      <td>CAM 1</td>
+                      <td>카메라</td>
+                      <td>192.168.200.101</td>
+                      <td>남서</td>
+                      <td>정상</td>
+                      <td>2021-06-07 12:31:33</td>
+                    </tr>
+                    <!-- 체크박스 활성화시 active 클래스 추가해주시면 됩니다 -->
+                    <tr class="active">
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>1</td>
+                      <td>CAM0000001</td>
+                      <td>CAM 1</td>
+                      <td>카메라</td>
+                      <td>192.168.200.101</td>
+                      <td>남서</td>
+                      <td>정상</td>
+                      <td>2021-06-07 12:31:33</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </main>
+            </article>
+            <!-- //list-container -->
+          </div>
+          <!-- //administer-body -->
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/include/copyright.html"></footer>
+    </div>
+  </body>
+</html>

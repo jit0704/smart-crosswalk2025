@@ -777,10 +777,9 @@ dialog {
   justify-content: flex-start;
   align-items: center;
   gap: 0 10px;
-  padding: 6px 20px;
+  padding: 6.5px 20px;
   font-size: 14px;
   color: #fff;
-  font-weight: 700;
   border-radius: 8px;
   background: #1c3d74;
 }
@@ -852,6 +851,15 @@ dialog {
 .btn.c-gray.md {
   min-width: 100px;
   padding: 8px 11px;
+}
+.btn-excel-down {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  background-image: url("/images/btn_excel_down.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
 }
 
 /*---------------------------------------------------------------
@@ -933,6 +941,22 @@ dialog {
   width: 16px;
   height: 19px;
   background-image: url("/images/icon_coordi.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.icon-history {
+  width: 17px;
+  height: 17px;
+  background-image: url("/images/icon_check.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.icon-back {
+  width: 17px;
+  height: 15px;
+  background-image: url("/images/icon_arrow_left.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -1198,6 +1222,17 @@ table tr.no-data {
 }
 .inp-switch-wrap .inp-switch:checked + .inp-switch-slider::before {
   transform: translateX(24px);
+}
+.inp-date {
+  height: 35px;
+  padding: 0 10px;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 300;
+}
+.inp-date::-webkit-calendar-picker-indicator {
+  cursor: pointer;
 }
 
 .txt-field {
@@ -1495,6 +1530,22 @@ table tr.no-data {
 }
 .camera-sw-crdnt-mng-container .ly-right .sec2 .tbl-centered .txt-field-group .opt {
   width: 70px;
+}
+
+/*---------------------------------------------------------------
+  [장비 관리 - 장비 상태 관리/이력	]
+  org\eqpmn\eqpmnSttusMng.html
+  org\eqpmn\eqpmnSttusHist.html
+-----------------------------------------------------------------*/
+.eqpmn-sttus-mng-container .filter-area-container .opt {
+  width: 200px;
+}
+
+.eqpmn-sttus-hist-container .filter-area-container .opt {
+  width: 200px;
+}
+.eqpmn-sttus-hist-container .filter-area-container .inp-date {
+  width: 170px;
 }
 
 /*---------------------------------------------------------------

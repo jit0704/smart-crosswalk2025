@@ -100,6 +100,19 @@
       }
     }
   }
+
+  &-date {
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background: $c-white0;
+    font-size: 14px;
+    font-weight: 300;
+
+    &::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+    }
+  }
 }
 
 .txt-field {

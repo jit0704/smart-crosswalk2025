@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RTU 관리</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/pub/includeHTML.js"></script>
+    <script defer src="/js/pub/pubUi.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/include/gnb.html"></nav>
+      <main class="main-container">
+        <section class="administer rtu-mng-container">
+          <div class="ly-left">
+            <article class="list-container">
+              <header class="administer-header">
+                <em class="title">RTU</em>
+                <span class="btn-group">
+                  <button class="btn"><i class="icon-del"></i>삭제</button>
+                  <button class="btn"><i class="icon-add"></i>추가</button>
+                </span>
+              </header>
+              <main>
+                <table class="tbl-centered sm">
+                  <colgroup>
+                    <col style="width: 80px" />
+                    <col style="width: 80px" />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>NO</th>
+                      <th>IP 주소</th>
+                      <th>PORT</th>
+                      <th>채널 ID</th>
+                      <th>전원 1</th>
+                      <th>전원 2</th>
+                      <th>전원 3</th>
+                      <th>전원 4</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="no-data">
+                      <td colspan="9">데이터가 없습니다.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>1</td>
+                      <td>192.168.200.101</td>
+                      <td>35010</td>
+                      <td>0</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                    </tr>
+                    <!-- 체크박스 활성화시 active 클래스 추가해주시면 됩니다 -->
+                    <tr class="active">
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>1</td>
+                      <td>192.168.200.101</td>
+                      <td>35010</td>
+                      <td>0</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </main>
+            </article>
+          </div>
+          <div class="ly-right">
+            <article class="view-container">
+              <header class="administer-header">
+                <em class="title">상세정보</em>
+                <button class="btn"><i class="icon-save"></i>저장</button>
+              </header>
+              <main>
+                <div class="tbl-details h-auto">
+                  <table>
+                    <colgroup>
+                      <col style="width: 174px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>IP 주소<i>*</i></th>
+                        <td><input type="text" class="txt-field" /></td>
+                      </tr>
+                      <tr>
+                        <th>PORT<i>*</i></th>
+                        <td><input type="text" class="txt-field" /></td>
+                      </tr>
+                      <tr>
+                        <th>채널 ID<i>*</i></th>
+                        <td>
+                          <select class="opt">
+                            <option value="">채널 0</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>전원1 (제어장비)</th>
+                        <td>
+                          <select class="opt">
+                            <option value="">VMS0000001</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>전원1 (별칭)</th>
+                        <td><input type="text" class="txt-field" /></td>
+                      </tr>
+                      <tr>
+                        <th>전원2 (제어장비)</th>
+                        <td>
+                          <select class="opt">
+                            <option value="">제어장비 ID</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>전원2 (별칭)</th>
+                        <td><input type="text" class="txt-field" /></td>
+                      </tr>
+                      <tr>
+                        <th>전원3 (제어장비)</th>
+                        <td>
+                          <select class="opt">
+                            <option value="">제어장비 ID</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>전원3 (별칭)</th>
+                        <td><input type="text" class="txt-field" /></td>
+                      </tr>
+                      <tr>
+                        <th>전원4 (제어장비)</th>
+                        <td>
+                          <select class="opt">
+                            <option value="">제어장비 ID</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>전원4 (별칭)</th>
+                        <td><input type="text" class="txt-field" /></td>
+                      </tr>
+                      <tr>
+                        <th>수정 일시</th>
+                        <td>2021-11-01 10:35:01</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </main>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/include/copyright.html"></footer>
+    </div>
+  </body>
+</html>

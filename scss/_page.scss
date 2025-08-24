@@ -187,6 +187,31 @@
 }
 
 /*---------------------------------------------------------------
+  [장비 관리 - 장비 상태 관리/이력	]
+  org\eqpmn\eqpmnSttusMng.html
+  org\eqpmn\eqpmnSttusHist.html
+-----------------------------------------------------------------*/
+.eqpmn-sttus-mng-container {
+  .filter-area-container {
+    .opt {
+      width: 200px;
+    }
+  }
+}
+
+.eqpmn-sttus-hist-container {
+  .filter-area-container {
+    .opt {
+      width: 200px;
+    }
+
+    .inp-date {
+      width: 170px;
+    }
+  }
+}
+
+/*---------------------------------------------------------------
   [제어관리 - 제어장비 동작 관리]
   org\ctrl\cteqOpertMng.html
 -----------------------------------------------------------------*/

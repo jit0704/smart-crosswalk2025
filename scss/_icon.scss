@@ -41,6 +41,14 @@
   &-coordi {
     @include bgurl($w: 16px, $h: 19px, $img: 'icon_coordi.png');
   }
+
+  &-history {
+    @include bgurl($w: 17px, $h: 17px, $img: 'icon_check.png');
+  }
+
+  &-back {
+    @include bgurl($w: 17px, $h: 15px, $img: 'icon_arrow_left.png');
+  }
 }
 
 .roi-mark {
