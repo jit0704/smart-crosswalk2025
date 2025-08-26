@@ -31,9 +31,6 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <!-- <tr class="no-data">
-                      <td colspan="2">데이터가 없습니다.</td>
-                    </tr> -->
                     <tr>
                       <td>
                         <label>
@@ -53,6 +50,87 @@
                       </td>
                       <td>인식박스 모드 설정</td>
                     </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>영상객체 Boxing 설정</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>검지결과 객체 정보 전송 모드 설정</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>학습 파일명 설정</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>영상 인식 관련 임계값 설정</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>검지 결과 전송 서버 설정</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>이미지 파일 생성 여부 설정</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>카메라 정보 요청 설정</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>영상 추가</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>인식 SW</td>
+                    </tr>
                   </tbody>
                 </table>
               </main>
@@ -61,79 +139,504 @@
           <div class="ly-right">
             <article class="view-container">
               <main>
-                <section class="sec1">
-                  <header class="administer-header">
-                    <em class="title">상세정보</em>
-                    <span class="btn-group">
-                      <button class="btn"><i class="icon-reboot"></i>재부팅</button>
-                      <button class="btn"><i class="icon-del"></i>삭제</button>
-                      <button class="btn"><i class="icon-search"></i>조회</button>
-                      <button class="btn"><i class="icon-set"></i>설정</button>
-                    </span>
-                  </header>
-                  <div class="tbl-details">
-                    <table>
-                      <colgroup>
-                        <col style="width: 200px" />
-                        <col />
-                      </colgroup>
-                      <tbody>
-                        <tr>
-                          <th>채널</th>
-                          <td>
-                            <select class="opt">
-                              <option value="">전체</option>
-                              <option value=""></option>
-                            </select>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>Operation Mode</th>
-                          <td>
-                            <span class="inp-radio-group">
-                              <label>
-                                <input type="radio" name="video-mode" class="inp-radio" />
-                                <i></i>
-                                인식 동작 모드
-                              </label>
-                              <label>
-                                <input type="radio" name="video-mode" class="inp-radio" />
-                                <i></i>
-                                설정 모드
-                              </label>
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>학습파일명</th>
-                          <td><input type="text" class="txt-field" /></td>
-                        </tr>
-                        <tr>
-                          <th>Detection</th>
-                          <td>
-                            <span class="txt-field-group">
-                              <input type="text" class="txt-field" />
-                              <em class="integer">(0~100)</em>
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>인식 SW</th>
-                          <td>
-                            <p class="stuck">인식 SW를 재부팅 하거나 종료, 시작 처리합니다.</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                <!-- 상세 정보 개발 작업시 참고를 위해 inline-style추가(inline-style은 개발 파일에 적용하지 마세요) -->
+                <section class="sw-setup-view" style="height: 212px; overflow-y: auto">
+                  <article>
+                    <header class="administer-header">
+                      <em class="title">상세정보</em>
+                      <span class="btn-group">
+                        <button class="btn"><i class="icon-set"></i>설정</button>
+                      </span>
+                    </header>
+                    <div class="tbl-details">
+                      <table>
+                        <colgroup>
+                          <col style="width: 200px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>채널</th>
+                            <td>
+                              <select class="opt">
+                                <option value="">전체</option>
+                                <option value=""></option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>Operation Mode</th>
+                            <td>
+                              <span class="inp-radio-group">
+                                <label>
+                                  <input type="radio" name="video-mode" class="inp-radio" />
+                                  <i></i>
+                                  인식 동작 모드
+                                </label>
+                                <label>
+                                  <input type="radio" name="video-mode" class="inp-radio" />
+                                  <i></i>
+                                  설정 모드
+                                </label>
+                              </span>
+                            </td>
+                          </tr>
+                          <!-- 테이블 높이값 고정을 위해 빈 값 유지 -->
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+
+                  <article>
+                    <header class="administer-header">
+                      <em class="title">상세정보</em>
+                      <span class="btn-group">
+                        <button class="btn"><i class="icon-search"></i>조회</button>
+                        <button class="btn"><i class="icon-set"></i>설정</button>
+                      </span>
+                    </header>
+                    <div class="tbl-details">
+                      <table>
+                        <colgroup>
+                          <col style="width: 200px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>채널</th>
+                            <td>
+                              <select class="opt">
+                                <option value="">전체</option>
+                                <option value=""></option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>ViewBox Mode</th>
+                            <td>
+                              <span class="inp-radio-group">
+                                <label>
+                                  <input type="radio" name="video-mode2" class="inp-radio" />
+                                  <i></i>
+                                  오리지널 모드
+                                </label>
+                                <label>
+                                  <input type="radio" name="video-mode2" class="inp-radio" />
+                                  <i></i>
+                                  Tracking 모드
+                                </label>
+                              </span>
+                            </td>
+                          </tr>
+                          <!-- 테이블 높이값 고정을 위해 빈 값 유지 -->
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+
+                  <article>
+                    <header class="administer-header">
+                      <em class="title">상세정보</em>
+                      <span class="btn-group">
+                        <button class="btn"><i class="icon-set"></i>설정</button>
+                      </span>
+                    </header>
+                    <div class="tbl-details">
+                      <table>
+                        <colgroup>
+                          <col style="width: 200px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>채널</th>
+                            <td>
+                              <select class="opt">
+                                <option value="">전체</option>
+                                <option value=""></option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>전송 모드</th>
+                            <td>
+                              <span class="inp-radio-group">
+                                <label>
+                                  <input type="radio" name="video-mode3" class="inp-radio" />
+                                  <i></i>
+                                  Box 그리지 않은 상태로 전달
+                                </label>
+                                <label>
+                                  <input type="radio" name="video-mode3" class="inp-radio" />
+                                  <i></i>
+                                  Box 그려진 상태로 전달
+                                </label>
+                              </span>
+                            </td>
+                          </tr>
+                          <!-- 테이블 높이값 고정을 위해 빈 값 유지 -->
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+
+                  <article>
+                    <header class="administer-header">
+                      <em class="title">상세정보</em>
+                      <span class="btn-group">
+                        <button class="btn"><i class="icon-set"></i>설정</button>
+                      </span>
+                    </header>
+                    <div class="tbl-details">
+                      <table>
+                        <colgroup>
+                          <col style="width: 200px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>채널</th>
+                            <td>
+                              <select class="opt">
+                                <option value="">전체</option>
+                                <option value=""></option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>객체 정보 전송 모드</th>
+                            <td>
+                              <span class="inp-radio-group">
+                                <label>
+                                  <input type="radio" name="video-mode4" class="inp-radio" />
+                                  <i></i>
+                                  검지결과 객체가 없을 때도 보냄
+                                </label>
+                                <label>
+                                  <input type="radio" name="video-mode4" class="inp-radio" />
+                                  <i></i>
+                                  검지결과 객체가 있을 때만 보냄
+                                </label>
+                              </span>
+                            </td>
+                          </tr>
+                          <!-- 테이블 높이값 고정을 위해 빈 값 유지 -->
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+
+                  <article>
+                    <header class="administer-header">
+                      <em class="title">상세정보</em>
+                      <span class="btn-group">
+                        <button class="btn"><i class="icon-search"></i>조회</button>
+                        <button class="btn"><i class="icon-set"></i>설정</button>
+                      </span>
+                    </header>
+                    <div class="tbl-details">
+                      <table>
+                        <colgroup>
+                          <col style="width: 200px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>학습파일명</th>
+                            <td><input type="text" class="txt-field" /></td>
+                          </tr>
+                          <!-- 테이블 높이값 고정을 위해 빈 값 유지 -->
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+
+                  <article>
+                    <header class="administer-header">
+                      <em class="title">상세정보</em>
+                      <span class="btn-group">
+                        <button class="btn"><i class="icon-search"></i>조회</button>
+                        <button class="btn"><i class="icon-set"></i>설정</button>
+                      </span>
+                    </header>
+                    <div class="tbl-details">
+                      <table>
+                        <colgroup>
+                          <col style="width: 200px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>채널</th>
+                            <td>
+                              <select class="opt">
+                                <option value="">전체</option>
+                                <option value=""></option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>Detection</th>
+                            <td>
+                              <span class="txt-field-group">
+                                <input type="text" class="txt-field" />
+                                <em class="integer">(0~100)</em>
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>NMS</th>
+                            <td>
+                              <span class="txt-field-group">
+                                <input type="text" class="txt-field" />
+                                <em class="integer">(0~100)</em>
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+
+                  <article>
+                    <header class="administer-header">
+                      <em class="title">상세정보</em>
+                      <span class="btn-group">
+                        <button class="btn"><i class="icon-search"></i>조회</button>
+                        <button class="btn"><i class="icon-set"></i>설정</button>
+                      </span>
+                    </header>
+                    <div class="tbl-details">
+                      <table>
+                        <colgroup>
+                          <col style="width: 200px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>SERVER IP</th>
+                            <td><input type="text" class="txt-field" /></td>
+                          </tr>
+                          <tr>
+                            <th>SERVER PORT</th>
+                            <td><input type="text" class="txt-field" /></td>
+                          </tr>
+                          <!-- 테이블 높이값 고정을 위해 빈 값 유지 -->
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+
+                  <article>
+                    <header class="administer-header">
+                      <em class="title">상세정보</em>
+                      <span class="btn-group">
+                        <button class="btn"><i class="icon-set"></i>설정</button>
+                      </span>
+                    </header>
+                    <div class="tbl-details">
+                      <table>
+                        <colgroup>
+                          <col style="width: 200px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>채널</th>
+                            <td>
+                              <select class="opt">
+                                <option value="">전체</option>
+                                <option value=""></option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>이미지 생성 모드</th>
+                            <td>
+                              <span class="inp-radio-group">
+                                <label>
+                                  <input type="radio" name="video-mode5" class="inp-radio" />
+                                  <i></i>
+                                  이미지 파일 생성 종료
+                                </label>
+                                <label>
+                                  <input type="radio" name="video-mode5" class="inp-radio" />
+                                  <i></i>
+                                  이미지 파일 생생 시작
+                                </label>
+                              </span>
+                            </td>
+                          </tr>
+                          <!-- 테이블 높이값 고정을 위해 빈 값 유지 -->
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+
+                  <article>
+                    <header class="administer-header">
+                      <em class="title">상세정보</em>
+                      <span class="btn-group">
+                        <button class="btn"><i class="icon-del"></i>삭제</button>
+                        <button class="btn"><i class="icon-search"></i>조회</button>
+                        <button class="btn"><i class="icon-set"></i>설정</button>
+                      </span>
+                    </header>
+                    <div class="tbl-details">
+                      <table>
+                        <colgroup>
+                          <col style="width: 200px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>채널</th>
+                            <td>
+                              <select class="opt">
+                                <option value="">전체</option>
+                                <option value=""></option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>카메라 요청 모드</th>
+                            <td>
+                              <span class="inp-radio-group" style="gap: 0 42px">
+                                <label>
+                                  <input type="radio" name="video-mode6" class="inp-radio" />
+                                  <i></i>
+                                  RTSP 정보를 제외한 데이터 요청
+                                </label>
+                                <label>
+                                  <input type="radio" name="video-mode6" class="inp-radio" />
+                                  <i></i>
+                                  RTSP 정보를 추가한 데이터 요청 모드
+                                </label>
+                              </span>
+                            </td>
+                          </tr>
+                          <!-- 테이블 높이값 고정을 위해 빈 값 유지 -->
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+
+                  <article>
+                    <header class="administer-header">
+                      <em class="title">상세정보</em>
+                      <span class="btn-group">
+                        <button class="btn"><i class="icon-set"></i>설정</button>
+                      </span>
+                    </header>
+                    <div class="tbl-details">
+                      <table>
+                        <colgroup>
+                          <col style="width: 200px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>채널</th>
+                            <td>
+                              <select class="opt">
+                                <option value="">전체</option>
+                                <option value=""></option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>영상 경로 및 파일명</th>
+                            <td><input type="text" class="txt-field" /></td>
+                          </tr>
+                          <!-- 테이블 높이값 고정을 위해 빈 값 유지 -->
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
+
+                  <article>
+                    <header class="administer-header">
+                      <em class="title">상세정보</em>
+                      <span class="btn-group">
+                        <button class="btn"><i class="icon-reboot"></i>재부팅</button>
+                        <button class="btn"><i class="icon-search"></i>조회</button>
+                        <button class="btn"><i class="icon-set"></i>설정</button>
+                      </span>
+                    </header>
+                    <div class="tbl-details">
+                      <table>
+                        <colgroup>
+                          <col style="width: 200px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>인식 SW</th>
+                            <td>
+                              <p class="stuck">인식 SW를 재부팅 하거나 종료, 시작 처리합니다.</p>
+                            </td>
+                          </tr>
+                          <!-- 테이블 높이값 고정을 위해 빈 값 유지 -->
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th></th>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </article>
                 </section>
 
-                <section class="sec2">
+                <section class="sw-setup-log">
                   <header class="administer-header">
                     <em class="title bul">로그</em>
                     <button class="btn"><i class="icon-reset"></i>초기화</button>
                   </header>
-                  <div class="log-container"></div>
+                  <textarea readonly class="log-container"></textarea>
                 </section>
               </main>
             </article>

@@ -8,6 +8,70 @@
     <script defer src="/js/ui.js"></script>
   </head>
   <body>
+    <header class="administer-header">
+      <em class="title">상세정보</em>
+      <span class="btn-group">
+        <button class="btn"><i class="icon-reboot"></i>재부팅</button>
+        <button class="btn"><i class="icon-del"></i>삭제</button>
+        <button class="btn"><i class="icon-search"></i>조회</button>
+        <button class="btn"><i class="icon-set"></i>설정</button>
+      </span>
+    </header>
+    <div class="tbl-details">
+      <table>
+        <colgroup>
+          <col style="width: 200px" />
+          <col />
+        </colgroup>
+        <tbody>
+          <tr>
+            <th>채널</th>
+            <td>
+              <select class="opt">
+                <option value="">전체</option>
+                <option value=""></option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>Operation Mode</th>
+            <td>
+              <span class="inp-radio-group">
+                <label>
+                  <input type="radio" name="video-mode" class="inp-radio" />
+                  <i></i>
+                  인식 동작 모드
+                </label>
+                <label>
+                  <input type="radio" name="video-mode" class="inp-radio" />
+                  <i></i>
+                  설정 모드
+                </label>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th>학습파일명</th>
+            <td><input type="text" class="txt-field" /></td>
+          </tr>
+          <tr>
+            <th>Detection</th>
+            <td>
+              <span class="txt-field-group">
+                <input type="text" class="txt-field" />
+                <em class="integer">(0~100)</em>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th>인식 SW</th>
+            <td>
+              <p class="stuck">인식 SW를 재부팅 하거나 종료, 시작 처리합니다.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="pt10 mb24">
       <h4 class="truncate">This is an extremely long title that will be truncated</h4>
       <ul id="dropdown2" class="dropdown-content">

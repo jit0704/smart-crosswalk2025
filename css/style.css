@@ -109,9 +109,9 @@ select {
 
 textarea {
   width: 100%;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  font-size: 1.8rem;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 14px;
   outline: 0;
   resize: none;
 }
@@ -303,7 +303,7 @@ dialog {
   color: #666;
   font-weight: 400;
 }
-.gnb-depth-1 .gnb-depth-2 .depth-2 .depth-2-link:first-child {
+.gnb-depth-1 .gnb-depth-2 .depth-2 .depth-2-link:hover {
   color: #004;
   font-weight: 700;
 }
@@ -1472,22 +1472,22 @@ table tr.no-data {
 .camera-sw-setup-mng-container .ly-right .view-container > main > section {
   width: 100%;
 }
-.camera-sw-setup-mng-container .ly-right .sec1 .tbl-details {
-  height: auto;
+.camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details {
+  height: 165px;
   margin-top: 10px;
 }
-.camera-sw-setup-mng-container .ly-right .sec1 .tbl-details .opt {
+.camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details .opt {
   width: 130px;
 }
-.camera-sw-setup-mng-container .ly-right .sec1 .tbl-details .integer {
+.camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details .integer {
   font-size: 18px;
   color: #909090;
 }
-.camera-sw-setup-mng-container .ly-right .sec1 .tbl-details .stuck {
+.camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details .stuck {
   color: #1c3d74;
   text-align: center;
 }
-.camera-sw-setup-mng-container .ly-right .sec2 {
+.camera-sw-setup-mng-container .ly-right .sw-setup-log {
   flex: 1;
 }
 .camera-sw-setup-mng-container .ly-right .log-container {
