@@ -417,6 +417,12 @@ dialog {
 .main-container .administer.filter .view-container main {
   height: calc(100vh - 293px);
 }
+.main-container .administer.filter .list-container.is-paging > main {
+  height: calc(100vh - 335px);
+}
+.main-container .administer.filter .list-container.is-paging .paging-container {
+  margin-top: 10px;
+}
 
 /*---------------------------------------------------------------
   [로그인]
@@ -770,6 +776,44 @@ dialog {
 }
 .view-container main .tbl-details table {
   height: 100%;
+}
+
+/*---------------------------------------------------------------
+  [페이징]
+-----------------------------------------------------------------*/
+.paging-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0 6px;
+}
+.paging-container button {
+  font-size: 16px;
+  color: #212b36;
+  text-align: center;
+}
+.paging-container > button {
+  width: 24px;
+  height: 24px;
+}
+.paging-container > button:disabled {
+  color: #a6a6a6;
+}
+.paging-container .num-bind {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 6px;
+}
+.paging-container .num-bind button {
+  min-width: 32px;
+  padding: 0 8px;
+  line-height: 32px;
+}
+.paging-container .num-bind button.active {
+  font-weight: 700;
 }
 
 /*---------------------------------------------------------------

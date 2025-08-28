@@ -300,3 +300,41 @@
     }
   }
 }
+
+/*---------------------------------------------------------------
+  [페이징]
+-----------------------------------------------------------------*/
+.paging-container {
+  @include flexbox(row, center, center);
+  gap: 0 6px;
+
+  button {
+    font-size: 16px;
+    color: $c-black6;
+    text-align: center;
+  }
+
+  & > button {
+    width: 24px;
+    height: 24px;
+
+    &:disabled {
+      color: $c-gray21;
+    }
+  }
+
+  .num-bind {
+    @include flexbox(row, flex-start, center);
+    gap: 0 6px;
+
+    button {
+      min-width: 32px;
+      padding: 0 8px;
+      line-height: 32px;
+
+      &.active {
+        font-weight: 700;
+      }
+    }
+  }
+}

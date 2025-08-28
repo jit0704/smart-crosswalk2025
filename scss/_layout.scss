@@ -242,9 +242,21 @@
         }
       }
 
+      // 페이징이 없을 경우
       .list-container main,
       .view-container main {
         height: calc(100vh - 293px);
+      }
+
+      // 페이징이 있을 경우
+      .list-container.is-paging {
+        & > main {
+          height: calc(100vh - 335px);
+        }
+
+        .paging-container {
+          margin-top: 10px;
+        }
       }
     }
   }

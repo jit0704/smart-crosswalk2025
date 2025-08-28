@@ -32,11 +32,13 @@
                     <col />
                     <col />
                     <col />
+                    <col />
                   </colgroup>
                   <thead>
                     <tr>
                       <th></th>
                       <th>NO</th>
+                      <th>지점 ID</th>
                       <th>제어장비 ID</th>
                       <th>제어장비 명</th>
                       <th>제어장비 유형</th>
@@ -46,7 +48,7 @@
                   </thead>
                   <tbody>
                     <tr class="no-data">
-                      <td colspan="7">데이터가 없습니다.</td>
+                      <td colspan="8">데이터가 없습니다.</td>
                     </tr>
                     <tr>
                       <td>
@@ -56,6 +58,7 @@
                         </label>
                       </td>
                       <td>1</td>
+                      <td>0001</td>
                       <td>VMS0000001</td>
                       <td>VMS1</td>
                       <td>VMS</td>
@@ -71,6 +74,7 @@
                         </label>
                       </td>
                       <td>1</td>
+                      <td>0001</td>
                       <td>VMS0000001</td>
                       <td>VMS1</td>
                       <td>VMS</td>
@@ -96,6 +100,15 @@
                       <col />
                     </colgroup>
                     <tbody>
+                      <tr>
+                        <th>지점 ID<i>*</i></th>
+                        <td>
+                          <select class="opt">
+                            <option value="">0001</option>
+                            <option value=""></option>
+                          </select>
+                        </td>
+                      </tr>
                       <tr>
                         <th>제어장비 ID <i>*</i></th>
                         <td><input type="text" class="txt-field" /></td>

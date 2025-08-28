@@ -32,11 +32,13 @@
                     <col />
                     <col />
                     <col />
+                    <col />
                   </colgroup>
                   <thead>
                     <tr>
                       <th></th>
                       <th>NO</th>
+                      <th>지점 ID</th>
                       <th>카메라 ID</th>
                       <th>카메라 명</th>
                       <th>채널 ID</th>
@@ -46,7 +48,7 @@
                   </thead>
                   <tbody>
                     <tr class="no-data">
-                      <td colspan="7">데이터가 없습니다.</td>
+                      <td colspan="8">데이터가 없습니다.</td>
                     </tr>
                     <tr>
                       <td>
@@ -56,6 +58,7 @@
                         </label>
                       </td>
                       <td>1</td>
+                      <td>0001</td>
                       <td>CAM0000001</td>
                       <td>CAM1</td>
                       <td>1</td>
@@ -71,6 +74,7 @@
                         </label>
                       </td>
                       <td>1</td>
+                      <td>0001</td>
                       <td>CAM0000001</td>
                       <td>CAM1</td>
                       <td>1</td>
@@ -97,6 +101,15 @@
                         <col />
                       </colgroup>
                       <tbody>
+                        <tr>
+                          <th>지점 ID<i>*</i></th>
+                          <td>
+                            <select class="opt">
+                              <option value="">0001</option>
+                              <option value=""></option>
+                            </select>
+                          </td>
+                        </tr>
                         <tr>
                           <th>카메라 ID <i>*</i></th>
                           <td><input type="text" class="txt-field" /></td>
@@ -169,10 +182,10 @@
                           <th>검지 모드</th>
                           <td>인식 동작 모드 / 설정 모드</td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                           <th>인식박스 출력</th>
                           <td>Tracking 모드</td>
-                        </tr>
+                        </tr> -->
                         <tr>
                           <th>Detection 임계</th>
                           <td>100</td>
