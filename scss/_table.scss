@@ -94,6 +94,7 @@ table {
   &-details {
     border: 1px solid $c-gray5;
     border-radius: 5px;
+    box-sizing: border-box;
 
     tbody {
       th {

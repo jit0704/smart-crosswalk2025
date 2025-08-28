@@ -90,102 +90,104 @@
               </header>
               <main>
                 <div class="tbl-details">
-                  <table>
-                    <colgroup>
-                      <col style="width: 174px" />
-                      <col />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>카메라 ID <i>*</i></th>
-                        <td><input type="text" class="txt-field" /></td>
-                      </tr>
-                      <tr>
-                        <th>카메라 명<i>*</i></th>
-                        <td><input type="text" class="txt-field" /></td>
-                      </tr>
-                      <tr>
-                        <th>채널 ID<i>*</i></th>
-                        <td>
-                          <select class="opt" disabled>
-                            <option value="">채널1</option>
-                            <option value="">채널2</option>
-                            <option value="">채널3</option>
-                          </select>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>영상 모드<i>*</i></th>
-                        <td>
-                          <span class="inp-radio-group">
-                            <label>
-                              <input type="radio" name="video-mode" class="inp-radio" />
-                              <i></i>
-                              RTSP
-                            </label>
-                            <label>
-                              <input type="radio" name="video-mode" class="inp-radio" />
-                              <i></i>
-                              영상
-                            </label>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>RTSP 주소<i>*</i></th>
-                        <td><input type="text" class="txt-field" /></td>
-                      </tr>
-                      <tr>
-                        <th>영상 주소</th>
-                        <td><input type="text" class="txt-field" /></td>
-                      </tr>
-                      <tr>
-                        <th>IP 주소<i>*</i></th>
-                        <td><input type="text" class="txt-field" /></td>
-                      </tr>
-                      <tr>
-                        <th>카메라 방향<i>*</i></th>
-                        <td>
-                          <select class="opt">
-                            <option value="">동</option>
-                            <option value="">서</option>
-                            <option value="">남</option>
-                            <option value="">북</option>
-                          </select>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>해상도<i>*</i></th>
-                        <td>
-                          <span class="resolution">
-                            <input type="text" class="txt-field" />
-                            X
-                            <input type="text" class="txt-field" />
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>검지 모드</th>
-                        <td>인식 동작 모드 / 설정 모드</td>
-                      </tr>
-                      <tr>
-                        <th>인식박스 출력</th>
-                        <td>Tracking 모드</td>
-                      </tr>
-                      <tr>
-                        <th>Detection 임계</th>
-                        <td>100</td>
-                      </tr>
-                      <tr>
-                        <th>NMS 임계</th>
-                        <td>100</td>
-                      </tr>
-                      <tr>
-                        <th>수정일시</th>
-                        <td>2021-11-01 10:35:01</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <form action="">
+                    <table>
+                      <colgroup>
+                        <col style="width: 174px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>카메라 ID <i>*</i></th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>카메라 명<i>*</i></th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>채널 ID<i>*</i></th>
+                          <td>
+                            <select class="opt" disabled>
+                              <option value="">채널1</option>
+                              <option value="">채널2</option>
+                              <option value="">채널3</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>영상 모드<i>*</i></th>
+                          <td>
+                            <span class="inp-radio-group">
+                              <label>
+                                <input type="radio" name="video-mode" class="inp-radio" />
+                                <i></i>
+                                RTSP
+                              </label>
+                              <label>
+                                <input type="radio" name="video-mode" class="inp-radio" />
+                                <i></i>
+                                영상
+                              </label>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>RTSP 주소<i>*</i></th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>영상 주소</th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>IP 주소<i>*</i></th>
+                          <td><input type="text" class="txt-field" /></td>
+                        </tr>
+                        <tr>
+                          <th>카메라 방향<i>*</i></th>
+                          <td>
+                            <select class="opt">
+                              <option value="">동</option>
+                              <option value="">서</option>
+                              <option value="">남</option>
+                              <option value="">북</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>해상도<i>*</i></th>
+                          <td>
+                            <span class="resolution">
+                              <input type="text" class="txt-field" />
+                              X
+                              <input type="text" class="txt-field" />
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>검지 모드</th>
+                          <td>인식 동작 모드 / 설정 모드</td>
+                        </tr>
+                        <tr>
+                          <th>인식박스 출력</th>
+                          <td>Tracking 모드</td>
+                        </tr>
+                        <tr>
+                          <th>Detection 임계</th>
+                          <td>100</td>
+                        </tr>
+                        <tr>
+                          <th>NMS 임계</th>
+                          <td>100</td>
+                        </tr>
+                        <tr>
+                          <th>수정일시</th>
+                          <td>2021-11-01 10:35:01</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
                 </div>
               </main>
             </article>

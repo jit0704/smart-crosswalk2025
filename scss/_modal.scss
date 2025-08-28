@@ -10,6 +10,10 @@
   border: 1px solid $c-gray5;
   border-top-color: $c-blue1;
 
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
   &.alert {
     width: 450px;
     min-height: 205px;

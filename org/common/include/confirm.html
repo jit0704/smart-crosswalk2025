@@ -12,16 +12,20 @@
     <div class="ly-container">
       <nav class="gnb-container" include-html="/org/common/include/gnb.html"></nav>
     </div>
-    <dialog class="dialog-modal confirm" open>
+    <dialog class="dialog-modal confirm">
       <button type="button" class="btn-close"><span class="screen-out">닫기</span></button>
       <div class="dialog-modal-container">
         <div class="dialog-modal-body">내용이<br />두줄로 들어갑니다.</div>
         <form method="dialog" class="dialog-modal-btn-group">
-          <button type="submit" class="btn positive">확인</button>
-          <button type="submit" class="btn cancel">취소</button>
+          <button type="button" class="btn positive">확인</button>
+          <button type="button" class="btn cancel">취소</button>
         </form>
       </div>
       <!-- //dialog-modal-container -->
     </dialog>
+
+    <script>
+      document.querySelector('dialog').showModal();
+    </script>
   </body>
 </html>

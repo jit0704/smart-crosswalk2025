@@ -283,10 +283,15 @@
     margin-top: 10px;
 
     .tbl-details {
+      overflow: hidden;
       height: 100%;
 
       &.h-auto {
         height: auto;
+      }
+
+      & > form {
+        height: inherit;
       }
 
       table {

@@ -298,8 +298,8 @@ dialog {
   gap: 25px 0;
 }
 .gnb-depth-1 .gnb-depth-2 .depth-2 .depth-2-link {
-  line-height: 20px;
-  font-size: 20px;
+  line-height: 17px;
+  font-size: 17px;
   color: #666;
   font-weight: 400;
 }
@@ -759,10 +759,14 @@ dialog {
   margin-top: 10px;
 }
 .view-container main .tbl-details {
+  overflow: hidden;
   height: 100%;
 }
 .view-container main .tbl-details.h-auto {
   height: auto;
+}
+.view-container main .tbl-details > form {
+  height: inherit;
 }
 .view-container main .tbl-details table {
   height: 100%;
@@ -1104,6 +1108,7 @@ table tr.no-data {
 .tbl-details {
   border: 1px solid #ced4dd;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 .tbl-details tbody th {
   padding: 0 20px;
@@ -1347,6 +1352,9 @@ table tr.no-data {
   padding: 44px 38px 30px;
   border: 1px solid #ced4dd;
   border-top-color: #004;
+}
+.dialog-modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
 }
 .dialog-modal.alert {
   width: 450px;
