@@ -12,6 +12,10 @@
 
   &-save {
     @include bgurl($w: 16px, $h: 15px, $img: 'icon_save.png');
+
+    &.c-yellow {
+      background-image: url(/images/icon_save_yellow.png);
+    }
   }
 
   &-reset {

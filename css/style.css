@@ -87,6 +87,13 @@ a {
   text-decoration: none;
 }
 
+hr {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 button {
   border: 0;
   outline: 0;
@@ -577,6 +584,10 @@ dialog {
   border-radius: 5px;
   background: #f2f6ff;
 }
+.roi-container > hr {
+  height: 1px;
+  border-top: 1px solid #c0c7d5;
+}
 .roi-container .row {
   width: 100%;
   display: flex;
@@ -587,6 +598,36 @@ dialog {
 }
 .roi-container .row button {
   flex: 1;
+}
+.roi-container .row.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 12px;
+}
+.roi-container .row.result .txt-result {
+  flex: 1;
+  line-height: 35px;
+  text-align: center;
+  color: #fff600;
+  font-weight: 700;
+  border-radius: 5px;
+  background: #1c3d74;
+}
+.roi-container .row.result .txt-field {
+  width: 110px;
+  line-height: 33px;
+}
+.roi-container .row.btns button {
+  line-height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  background: #233251;
+}
+.roi-container .row.btns button:disabled {
+  color: #adb4c4;
+  background: #e6eaf3;
 }
 .roi-container .btn-roi {
   line-height: 35px;
@@ -644,7 +685,7 @@ dialog {
 .roi-container .ic.lane-left-turn::after {
   width: 15px;
   height: 15px;
-  background-image: url("/images/roi/left_utern.png");
+  background-image: url("/images/roi/left.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -660,7 +701,199 @@ dialog {
 .roi-container .ic.lane-left-turn.active::after {
   width: 15px;
   height: 15px;
+  background-image: url("/images/roi/left_white.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-right-turn::after {
+  width: 15px;
+  height: 15px;
+  background-image: url("/images/roi/right.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-right-turn:disabled {
+  opacity: 0.4;
+  background: #adb4c4;
+}
+.roi-container .ic.lane-right-turn.active {
+  color: #fff;
+  background: #576376;
+}
+.roi-container .ic.lane-right-turn.active::after {
+  width: 15px;
+  height: 15px;
+  background-image: url("/images/roi/right_white.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-u-turn::after {
+  width: 14px;
+  height: 17px;
+  background-image: url("/images/roi/utern.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-u-turn:disabled {
+  opacity: 0.4;
+  background: #adb4c4;
+}
+.roi-container .ic.lane-u-turn.active {
+  color: #fff;
+  background: #576376;
+}
+.roi-container .ic.lane-u-turn.active::after {
+  width: 14px;
+  height: 17px;
+  background-image: url("/images/roi/utern_white.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-straight_left::after {
+  width: 16px;
+  height: 20px;
+  background-image: url("/images/roi/straight_left.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-straight_left:disabled {
+  opacity: 0.4;
+  background: #adb4c4;
+}
+.roi-container .ic.lane-straight_left.active {
+  color: #fff;
+  background: #576376;
+}
+.roi-container .ic.lane-straight_left.active::after {
+  width: 16px;
+  height: 20px;
+  background-image: url("/images/roi/straight_left_white.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-straight_right::after {
+  width: 16px;
+  height: 20px;
+  background-image: url("/images/roi/straight_right.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-straight_right:disabled {
+  opacity: 0.4;
+  background: #adb4c4;
+}
+.roi-container .ic.lane-straight_right.active {
+  color: #fff;
+  background: #576376;
+}
+.roi-container .ic.lane-straight_right.active::after {
+  width: 16px;
+  height: 20px;
+  background-image: url("/images/roi/straight_right_white.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-left-uturn::after {
+  width: 14px;
+  height: 20px;
+  background-image: url("/images/roi/left_utern.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.lane-left-uturn:disabled {
+  opacity: 0.4;
+  background: #adb4c4;
+}
+.roi-container .ic.lane-left-uturn.active {
+  color: #fff;
+  background: #576376;
+}
+.roi-container .ic.lane-left-uturn.active::after {
+  width: 14px;
+  height: 20px;
   background-image: url("/images/roi/left_utern_white.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.bus::after {
+  width: 22px;
+  height: 20px;
+  background-image: url("/images/roi/bus.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.bus:disabled {
+  opacity: 0.4;
+  background: #adb4c4;
+}
+.roi-container .ic.bus.active {
+  color: #fff;
+  background: #576376;
+}
+.roi-container .ic.bus.active::after {
+  width: 22px;
+  height: 20px;
+  background-image: url("/images/roi/bus_white.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.road::after {
+  width: 20px;
+  height: 15px;
+  background-image: url("/images/roi/car.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.road:disabled {
+  opacity: 0.4;
+  background: #adb4c4;
+}
+.roi-container .ic.road.active {
+  color: #fff;
+  background: #576376;
+}
+.roi-container .ic.road.active::after {
+  width: 20px;
+  height: 15px;
+  background-image: url("/images/roi/car_white.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.person::after {
+  width: 13px;
+  height: 22px;
+  background-image: url("/images/roi/icon_person.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-container .ic.person:disabled {
+  opacity: 0.4;
+  background: #adb4c4;
+}
+.roi-container .ic.person.active {
+  color: #fff;
+  background: #576376;
+}
+.roi-container .ic.person.active::after {
+  width: 13px;
+  height: 22px;
+  background-image: url("/images/roi/icon_person_white.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -936,6 +1169,9 @@ dialog {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+.icon-save.c-yellow {
+  background-image: url(/images/icon_save_yellow.png);
 }
 .icon-reset {
   width: 17px;

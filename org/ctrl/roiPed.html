@@ -22,6 +22,11 @@
               </header>
               <main class="information-container">
                 <div class="roi-container">
+                  <!-- 각 버튼 상태 설명: 
+                      - 활성화: active 클래스 추가
+                      - 비활성화: disabled 속성 추가
+                      - 활성화, 비활성화 상태가 아닐때는 기본 상태
+                  -->
                   <div class="row">
                     <button type="button" class="btn-roi">횡단보도</button>
                     <button type="button" class="btn-roi" disabled>도로</button>
@@ -32,28 +37,28 @@
                     <button type="button" class="btn-roi" disabled>B 구역</button>
                   </div>
                   <div class="row">
-                    <button type="button" class="ic east">동</button>
-                    <button type="button" class="ic west">서</button>
-                    <button type="button" class="ic south">남</button>
-                    <button type="button" class="ic north">북</button>
-                    <button type="button" class="ic northeast">북동</button>
-                    <button type="button" class="ic southwest">남서</button>
-                    <button type="button" class="ic northwest">북서</button>
-                    <button type="button" class="ic southeast">남동</button>
+                    <button type="button" class="ic person">동</button>
+                    <button type="button" class="ic person">서</button>
+                    <button type="button" class="ic person">남</button>
+                    <button type="button" class="ic person">북</button>
+                    <button type="button" class="ic person">북동</button>
+                    <button type="button" class="ic person">남서</button>
+                    <button type="button" class="ic person">북서</button>
+                    <button type="button" class="ic person">남동</button>
                   </div>
                   <div class="row">
                     <button type="button" class="btn-roi">검지영역</button>
                     <button type="button" class="btn-roi" disabled>대기영역</button>
-                    <button type="button" class="btn-roi" active>위험영역</button>
+                    <button type="button" class="btn-roi active">위험영역</button>
                   </div>
                   <div class="row result">
                     <em class="txt-result">진입영역, 좌회전, 4차로</em>
                   </div>
                   <hr />
-                  <div class="row">
+                  <div class="row btns">
                     <button type="button">ROI 설정</button>
-                    <button type="button">취소</button>
-                    <button type="button">완료</button>
+                    <button type="button" disabled>취소</button>
+                    <button type="button" disabled>완료</button>
                   </div>
                 </div>
                 <!-- //roi-container -->

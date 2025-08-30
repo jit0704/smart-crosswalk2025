@@ -22,6 +22,11 @@
               </header>
               <main class="information-container">
                 <div class="roi-container">
+                  <!-- 각 버튼 상태 설명: 
+                      - 활성화: active 클래스 추가
+                      - 비활성화: disabled 속성 추가
+                      - 활성화, 비활성화 상태가 아닐때는 기본 상태
+                  -->
                   <div class="row">
                     <button type="button" class="btn-roi">진입영역</button>
                     <button type="button" class="btn-roi" disabled>정지영역</button>
@@ -39,25 +44,25 @@
                     <button type="button" class="ic bus">버스</button>
                   </div>
                   <div class="row">
-                    <button type="button" class="ic road1">1차로</button>
-                    <button type="button" class="ic road2">2차로</button>
-                    <button type="button" class="ic road3">3차로</button>
-                    <button type="button" class="ic road4">4차로</button>
-                    <button type="button" class="ic road5">5차로</button>
-                    <button type="button" class="ic road6">6차로</button>
-                    <button type="button" class="ic road7">7차로</button>
-                    <button type="button" class="ic road8">8차로</button>
+                    <button type="button" class="ic road">1차로</button>
+                    <button type="button" class="ic road" disabled>2차로</button>
+                    <button type="button" class="ic road active">3차로</button>
+                    <button type="button" class="ic road">4차로</button>
+                    <button type="button" class="ic road">5차로</button>
+                    <button type="button" class="ic road">6차로</button>
+                    <button type="button" class="ic road">7차로</button>
+                    <button type="button" class="ic road">8차로</button>
                   </div>
                   <div class="row result">
                     <em class="txt-result">진입영역, 좌회전, 4차로</em>
                     <i>거리(m)</i>
-                    <input type="text" class="txt-field" />
+                    <input type="text" class="txt-field sm" />
                   </div>
                   <hr />
-                  <div class="row">
+                  <div class="row btns">
                     <button type="button">ROI 설정</button>
-                    <button type="button">취소</button>
-                    <button type="button">완료</button>
+                    <button type="button" disabled>취소</button>
+                    <button type="button" disabled>완료</button>
                   </div>
                 </div>
                 <!-- //roi-container -->
@@ -65,6 +70,8 @@
                   <header class="administer-header">
                     <em class="title sm bul">ROI 목록</em>
                     <button type="button" class="btn"><i class="icon-save"></i>저장</button>
+                    <!-- 저장 아이콘 노란색 디자인 -->
+                    <!-- <button type="button" class="btn"><i class="icon-save c-yellow"></i>저장</button> -->
                   </header>
                   <div class="tbl-bind">
                     <table class="tbl-centered sm">

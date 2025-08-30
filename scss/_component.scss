@@ -99,6 +99,11 @@
   border-radius: 5px;
   background: $c-white3;
 
+  & > hr {
+    height: 1px;
+    border-top: 1px solid $c-gray22;
+  }
+
   .row {
     width: 100%;
     @include flexbox(row, flex-start, flex-start);
@@ -106,6 +111,40 @@
 
     button {
       flex: 1;
+    }
+
+    &.result {
+      @include flexbox(row, flex-start, center);
+      gap: 0 12px;
+
+      .txt-result {
+        flex: 1;
+        line-height: 35px;
+        text-align: center;
+        color: $c-yellow1;
+        font-weight: 700;
+        border-radius: 5px;
+        background: $c-blue2;
+      }
+
+      .txt-field {
+        width: 110px;
+        line-height: 33px;
+      }
+    }
+
+    &.btns {
+      button {
+        line-height: 40px;
+        color: $c-white0;
+        border-radius: 5px;
+        background: $c-blue7;
+
+        &:disabled {
+          color: $c-gray18;
+          background: $c-gray17;
+        }
+      }
     }
   }
 
@@ -161,7 +200,7 @@
 
     &.lane-left-turn {
       &::after {
-        @include bgurl-roi($w: 15px, $h: 15px, $img: 'left_utern.png');
+        @include bgurl-roi($w: 15px, $h: 15px, $img: 'left.png');
       }
 
       &:disabled {
@@ -174,7 +213,167 @@
         background: $c-black4;
 
         &::after {
-          @include bgurl-roi($w: 15px, $h: 15px, $img: 'left_utern_white.png');
+          @include bgurl-roi($w: 15px, $h: 15px, $img: 'left_white.png');
+        }
+      }
+    }
+
+    &.lane-right-turn {
+      &::after {
+        @include bgurl-roi($w: 15px, $h: 15px, $img: 'right.png');
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        background: $c-gray18;
+      }
+
+      &.active {
+        color: $c-white0;
+        background: $c-black4;
+
+        &::after {
+          @include bgurl-roi($w: 15px, $h: 15px, $img: 'right_white.png');
+        }
+      }
+    }
+
+    &.lane-u-turn {
+      &::after {
+        @include bgurl-roi($w: 14px, $h: 17px, $img: 'utern.png');
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        background: $c-gray18;
+      }
+
+      &.active {
+        color: $c-white0;
+        background: $c-black4;
+
+        &::after {
+          @include bgurl-roi($w: 14px, $h: 17px, $img: 'utern_white.png');
+        }
+      }
+    }
+
+    &.lane-straight_left {
+      &::after {
+        @include bgurl-roi($w: 16px, $h: 20px, $img: 'straight_left.png');
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        background: $c-gray18;
+      }
+
+      &.active {
+        color: $c-white0;
+        background: $c-black4;
+
+        &::after {
+          @include bgurl-roi($w: 16px, $h: 20px, $img: 'straight_left_white.png');
+        }
+      }
+    }
+
+    &.lane-straight_right {
+      &::after {
+        @include bgurl-roi($w: 16px, $h: 20px, $img: 'straight_right.png');
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        background: $c-gray18;
+      }
+
+      &.active {
+        color: $c-white0;
+        background: $c-black4;
+
+        &::after {
+          @include bgurl-roi($w: 16px, $h: 20px, $img: 'straight_right_white.png');
+        }
+      }
+    }
+
+    &.lane-left-uturn {
+      &::after {
+        @include bgurl-roi($w: 14px, $h: 20px, $img: 'left_utern.png');
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        background: $c-gray18;
+      }
+
+      &.active {
+        color: $c-white0;
+        background: $c-black4;
+
+        &::after {
+          @include bgurl-roi($w: 14px, $h: 20px, $img: 'left_utern_white.png');
+        }
+      }
+    }
+
+    &.bus {
+      &::after {
+        @include bgurl-roi($w: 22px, $h: 20px, $img: 'bus.png');
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        background: $c-gray18;
+      }
+
+      &.active {
+        color: $c-white0;
+        background: $c-black4;
+
+        &::after {
+          @include bgurl-roi($w: 22px, $h: 20px, $img: 'bus_white.png');
+        }
+      }
+    }
+
+    &.road {
+      &::after {
+        @include bgurl-roi($w: 20px, $h: 15px, $img: 'car.png');
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        background: $c-gray18;
+      }
+
+      &.active {
+        color: $c-white0;
+        background: $c-black4;
+
+        &::after {
+          @include bgurl-roi($w: 20px, $h: 15px, $img: 'car_white.png');
+        }
+      }
+    }
+
+    &.person {
+      &::after {
+        @include bgurl-roi($w: 13px, $h: 22px, $img: 'icon_person.png');
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        background: $c-gray18;
+      }
+
+      &.active {
+        color: $c-white0;
+        background: $c-black4;
+
+        &::after {
+          @include bgurl-roi($w: 13px, $h: 22px, $img: 'icon_person_white.png');
         }
       }
     }
