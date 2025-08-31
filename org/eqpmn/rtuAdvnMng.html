@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RTU 고급 관리</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/pub/includeHTML.js"></script>
+    <script defer src="/js/pub/pubUi.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/include/gnb.html"></nav>
+      <main class="main-container">
+        <section class="administer filter rtu-advn-mng-container">
+          <div class="filter-key-value-container">
+            <dl>
+              <dt>함체장치관리 IP</dt>
+              <dd>
+                <input type="text" class="txt-field sm" style="width: 150px" />
+              </dd>
+            </dl>
+            <dl>
+              <dt>PORT</dt>
+              <dd>
+                <input type="text" class="txt-field sm" style="width: 50px; text-align: center" />
+              </dd>
+            </dl>
+          </div>
+          <!-- //filter-key-value-container -->
+          <div class="ly-left">
+            <article>
+              <header class="administer-header">
+                <em class="title">Network Setting</em>
+                <span class="btn-group">
+                  <button class="btn"><i class="icon-search"></i>조회</button>
+                  <button class="btn"><i class="icon-set"></i>설정</button>
+                </span>
+              </header>
+              <div class="tbl-details">
+                <table style="height: 112px">
+                  <colgroup>
+                    <col style="width: 210px" />
+                    <col />
+                    <col style="width: 210px" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>IP</th>
+                      <td><input type="text" class="txt-field" /></td>
+                      <th>Gateway</th>
+                      <td><input type="text" class="txt-field" /></td>
+                    </tr>
+                    <tr>
+                      <th>PORT</th>
+                      <td><input type="text" class="txt-field" /></td>
+                      <th>Subnet Mask</th>
+                      <td><input type="text" class="txt-field" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl-details -->
+
+              <em class="rtu-guide">장비의 IP를 설정한다.<br />Network Setting은 장비 재부팅 후 적용된다.</em>
+
+              <div class="rtu-refer">
+                <em>기본 값</em>
+                <table>
+                  <colgroup>
+                    <col style="width: 95px" />
+                    <col />
+                    <col style="width: 115px" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>IP</th>
+                      <td><span>192.168.172.200</span></td>
+                      <th>Gateway</th>
+                      <td><span>255.255.255.0</span></td>
+                    </tr>
+                    <tr>
+                      <th>PORT</th>
+                      <td><span>35344</span></td>
+                      <th>Subnet Mask</th>
+                      <td><span>192.168.172.1</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="mt15">
+              <header class="administer-header">
+                <em class="title">Device ID Setting</em>
+                <span class="btn-group">
+                  <button class="btn"><i class="icon-search"></i>조회</button>
+                  <button class="btn"><i class="icon-set"></i>설정</button>
+                </span>
+              </header>
+              <div class="tbl-details">
+                <table style="height: 63px">
+                  <colgroup>
+                    <col style="width: 210px" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>Device ID</th>
+                      <td><input type="text" class="txt-field" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl-details -->
+
+              <em class="rtu-guide">장비의 고유 번호를 설정한다. (범위 0 ~ 65535)</em>
+            </article>
+
+            <article class="mt12">
+              <header class="administer-header">
+                <em class="title">Transmission Method</em>
+                <button class="btn"><i class="icon-set"></i>설정</button>
+              </header>
+              <div class="tbl-details">
+                <table style="height: 63px">
+                  <colgroup>
+                    <col style="width: 210px" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>Transmission Method</th>
+                      <td><input type="text" class="txt-field" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl-details -->
+
+              <em class="rtu-guide">
+                신호등 상태정보의 서버 전송 방법을 설정한다.<br />
+                * 0 : 서버로 전송하지 않음<br />
+                * 1 : Method1, 신호등 상태 변경 될 경우 자동 전송<br />
+                * 2 : Method2, 100msec 마다 자동으로 신호등 상태 전송
+              </em>
+            </article>
+          </div>
+          <!-- //ly-left -->
+
+          <div class="ly-right">
+            <article>
+              <header class="administer-header">
+                <em class="title">Server Connection Information Setting</em>
+                <span class="btn-group">
+                  <button class="btn"><i class="icon-search"></i>조회</button>
+                  <button class="btn"><i class="icon-set"></i>설정</button>
+                </span>
+              </header>
+              <div class="tbl-details">
+                <table style="height: 112px">
+                  <colgroup>
+                    <col style="width: 210px" />
+                    <col />
+                    <col style="width: 210px" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>Server IP 1</th>
+                      <td><input type="text" class="txt-field" /></td>
+                      <th>Server IP 2</th>
+                      <td><input type="text" class="txt-field" /></td>
+                    </tr>
+                    <tr>
+                      <th>Server PORT 1</th>
+                      <td><input type="text" class="txt-field" /></td>
+                      <th>Server PORT 2</th>
+                      <td><input type="text" class="txt-field" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl-details -->
+
+              <em class="rtu-guide"
+                >제어기가 Client로 동작 시 서버 IP 주소와 포트 값 설정한다.<br />Transmission Method가 1 또는 2로 설정된 경우, 설정된 IP 주소로 신호등
+                상태 값이 전송된다</em
+              >
+
+              <div class="rtu-refer">
+                <em>기본 값</em>
+                <table>
+                  <colgroup>
+                    <col style="width: 95px" />
+                    <col />
+                    <col style="width: 95px" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>Server 1</th>
+                      <td><span>192.168.172.200</span></td>
+                      <th>Port</th>
+                      <td><span>35000</span></td>
+                    </tr>
+                    <tr>
+                      <th>Server 2</th>
+                      <td><span>35344</span></td>
+                      <th>Port</th>
+                      <td><span>35000</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="mt15">
+              <header class="administer-header">
+                <em class="title">Traffic Signal Request</em>
+                <button class="btn"><i class="icon-set"></i>설정</button>
+              </header>
+              <div class="tbl-details">
+                <table style="height: 63px">
+                  <colgroup>
+                    <col style="width: 210px" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>Traffic Signal Transmission</th>
+                      <td><input type="text" class="txt-field" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl-details -->
+
+              <em class="rtu-guide">신호등 상태값의 서버 전송 여부를 설정한다(0 : 전송금지, 1 : 전송)</em>
+            </article>
+
+            <article class="mt12">
+              <header class="administer-header">
+                <em class="title">Device Reset</em>
+                <button type="button" class="btn"><i class="icon-reset"></i>초기화</button>
+              </header>
+              <em class="rtu-guide bordered">신호등 상태값의 서버 전송 여부를 설정한다(0 : 전송금지, 1 : 전송)</em>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/include/copyright.html"></footer>
+    </div>
+  </body>
+</html>

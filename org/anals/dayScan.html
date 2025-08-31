@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일별 검지</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/pub/includeHTML.js"></script>
+    <script defer src="/js/pub/pubUi.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/include/gnb.html"></nav>
+      <main class="main-container">
+        <section class="administer filter day-scan-container">
+          <div class="filter-area-container">
+            <select class="opt sm" style="width: 200px">
+              <option value="">지점</option>
+              <option value=""></option>
+            </select>
+            <input type="date" class="inp-date" style="width: 170px" />
+            <input type="date" class="inp-date" style="width: 170px" />
+            <select class="opt sm" style="width: 200px">
+              <option value="">line</option>
+              <option value=""></option>
+            </select>
+            <button type="button" class="btn-search"><span class="screen-out">검색 버튼</span></button>
+          </div>
+          <!-- //filter-area-container -->
+          <div class="chart-body mt20">
+            <section class="chart-container"></section>
+            <section class="chart-container"></section>
+          </div>
+          <!-- //chart-body -->
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/include/copyright.html"></footer>
+    </div>
+  </body>
+</html>

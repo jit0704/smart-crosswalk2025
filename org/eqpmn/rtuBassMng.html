@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RTU 기본 관리</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/pub/includeHTML.js"></script>
+    <script defer src="/js/pub/pubUi.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/include/gnb.html"></nav>
+      <main class="main-container">
+        <section class="administer filter rtu-bass-mng-container">
+          <div class="filter-key-value-container">
+            <dl>
+              <dt>함체장치관리 IP</dt>
+              <dd>
+                <input type="text" class="txt-field sm" style="width: 150px" />
+              </dd>
+            </dl>
+            <dl>
+              <dt>PORT</dt>
+              <dd>
+                <input type="text" class="txt-field sm" style="width: 50px; text-align: center" />
+              </dd>
+            </dl>
+          </div>
+          <!-- //filter-key-value-container -->
+          <div class="administer-body">
+            <article>
+              <header class="administer-header">
+                <em class="title">전원 설정</em>
+                <span class="bind">총 소모전력 : 191W</span>
+              </header>
+              <div class="tbl-emphasis">
+                <table>
+                  <colgroup>
+                    <col style="width: 160px" />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>POWER 1</th>
+                      <th>POWER 2</th>
+                      <th>POWER 3</th>
+                      <th>POWER 4</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>별칭</th>
+                      <td>
+                        <input type="text" class="txt-field lg2" />
+                      </td>
+                      <td>
+                        <input type="text" class="txt-field lg2" />
+                      </td>
+                      <td>
+                        <input type="text" class="txt-field lg2" />
+                      </td>
+                      <td>
+                        <input type="text" class="txt-field lg2" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>ON / OFF</th>
+                      <td>
+                        <span class="state-onoff"><em class="active">ON</em> / <em>OFF</em></span>
+                      </td>
+                      <td>
+                        <span class="state-onoff"><em class="active">ON</em> / <em>OFF</em></span>
+                      </td>
+                      <td>
+                        <span class="state-onoff"><em class="active">ON</em> / <em>OFF</em></span>
+                      </td>
+                      <td>
+                        <span class="state-onoff"><em>ON</em> / <em class="active">OFF</em></span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="mt63">
+              <header class="administer-header">
+                <em class="title">Pan & Heater 설정</em>
+                <span class="bind">
+                  <em>내부 온도 : 36 ℃</em>
+                  <button class="btn"><i class="icon-save"></i>저장</button>
+                </span>
+              </header>
+              <div class="tbl-emphasis">
+                <table>
+                  <colgroup>
+                    <col style="width: 160px" />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Mode</th>
+                      <th>설정 온도</th>
+                      <th>동작 여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Pan</th>
+                      <td rowspan="2">
+                        <span class="state-onoff"><em class="active">AUTO</em> / <em>MANUAL</em></span>
+                      </td>
+                      <td>
+                        <input type="text" class="txt-field" />
+                      </td>
+                      <td>
+                        <span class="state-onoff"><em class="active">ON</em> / <em>OFF</em></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Heater</th>
+                      <td>
+                        <input type="text" class="txt-field" />
+                      </td>
+                      <td>
+                        <span class="state-onoff"><em>ON</em> / <em class="active">OFF</em></span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="mt50">
+              <header class="administer-header">
+                <em class="title">함체 문 상태</em>
+              </header>
+              <div class="tbl-emphasis">
+                <table>
+                  <colgroup>
+                    <col style="width: 160px" />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Front Door</th>
+                      <th>Rear Door</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>개폐 상태</th>
+                      <td>Open</td>
+                      <td>Closed</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+          <!-- //administer-body -->
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/include/copyright.html"></footer>
+    </div>
+  </body>
+</html>

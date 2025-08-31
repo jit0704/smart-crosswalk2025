@@ -116,4 +116,38 @@ table {
       }
     }
   }
+
+  &-emphasis {
+    border: 1px solid $c-gray23;
+    border-radius: 5px;
+
+    th {
+      height: 60px;
+      font-weight: 400;
+      background: $c-white4;
+    }
+
+    tbody {
+      td {
+        height: 60px;
+        padding: 0 12px;
+        text-align: center;
+        border: 1px solid $c-gray23;
+
+        .txt-field {
+          text-align: center;
+        }
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+
+      tr:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
 }

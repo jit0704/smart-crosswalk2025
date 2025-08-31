@@ -212,16 +212,129 @@
 }
 
 /*---------------------------------------------------------------
-  [제어관리 - 제어장비 동작 관리]
-  org\ctrl\cteqOpertMng.html
+  [장비 관리 - RTU 기본 관리	]
+  org\eqpmn\rtuBassMng.html
 -----------------------------------------------------------------*/
-.cteq-opert-mng-container {
+.rtu-bass-mng-container {
+  .administer-body {
+    flex: 1;
+    padding-top: 23px;
+  }
+
+  .administer-header {
+    margin-bottom: 10px;
+  }
+
+  .state-onoff {
+    font-size: 16px;
+
+    em {
+      &.active {
+        &:first-child {
+          color: $c-blue4;
+        }
+
+        &:last-child {
+          color: $c-red2;
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------------------------------------
+  [장비 관리 - RTU 고급 관리	]
+  org\eqpmn\rtuAdvnMng.html
+-----------------------------------------------------------------*/
+.rtu-advn-mng-container.administer {
+  gap: 0 50px;
+
+  .administer-header {
+    margin-bottom: 10px;
+  }
+
+  .rtu-guide {
+    display: block;
+    margin-top: 10px;
+    line-height: 20px;
+    color: $c-blue4;
+
+    &.bordered {
+      padding: 21px 15px 20px;
+      border-radius: 5px;
+      border: 1px solid $c-gray5;
+    }
+  }
+
+  .rtu-refer {
+    margin-top: 8px;
+    padding: 12px 15px 8px;
+    border-radius: 5px;
+    border: 1px solid $c-gray24;
+
+    table {
+      border-top: 1px solid $c-gray5;
+      border-bottom: 1px solid $c-gray5;
+
+      th {
+        height: 35px;
+        padding-left: 20px;
+        font-weight: 400;
+        text-align: left;
+        border-bottom: 1px solid $c-gray5;
+      }
+
+      td {
+        height: 35px;
+        border-bottom: 1px solid $c-gray5;
+
+        span {
+          display: block;
+          line-height: 15px;
+          padding-left: 24px;
+          border-left: 1px solid $c-gray5;
+        }
+      }
+    }
+  }
+
+  .ly-left {
+    width: 905px;
+    margin-top: 20px;
+  }
+
+  .ly-right {
+    margin-top: 20px;
+  }
+}
+
+/*---------------------------------------------------------------
+  [제어관리 - 제어장비 동작 관리, 제어장비 운영 시간 관리]
+  org\ctrl\cteqOpertMng.html,
+  org\ctrl\cteqOperTimeMng.html
+-----------------------------------------------------------------*/
+.cteq-opert-mng-container,
+.cteq-oper-time-mng-container {
   .filter-area-container {
     .opt {
       width: 200px;
     }
   }
 
+  .view-container main .tbl-details {
+    height: auto;
+  }
+}
+
+/*---------------------------------------------------------------
+  [제어관리 - , 신호 연장 운영 시간 관리, 집중조명 운영 시간 관리, 음성안내 음량 관리]
+  org\ctrl\pseOperTimeMng.html,
+  org\ctrl\spotlightOperTimeMng.html,
+  org\ctrl\voiceVolumeMng.html
+-----------------------------------------------------------------*/
+.pse-oper-time-mng-container,
+.spotlight-oper-time-mng-container,
+.voice-volume-mng-container {
   .view-container main .tbl-details {
     height: auto;
   }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>음성안내 음량 관리</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script defer src="/js/pub/includeHTML.js"></script>
+    <script defer src="/js/pub/pubUi.js"></script>
+  </head>
+  <body>
+    <div class="ly-container">
+      <nav class="gnb-container" include-html="/org/common/include/gnb.html"></nav>
+      <main class="main-container">
+        <section class="administer voice-volume-mng-container">
+          <div class="ly-left">
+            <article class="list-container">
+              <header class="administer-header">
+                <em class="title">음성안내 음량</em>
+              </header>
+              <main>
+                <table class="tbl-centered sm">
+                  <colgroup>
+                    <col style="width: 80px" />
+                    <col style="width: 80px" />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>NO</th>
+                      <th>적용시간</th>
+                      <th>볼륨</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="no-data">
+                      <td colspan="4">데이터가 없습니다.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>1</td>
+                      <td>00:00 ~ 01:00 (1:00시 이전)</td>
+                      <td>100</td>
+                    </tr>
+                    <!-- 체크박스 활성화시 active 클래스 추가해주시면 됩니다 -->
+                    <tr class="active">
+                      <td>
+                        <label>
+                          <input type="checkbox" class="inp-chkbox" />
+                          <i></i>
+                        </label>
+                      </td>
+                      <td>1</td>
+                      <td>00:00 ~ 01:00 (1:00시 이전)</td>
+                      <td>100</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </main>
+            </article>
+          </div>
+          <div class="ly-right">
+            <article class="view-container">
+              <header class="administer-header">
+                <em class="title">상세정보</em>
+                <button class="btn"><i class="icon-save"></i>저장</button>
+              </header>
+              <main>
+                <div class="tbl-details">
+                  <table>
+                    <colgroup>
+                      <col style="width: 175px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>적용시간</th>
+                        <td>00:00 ~ 01:00 (01:00시 이전)</td>
+                      </tr>
+                      <tr>
+                        <th>볼륨 <i>*</i></th>
+                        <td><input type="text" class="txt-field" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </main>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="ly-footer" include-html="/org/common/include/copyright.html"></footer>
+    </div>
+  </body>
+</html>

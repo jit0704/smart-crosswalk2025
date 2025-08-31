@@ -420,6 +420,12 @@ dialog {
   align-items: center;
   gap: 0 10px;
 }
+.main-container .administer.filter .filter-key-value-container {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+}
 .main-container .administer.filter .list-container main,
 .main-container .administer.filter .view-container main {
   height: calc(100vh - 293px);
@@ -518,6 +524,27 @@ dialog {
   height: 65px;
   padding: 0 10px;
   background: #f2f6ff;
+}
+
+.filter-key-value-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 20px;
+  height: 65px;
+  padding: 0 21.5px;
+  background: #f2f6ff;
+}
+.filter-key-value-container dl {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 10px;
+}
+.filter-key-value-container dl dt {
+  color: #1c3d74;
 }
 
 /*---------------------------------------------------------------
@@ -1050,6 +1077,29 @@ dialog {
 }
 
 /*---------------------------------------------------------------
+  [차트 그룹]
+-----------------------------------------------------------------*/
+.chart-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 14px 0;
+  width: 100%;
+}
+.chart-body .chart-container {
+  width: 100%;
+  height: 350px;
+}
+
+.chart-container {
+  border-radius: 5px;
+  border: 1px solid #ced4dd;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/*---------------------------------------------------------------
   [버튼]
 -----------------------------------------------------------------*/
 .btn {
@@ -1405,6 +1455,30 @@ table tr.no-data {
   height: 52px;
   padding: 0 16px;
 }
+.tbl-emphasis {
+  border: 1px solid #cfdbeb;
+  border-radius: 5px;
+}
+.tbl-emphasis th {
+  height: 60px;
+  font-weight: 400;
+  background: #f4f6f9;
+}
+.tbl-emphasis tbody td {
+  height: 60px;
+  padding: 0 12px;
+  text-align: center;
+  border: 1px solid #cfdbeb;
+}
+.tbl-emphasis tbody td .txt-field {
+  text-align: center;
+}
+.tbl-emphasis tbody td:last-child {
+  border-right: 0;
+}
+.tbl-emphasis tbody tr:last-child td {
+  border-bottom: 0;
+}
 
 /*---------------------------------------------------------------
   [form]
@@ -1528,8 +1602,14 @@ table tr.no-data {
   border: 1px solid #ced4dd;
   background: #fff;
 }
+.txt-field.sm {
+  line-height: 33px;
+}
 .txt-field.lg {
   line-height: 50px;
+}
+.txt-field.lg2 {
+  line-height: 43px;
 }
 .txt-field::placeholder {
   color: #aeaeae;
@@ -1565,6 +1645,18 @@ table tr.no-data {
   font-size: 14px;
   border-radius: 5px;
   border: 1px solid #ced4dd;
+}
+.opt-time-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.opt-time-group .opt {
+  width: 150px;
+}
+.opt-time-group i {
+  margin: 0 10px;
 }
 .opt:disabled {
   background: rgba(247, 248, 249, 0.96);
@@ -1837,13 +1929,105 @@ table tr.no-data {
 }
 
 /*---------------------------------------------------------------
-  [제어관리 - 제어장비 동작 관리]
-  org\ctrl\cteqOpertMng.html
+  [장비 관리 - RTU 기본 관리	]
+  org\eqpmn\rtuBassMng.html
 -----------------------------------------------------------------*/
-.cteq-opert-mng-container .filter-area-container .opt {
+.rtu-bass-mng-container .administer-body {
+  flex: 1;
+  padding-top: 23px;
+}
+.rtu-bass-mng-container .administer-header {
+  margin-bottom: 10px;
+}
+.rtu-bass-mng-container .state-onoff {
+  font-size: 16px;
+}
+.rtu-bass-mng-container .state-onoff em.active:first-child {
+  color: #5388f4;
+}
+.rtu-bass-mng-container .state-onoff em.active:last-child {
+  color: #fa4242;
+}
+
+/*---------------------------------------------------------------
+  [장비 관리 - RTU 고급 관리	]
+  org\eqpmn\rtuAdvnMng.html
+-----------------------------------------------------------------*/
+.rtu-advn-mng-container.administer {
+  gap: 0 50px;
+}
+.rtu-advn-mng-container.administer .administer-header {
+  margin-bottom: 10px;
+}
+.rtu-advn-mng-container.administer .rtu-guide {
+  display: block;
+  margin-top: 10px;
+  line-height: 20px;
+  color: #5388f4;
+}
+.rtu-advn-mng-container.administer .rtu-guide.bordered {
+  padding: 21px 15px 20px;
+  border-radius: 5px;
+  border: 1px solid #ced4dd;
+}
+.rtu-advn-mng-container.administer .rtu-refer {
+  margin-top: 8px;
+  padding: 12px 15px 8px;
+  border-radius: 5px;
+  border: 1px solid #a4bef4;
+}
+.rtu-advn-mng-container.administer .rtu-refer table {
+  border-top: 1px solid #ced4dd;
+  border-bottom: 1px solid #ced4dd;
+}
+.rtu-advn-mng-container.administer .rtu-refer table th {
+  height: 35px;
+  padding-left: 20px;
+  font-weight: 400;
+  text-align: left;
+  border-bottom: 1px solid #ced4dd;
+}
+.rtu-advn-mng-container.administer .rtu-refer table td {
+  height: 35px;
+  border-bottom: 1px solid #ced4dd;
+}
+.rtu-advn-mng-container.administer .rtu-refer table td span {
+  display: block;
+  line-height: 15px;
+  padding-left: 24px;
+  border-left: 1px solid #ced4dd;
+}
+.rtu-advn-mng-container.administer .ly-left {
+  width: 905px;
+  margin-top: 20px;
+}
+.rtu-advn-mng-container.administer .ly-right {
+  margin-top: 20px;
+}
+
+/*---------------------------------------------------------------
+  [제어관리 - 제어장비 동작 관리, 제어장비 운영 시간 관리]
+  org\ctrl\cteqOpertMng.html,
+  org\ctrl\cteqOperTimeMng.html
+-----------------------------------------------------------------*/
+.cteq-opert-mng-container .filter-area-container .opt,
+.cteq-oper-time-mng-container .filter-area-container .opt {
   width: 200px;
 }
-.cteq-opert-mng-container .view-container main .tbl-details {
+.cteq-opert-mng-container .view-container main .tbl-details,
+.cteq-oper-time-mng-container .view-container main .tbl-details {
+  height: auto;
+}
+
+/*---------------------------------------------------------------
+  [제어관리 - , 신호 연장 운영 시간 관리, 집중조명 운영 시간 관리, 음성안내 음량 관리]
+  org\ctrl\pseOperTimeMng.html,
+  org\ctrl\spotlightOperTimeMng.html,
+  org\ctrl\voiceVolumeMng.html
+-----------------------------------------------------------------*/
+.pse-oper-time-mng-container .view-container main .tbl-details,
+.spotlight-oper-time-mng-container .view-container main .tbl-details,
+.voice-volume-mng-container .view-container main .tbl-details {
   height: auto;
 }
 

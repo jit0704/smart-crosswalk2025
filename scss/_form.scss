@@ -123,8 +123,16 @@
   border: 1px solid $c-gray5;
   background: $c-white0;
 
+  &.sm {
+    line-height: 33px;
+  }
+
   &.lg {
     line-height: 50px;
+  }
+
+  &.lg2 {
+    line-height: 43px;
   }
 
   &::placeholder {
@@ -161,6 +169,18 @@
   font-size: 14px;
   border-radius: 5px;
   border: 1px solid $c-gray5;
+
+  &-time-group {
+    @include flexbox(row, flex-start, center);
+
+    .opt {
+      width: 150px;
+    }
+
+    i {
+      margin: 0 10px;
+    }
+  }
 
   &:disabled {
     background: rgba(247, 248, 249, 0.96);

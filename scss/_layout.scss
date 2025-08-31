@@ -242,6 +242,13 @@
         }
       }
 
+      .filter-key-value-container {
+        position: absolute;
+        top: 34px;
+        left: 0;
+        right: 0;
+      }
+
       // 페이징이 없을 경우
       .list-container main,
       .view-container main {
