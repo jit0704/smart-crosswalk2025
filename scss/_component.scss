@@ -6,16 +6,17 @@
     @include flexbox(row, flex-start, center);
     gap: 3px;
     flex-wrap: wrap;
-    height: calc(100vh - 223px);
+    height: calc(100vh - 201px);
     margin-top: 8px;
     padding: 10px;
     border-radius: 5px;
     background: $c-gray12;
+    box-sizing: border-box;
   }
 
   &-video-bind {
     flex: calc(50% - 3px);
-    height: calc(100% / 2);
+    height: calc((100% / 2) - 3px);
     font-size: 0;
   }
 }
@@ -510,9 +511,9 @@
         height: inherit;
       }
 
-      table {
-        height: 100%;
-      }
+      // table {
+      //   height: 100%;
+      // }
     }
   }
 }

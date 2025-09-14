@@ -5,7 +5,7 @@
 .monitoring-container {
   .tbl-bind {
     overflow-y: auto;
-    height: 300px;
+    height: 292px;
     border-bottom: 1px solid $c-black2;
   }
 
@@ -40,6 +40,18 @@
 
     table {
       height: 100%;
+    }
+  }
+}
+
+.information-container.roi {
+  .view-container {
+    .administer-header {
+      margin-top: 29px;
+    }
+
+    .tbl-bind {
+      height: 315px;
     }
   }
 }
@@ -103,6 +115,10 @@
         height: 165px;
         margin-top: 10px;
 
+        table {
+          height: 100%;
+        }
+
         .opt {
           width: 130px;
         }
@@ -153,6 +169,10 @@
 
       .tbl-details {
         height: auto;
+
+        &::after {
+          width: 130px;
+        }
 
         .txt-field-group {
           .opt {
@@ -298,6 +318,24 @@
     }
   }
 
+  .tbl-details {
+    tbody {
+      th {
+        padding: 6px 20px 0;
+      }
+
+      td {
+        padding: 9px 15px 0;
+      }
+
+      tr:last-child {
+        td {
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+
   .ly-left {
     width: 905px;
     margin-top: 20px;
@@ -321,9 +359,9 @@
     }
   }
 
-  .view-container main .tbl-details {
-    height: auto;
-  }
+  // .view-container main .tbl-details {
+  //   height: auto;
+  // }
 }
 
 /*---------------------------------------------------------------
@@ -332,11 +370,18 @@
   org\ctrl\spotlightOperTimeMng.html,
   org\ctrl\voiceVolumeMng.html
 -----------------------------------------------------------------*/
-.pse-oper-time-mng-container,
+// .pse-oper-time-mng-container,
+// .spotlight-oper-time-mng-container,
+// .voice-volume-mng-container {
+//   .view-container main .tbl-details {
+//     height: auto;
+//   }
+// }
+
 .spotlight-oper-time-mng-container,
 .voice-volume-mng-container {
-  .view-container main .tbl-details {
-    height: auto;
+  .list-container main {
+    height: calc(100vh - 182px);
   }
 }
 
@@ -360,6 +405,10 @@
 
       & > .tbl-centered {
         margin-top: 9px;
+
+        .opt {
+          text-align: center;
+        }
       }
     }
 
@@ -469,5 +518,15 @@
     height: 100%;
     border-radius: 5px;
     border: 1px solid $c-gray5;
+  }
+}
+
+/*---------------------------------------------------------------
+  [설정관리 - 환경설정 확인]
+  org\setup\envrnSetupMng.html
+-----------------------------------------------------------------*/
+.envrn-setup-mng-container {
+  .list-container main {
+    height: calc(100vh - 182px);
   }
 }

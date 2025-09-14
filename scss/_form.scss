@@ -139,7 +139,8 @@
     color: $c-gray3;
   }
 
-  &:disabled {
+  &:disabled,
+  &:read-only {
     background: rgba(247, 248, 249, 0.96);
   }
 }
@@ -169,6 +170,9 @@
   font-size: 14px;
   border-radius: 5px;
   border: 1px solid $c-gray5;
+  appearance: none;
+  background: url(/images/selectbox_arrow.png) no-repeat calc(100% - 10px) 50%;
+  background-size: 11px 7px;
 
   &-time-group {
     @include flexbox(row, flex-start, center);

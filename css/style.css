@@ -182,6 +182,10 @@ dialog {
   text-indent: -9999px;
 }
 
+.verti-align-mid {
+  vertical-align: middle !important;
+}
+
 /*---------------------------------------------------------------
   [화면 레이아웃 정의]
 -----------------------------------------------------------------*/
@@ -347,7 +351,7 @@ dialog {
 }
 .main-container .monitoring-container .ly-right {
   flex: 1;
-  margin-top: 23px;
+  margin-top: 28px;
 }
 .main-container .monitoring-container.type2 .ly-left {
   width: 1260px;
@@ -377,7 +381,7 @@ dialog {
   gap: 0 10px;
 }
 .main-container .monitoring-container.type2 .monitoring-content {
-  height: calc(100vh - 285px);
+  height: calc(100vh - 246px);
   margin-top: 19px;
   padding: 10px;
 }
@@ -500,15 +504,16 @@ dialog {
   align-items: center;
   gap: 3px;
   flex-wrap: wrap;
-  height: calc(100vh - 223px);
+  height: calc(100vh - 201px);
   margin-top: 8px;
   padding: 10px;
   border-radius: 5px;
   background: #cfd4da;
+  box-sizing: border-box;
 }
 .monitoring-video-bind {
   flex: calc(50% - 3px);
-  height: 50%;
+  height: calc(50% - 3px);
   font-size: 0;
 }
 
@@ -1034,9 +1039,6 @@ dialog {
 .view-container main .tbl-details > form {
   height: inherit;
 }
-.view-container main .tbl-details table {
-  height: 100%;
-}
 
 /*---------------------------------------------------------------
   [페이징]
@@ -1436,12 +1438,16 @@ table tr.no-data {
   font-size: 14px;
 }
 .tbl-details {
+  position: relative;
   border: 1px solid #ced4dd;
   border-radius: 5px;
   box-sizing: border-box;
 }
+.tbl-details .h-auto {
+  height: auto !important;
+}
 .tbl-details tbody th {
-  padding: 0 20px;
+  padding: 15px 20px 0;
   text-align: left;
   font-weight: 400;
   background: #e6e9ee;
@@ -1453,7 +1459,18 @@ table tr.no-data {
 }
 .tbl-details tbody td {
   height: 52px;
-  padding: 0 16px;
+  padding: 15px 16px 0;
+  vertical-align: top;
+}
+.tbl-details::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 174px;
+  background: #e6e9ee;
 }
 .tbl-emphasis {
   border: 1px solid #cfdbeb;
@@ -1614,7 +1631,7 @@ table tr.no-data {
 .txt-field::placeholder {
   color: #aeaeae;
 }
-.txt-field:disabled {
+.txt-field:disabled, .txt-field:read-only {
   background: rgba(247, 248, 249, 0.96);
 }
 
@@ -1645,6 +1662,9 @@ table tr.no-data {
   font-size: 14px;
   border-radius: 5px;
   border: 1px solid #ced4dd;
+  appearance: none;
+  background: url(/images/selectbox_arrow.png) no-repeat calc(100% - 10px) 50%;
+  background-size: 11px 7px;
 }
 .opt-time-group {
   display: flex;
@@ -1785,7 +1805,7 @@ table tr.no-data {
 -----------------------------------------------------------------*/
 .monitoring-container .tbl-bind {
   overflow-y: auto;
-  height: 300px;
+  height: 292px;
   border-bottom: 1px solid #394250;
 }
 .monitoring-container .tbl-centered tbody tr:last-child td {
@@ -1808,6 +1828,13 @@ table tr.no-data {
 }
 .monitoring-container .view-container .tbl-details table {
   height: 100%;
+}
+
+.information-container.roi .view-container .administer-header {
+  margin-top: 29px;
+}
+.information-container.roi .view-container .tbl-bind {
+  height: 315px;
 }
 
 /*---------------------------------------------------------------
@@ -1856,6 +1883,9 @@ table tr.no-data {
   height: 165px;
   margin-top: 10px;
 }
+.camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details table {
+  height: 100%;
+}
 .camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details .opt {
   width: 130px;
 }
@@ -1892,6 +1922,9 @@ table tr.no-data {
 }
 .camera-sw-crdnt-mng-container .ly-right .sec1 .tbl-details {
   height: auto;
+}
+.camera-sw-crdnt-mng-container .ly-right .sec1 .tbl-details::after {
+  width: 130px;
 }
 .camera-sw-crdnt-mng-container .ly-right .sec1 .tbl-details .txt-field-group .opt {
   width: 120px;
@@ -1997,6 +2030,15 @@ table tr.no-data {
   padding-left: 24px;
   border-left: 1px solid #ced4dd;
 }
+.rtu-advn-mng-container.administer .tbl-details tbody th {
+  padding: 6px 20px 0;
+}
+.rtu-advn-mng-container.administer .tbl-details tbody td {
+  padding: 9px 15px 0;
+}
+.rtu-advn-mng-container.administer .tbl-details tbody tr:last-child td {
+  padding-bottom: 8px;
+}
 .rtu-advn-mng-container.administer .ly-left {
   width: 905px;
   margin-top: 20px;
@@ -2014,10 +2056,6 @@ table tr.no-data {
 .cteq-oper-time-mng-container .filter-area-container .opt {
   width: 200px;
 }
-.cteq-opert-mng-container .view-container main .tbl-details,
-.cteq-oper-time-mng-container .view-container main .tbl-details {
-  height: auto;
-}
 
 /*---------------------------------------------------------------
   [제어관리 - , 신호 연장 운영 시간 관리, 집중조명 운영 시간 관리, 음성안내 음량 관리]
@@ -2025,10 +2063,9 @@ table tr.no-data {
   org\ctrl\spotlightOperTimeMng.html,
   org\ctrl\voiceVolumeMng.html
 -----------------------------------------------------------------*/
-.pse-oper-time-mng-container .view-container main .tbl-details,
-.spotlight-oper-time-mng-container .view-container main .tbl-details,
-.voice-volume-mng-container .view-container main .tbl-details {
-  height: auto;
+.spotlight-oper-time-mng-container .list-container main,
+.voice-volume-mng-container .list-container main {
+  height: calc(100vh - 182px);
 }
 
 /*---------------------------------------------------------------
@@ -2047,6 +2084,9 @@ table tr.no-data {
 }
 .cteq-lem-mng-container .ly-right .view-container main > .tbl-centered {
   margin-top: 9px;
+}
+.cteq-lem-mng-container .ly-right .view-container main > .tbl-centered .opt {
+  text-align: center;
 }
 .cteq-lem-mng-container .ly-right .tbl-centered ~ .administer-header {
   margin-top: 43px;
@@ -2122,6 +2162,14 @@ table tr.no-data {
   height: 100%;
   border-radius: 5px;
   border: 1px solid #ced4dd;
+}
+
+/*---------------------------------------------------------------
+  [설정관리 - 환경설정 확인]
+  org\setup\envrnSetupMng.html
+-----------------------------------------------------------------*/
+.envrn-setup-mng-container .list-container main {
+  height: calc(100vh - 182px);
 }
 
 .is-edge-browser {
