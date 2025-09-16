@@ -113,9 +113,29 @@
 .roi-container {
   @include flexbox(column, flex-start, flex-start);
   gap: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  background: $c-white3;
+
+  .roi-top-area {
+    width: 100%;
+    @include flexbox(column, flex-start, flex-start);
+    gap: 10px;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    background: $c-white3;
+    box-sizing: border-box;
+  }
+
+  .roi-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 10;
+    cursor: not-allowed;
+  }
 
   & > hr {
     height: 1px;

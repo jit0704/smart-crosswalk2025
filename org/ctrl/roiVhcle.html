@@ -27,37 +27,41 @@
                       - 비활성화: disabled 속성 추가
                       - 활성화, 비활성화 상태가 아닐때는 기본 상태
                   -->
-                  <div class="row">
-                    <button type="button" class="btn-roi">진입영역</button>
-                    <button type="button" class="btn-roi" disabled>정지영역</button>
-                    <button type="button" class="btn-roi active">진출영역</button>
-                    <button type="button" class="btn-roi">반대영역</button>
+                  <div id="roiTopArea" class="roi-top-area">
+                    <div class="row">
+                      <button type="button" class="btn-roi">진입영역</button>
+                      <button type="button" class="btn-roi" disabled>정지영역</button>
+                      <button type="button" class="btn-roi active">진출영역</button>
+                      <button type="button" class="btn-roi">반대영역</button>
+                    </div>
+                    <div class="row">
+                      <button type="button" class="ic lane-straight">직진</button>
+                      <button type="button" class="ic lane-left-turn" disabled>좌회전</button>
+                      <button type="button" class="ic lane-right-turn active">우회전</button>
+                      <button type="button" class="ic lane-u-turn">유턴</button>
+                      <button type="button" class="ic lane-straight_left">직 · 좌</button>
+                      <button type="button" class="ic lane-straight_right">직 · 우</button>
+                      <button type="button" class="ic lane-left-uturn">좌 · 유</button>
+                      <button type="button" class="ic bus">버스</button>
+                    </div>
+                    <div class="row">
+                      <button type="button" class="ic road">1차로</button>
+                      <button type="button" class="ic road" disabled>2차로</button>
+                      <button type="button" class="ic road active">3차로</button>
+                      <button type="button" class="ic road">4차로</button>
+                      <button type="button" class="ic road">5차로</button>
+                      <button type="button" class="ic road">6차로</button>
+                      <button type="button" class="ic road">7차로</button>
+                      <button type="button" class="ic road">8차로</button>
+                    </div>
+                    <div class="row result">
+                      <em class="txt-result">진입영역, 좌회전, 4차로</em>
+                      <i>거리(m)</i>
+                      <input type="text" class="txt-field sm" />
+                    </div>
+                    <span class="roi-overlay"></span>
                   </div>
-                  <div class="row">
-                    <button type="button" class="ic lane-straight">직진</button>
-                    <button type="button" class="ic lane-left-turn" disabled>좌회전</button>
-                    <button type="button" class="ic lane-right-turn active">우회전</button>
-                    <button type="button" class="ic lane-u-turn">유턴</button>
-                    <button type="button" class="ic lane-straight_left">직 · 좌</button>
-                    <button type="button" class="ic lane-straight_right">직 · 우</button>
-                    <button type="button" class="ic lane-left-uturn">좌 · 유</button>
-                    <button type="button" class="ic bus">버스</button>
-                  </div>
-                  <div class="row">
-                    <button type="button" class="ic road">1차로</button>
-                    <button type="button" class="ic road" disabled>2차로</button>
-                    <button type="button" class="ic road active">3차로</button>
-                    <button type="button" class="ic road">4차로</button>
-                    <button type="button" class="ic road">5차로</button>
-                    <button type="button" class="ic road">6차로</button>
-                    <button type="button" class="ic road">7차로</button>
-                    <button type="button" class="ic road">8차로</button>
-                  </div>
-                  <div class="row result">
-                    <em class="txt-result">진입영역, 좌회전, 4차로</em>
-                    <i>거리(m)</i>
-                    <input type="text" class="txt-field sm" />
-                  </div>
+                  <!-- //#roiTopArea -->
                   <hr />
                   <div class="row btns">
                     <button type="button">ROI 설정</button>
