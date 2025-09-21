@@ -171,7 +171,7 @@
   border-radius: 5px;
   border: 1px solid $c-gray5;
   appearance: none;
-  background: url(/images/selectbox_arrow.png) no-repeat calc(100% - 10px) 50%;
+  background: url(/images/selectbox_arrow.png) no-repeat calc(100% - 10px) 50% $c-white0;
   background-size: 11px 7px;
 
   &-time-group {

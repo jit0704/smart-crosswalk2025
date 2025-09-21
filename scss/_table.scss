@@ -21,8 +21,8 @@ table {
         font-size: 18px;
         font-weight: 400;
         text-align: center;
-        border-top: 2px solid $c-black2;
-        border-bottom: 2px solid $c-black2;
+        border-top: 1px solid $c-black2;
+        border-bottom: 1px solid $c-black2;
         background: $c-white0;
       }
     }
@@ -35,8 +35,22 @@ table {
         border-bottom: 1px solid $c-gray5;
       }
 
-      tr.active {
-        background: $c-white2;
+      tr {
+        &.active {
+          background: $c-white2;
+        }
+
+        &:not(.no-data) {
+          td {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &.hover-none {
+        td {
+          cursor: default !important;
+        }
       }
     }
 
@@ -104,6 +118,7 @@ table {
     tbody {
       th {
         padding: 15px 20px 0;
+        color: $c-black3;
         text-align: left;
         font-weight: 400;
         background: $c-gray10;

@@ -194,8 +194,8 @@ dialog {
 }
 .ly-container .ly-footer {
   width: calc(100% - 60px);
-  margin: 11px auto 0;
-  line-height: 29px;
+  margin: 10px auto 0;
+  line-height: 30px;
   text-align: right;
   font-size: 13px;
   color: #838a97;
@@ -349,6 +349,9 @@ dialog {
   justify-content: space-between;
   align-items: center;
 }
+.main-container .monitoring-container .ly-left .monitoring-content {
+  height: calc(100vh - 192px);
+}
 .main-container .monitoring-container .ly-right {
   flex: 1;
   margin-top: 28px;
@@ -381,7 +384,7 @@ dialog {
   gap: 0 10px;
 }
 .main-container .monitoring-container.type2 .monitoring-content {
-  height: calc(100vh - 246px);
+  height: calc(100vh - 239px);
   margin-top: 19px;
   padding: 10px;
 }
@@ -430,9 +433,15 @@ dialog {
   left: 0;
   right: 0;
 }
+.main-container .administer.filter .ly-left .list-container main {
+  height: calc(100vh - 294px);
+}
+.main-container .administer.filter .ly-right .view-container main {
+  height: calc(100vh - 293px);
+}
 .main-container .administer.filter .list-container main,
 .main-container .administer.filter .view-container main {
-  height: calc(100vh - 293px);
+  height: calc(100vh - 283px);
 }
 .main-container .administer.filter .list-container.is-paging > main {
   height: calc(100vh - 335px);
@@ -530,6 +539,13 @@ dialog {
   padding: 0 10px;
   background: #f2f6ff;
 }
+.filter-area-container .txt-field.sm {
+  line-height: 35px;
+  border: 0;
+}
+.filter-area-container .opt.sm {
+  border: 0;
+}
 
 .filter-key-value-container {
   display: flex;
@@ -540,6 +556,13 @@ dialog {
   height: 65px;
   padding: 0 21.5px;
   background: #f2f6ff;
+}
+.filter-key-value-container .txt-field.sm {
+  line-height: 35px;
+  border: 0;
+}
+.filter-key-value-container .opt.sm {
+  border: 0;
 }
 .filter-key-value-container dl {
   display: flex;
@@ -557,17 +580,19 @@ dialog {
 -----------------------------------------------------------------*/
 .controller-display-container {
   overflow-y: auto;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 255px);
   padding: 20px 10px;
   border-radius: 5px;
   background: #f2f6ff;
   box-sizing: border-box;
 }
 .controller-display-container li {
+  min-height: 101px;
   padding: 12px 20px 10px;
   border-radius: 5px;
   border: 1px solid #ced4dd;
   background: #fff;
+  box-sizing: border-box;
 }
 .controller-display-container li + li {
   margin-top: 17px;
@@ -636,6 +661,9 @@ dialog {
   background: rgba(255, 255, 255, 0.4);
   z-index: 10;
   cursor: not-allowed;
+}
+.roi-container .roi-overlay.active {
+  display: block;
 }
 .roi-container > hr {
   height: 1px;
@@ -1038,7 +1066,7 @@ dialog {
 -----------------------------------------------------------------*/
 .list-container main {
   overflow-y: auto;
-  height: calc(100vh - 195px);
+  height: calc(100vh - 196px);
   border-bottom: 1px solid #959da9;
   margin-top: 10px;
 }
@@ -1422,8 +1450,8 @@ table tr.no-data {
   font-size: 18px;
   font-weight: 400;
   text-align: center;
-  border-top: 2px solid #394250;
-  border-bottom: 2px solid #394250;
+  border-top: 1px solid #394250;
+  border-bottom: 1px solid #394250;
   background: #fff;
 }
 .tbl-centered tbody td {
@@ -1434,6 +1462,12 @@ table tr.no-data {
 }
 .tbl-centered tbody tr.active {
   background: #f4f7ff;
+}
+.tbl-centered tbody tr:not(.no-data) td {
+  cursor: pointer;
+}
+.tbl-centered tbody.hover-none td {
+  cursor: default !important;
 }
 .tbl-centered.bg thead th {
   background: #f3f5f9;
@@ -1469,6 +1503,7 @@ table tr.no-data {
 }
 .tbl-details tbody th {
   padding: 15px 20px 0;
+  color: #272727;
   text-align: left;
   font-weight: 400;
   background: #e6e9ee;
@@ -1684,7 +1719,7 @@ table tr.no-data {
   border-radius: 5px;
   border: 1px solid #ced4dd;
   appearance: none;
-  background: url(/images/selectbox_arrow.png) no-repeat calc(100% - 10px) 50%;
+  background: url(/images/selectbox_arrow.png) no-repeat calc(100% - 10px) 50% #fff;
   background-size: 11px 7px;
 }
 .opt-time-group {
@@ -1844,18 +1879,29 @@ table tr.no-data {
 .monitoring-container .administer-header {
   margin: 20px 0 6px;
 }
-.monitoring-container .view-container .tbl-details {
-  height: calc(100vh - 541px);
-}
-.monitoring-container .view-container .tbl-details table {
-  height: 100%;
-}
 
 .information-container.roi .view-container .administer-header {
   margin-top: 29px;
 }
 .information-container.roi .view-container .tbl-bind {
-  height: 315px;
+  height: 322px;
+}
+
+.mntr-information-wrapper .ly-right .tbl-bind tr:not(.no-data) td {
+  cursor: pointer;
+}
+.mntr-information-wrapper .ly-right .view-container .tbl-details {
+  height: calc(100vh - 533px);
+}
+.mntr-information-wrapper .ly-right .view-container .tbl-details table {
+  height: 100%;
+}
+.mntr-information-wrapper .ly-right .view-container .tbl-details table tr:last-child th,
+.mntr-information-wrapper .ly-right .view-container .tbl-details table tr:last-child td {
+  padding-bottom: 15px;
+}
+.mntr-information-wrapper .ly-right .view-container .tbl-details::after {
+  width: 130px;
 }
 
 /*---------------------------------------------------------------
@@ -1863,7 +1909,7 @@ table tr.no-data {
   org\mntr\scanning.html
 -----------------------------------------------------------------*/
 .scanning-container .tbl-bind {
-  height: calc(100vh - 649px);
+  height: calc(100vh - 651px);
   border-top: 1px solid #394250;
 }
 .scanning-container > .view-container:first-child .administer-header {
@@ -1888,13 +1934,16 @@ table tr.no-data {
   [장비 관리 - 카메라SW 설정 관리	]
   /org/eqpmn/cameraSwSetupMng.html
 -----------------------------------------------------------------*/
+.camera-sw-setup-mng-container .ly-left {
+  margin-top: 41px !important;
+}
 .camera-sw-setup-mng-container .ly-right .view-container > main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 18px 0;
-  height: calc(100vh - 163px);
+  height: calc(100vh - 152px);
   margin-top: 0;
 }
 .camera-sw-setup-mng-container .ly-right .view-container > main > section {
@@ -1903,6 +1952,13 @@ table tr.no-data {
 .camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details {
   height: 165px;
   margin-top: 10px;
+}
+.camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details.h-auto {
+  height: auto;
+}
+.camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details.h-auto tbody tr:last-child th,
+.camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details.h-auto tbody tr:last-child td {
+  padding-bottom: 15px;
 }
 .camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details table {
   height: 100%;
@@ -1932,9 +1988,6 @@ table tr.no-data {
   [장비 관리 - 카메라SW 위경도 관리	]
   /org/eqpmn/cameraSwCrdntMng.html
 -----------------------------------------------------------------*/
-.camera-sw-crdnt-mng-container .monitoring-content {
-  height: calc(100vh - 260px) !important;
-}
 .camera-sw-crdnt-mng-container .ly-right main {
   margin-top: 0;
 }
@@ -1957,7 +2010,7 @@ table tr.no-data {
   margin: 0 0 10px;
 }
 .camera-sw-crdnt-mng-container .ly-right .sec2 .tbl-bind {
-  height: calc(100vh - 440px);
+  height: calc(100vh - 464px);
 }
 .camera-sw-crdnt-mng-container .ly-right .sec2 .tbl-centered .txt-field-group {
   width: 170px;
@@ -1993,14 +2046,25 @@ table tr.no-data {
 .rtu-bass-mng-container .administer-header {
   margin-bottom: 10px;
 }
-.rtu-bass-mng-container .state-onoff {
+.rtu-bass-mng-container .state-btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0 15px;
+}
+.rtu-bass-mng-container .state-btn-group button {
+  min-width: 90px;
+  line-height: 25px;
+  border-radius: 30px;
   font-size: 16px;
+  color: #fff;
+  background: #d2d2d2;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.25) inset;
 }
-.rtu-bass-mng-container .state-onoff em.active:first-child {
-  color: #5388f4;
-}
-.rtu-bass-mng-container .state-onoff em.active:last-child {
-  color: #fa4242;
+.rtu-bass-mng-container .state-btn-group button.on {
+  background: #5388f4;
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.25) inset;
 }
 
 /*---------------------------------------------------------------
@@ -2086,7 +2150,7 @@ table tr.no-data {
 -----------------------------------------------------------------*/
 .spotlight-oper-time-mng-container .list-container main,
 .voice-volume-mng-container .list-container main {
-  height: calc(100vh - 182px);
+  height: calc(100vh - 183px);
 }
 
 /*---------------------------------------------------------------
@@ -2095,6 +2159,9 @@ table tr.no-data {
 -----------------------------------------------------------------*/
 .cteq-lem-mng-container .filter-area-container .opt {
   width: 200px;
+}
+.cteq-lem-mng-container .list-container main {
+  height: calc(100vh - 281px) !important;
 }
 .cteq-lem-mng-container .ly-right {
   margin-top: 16px !important;
@@ -2114,7 +2181,7 @@ table tr.no-data {
 }
 .cteq-lem-mng-container .ly-right .tbl-bind {
   overflow-y: auto;
-  height: calc(100vh - 475px);
+  height: calc(100vh - 464px);
   margin-top: 8px;
   border-bottom: 1px solid #959da9;
 }
@@ -2132,11 +2199,14 @@ table tr.no-data {
 .cteq-intrlck-mng-container .filter-area-container .opt {
   width: 200px;
 }
+.cteq-intrlck-mng-container .ly-left .list-container > main {
+  height: calc(100vh - 281px) !important;
+}
 .cteq-intrlck-mng-container .ly-right {
   margin-top: 16px !important;
 }
 .cteq-intrlck-mng-container .ly-right .view-container main {
-  height: calc(100vh - 249px) !important;
+  height: calc(100vh - 237px) !important;
   margin-top: 0;
   border-bottom: 1px solid #959da9;
 }
@@ -2190,7 +2260,7 @@ table tr.no-data {
   org\setup\envrnSetupMng.html
 -----------------------------------------------------------------*/
 .envrn-setup-mng-container .list-container main {
-  height: calc(100vh - 182px);
+  height: calc(100vh - 183px);
 }
 
 .is-edge-browser {

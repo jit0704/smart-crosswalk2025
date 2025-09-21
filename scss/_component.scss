@@ -30,6 +30,15 @@
   height: 65px;
   padding: 0 10px;
   background: $c-white3;
+
+  .txt-field.sm {
+    line-height: 35px;
+    border: 0;
+  }
+
+  .opt.sm {
+    border: 0;
+  }
 }
 
 .filter-key-value-container {
@@ -38,6 +47,15 @@
   height: 65px;
   padding: 0 21.5px;
   background: $c-white3;
+
+  .txt-field.sm {
+    line-height: 35px;
+    border: 0;
+  }
+
+  .opt.sm {
+    border: 0;
+  }
 
   dl {
     @include flexbox(row, flex-start, center);
@@ -55,17 +73,19 @@
 .controller-display {
   &-container {
     overflow-y: auto;
-    height: calc(100vh - 250px);
+    height: calc(100vh - 255px);
     padding: 20px 10px;
     border-radius: 5px;
     background: $c-white3;
     box-sizing: border-box;
 
     li {
+      min-height: 101px;
       padding: 12px 20px 10px;
       border-radius: 5px;
       border: 1px solid $c-gray5;
       background: $c-white0;
+      box-sizing: border-box;
 
       & + li {
         margin-top: 17px;
@@ -135,6 +155,10 @@
     background: rgba(255, 255, 255, 0.4);
     z-index: 10;
     cursor: not-allowed;
+
+    &.active {
+      display: block;
+    }
   }
 
   & > hr {
@@ -504,7 +528,7 @@
 .list-container {
   main {
     overflow-y: auto;
-    height: calc(100vh - 195px);
+    height: calc(100vh - 196px);
     // border: 1px solid red;
     border-bottom: 1px solid $c-gray7;
     margin-top: 10px;

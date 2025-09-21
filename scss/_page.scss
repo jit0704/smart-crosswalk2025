@@ -34,14 +34,6 @@
   .administer-header {
     margin: 20px 0 6px;
   }
-
-  .view-container .tbl-details {
-    height: calc(100vh - 541px);
-
-    table {
-      height: 100%;
-    }
-  }
 }
 
 .information-container.roi {
@@ -51,7 +43,38 @@
     }
 
     .tbl-bind {
-      height: 315px;
+      height: 322px;
+    }
+  }
+}
+
+.mntr-information-wrapper {
+  .ly-right {
+    .tbl-bind {
+      tr:not(.no-data) {
+        td {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .view-container .tbl-details {
+      height: calc(100vh - 533px);
+
+      table {
+        height: 100%;
+
+        tr:last-child {
+          th,
+          td {
+            padding-bottom: 15px;
+          }
+        }
+      }
+
+      &::after {
+        width: 130px;
+      }
     }
   }
 }
@@ -62,7 +85,7 @@
 -----------------------------------------------------------------*/
 .scanning-container {
   .tbl-bind {
-    height: calc(100vh - 649px);
+    height: calc(100vh - 651px);
     border-top: 1px solid $c-black2;
   }
 
@@ -98,11 +121,15 @@
   /org/eqpmn/cameraSwSetupMng.html
 -----------------------------------------------------------------*/
 .camera-sw-setup-mng-container {
+  .ly-left {
+    margin-top: 41px !important;
+  }
+
   .ly-right {
     .view-container > main {
       @include flexbox(column, flex-start, flex-start);
       gap: 18px 0;
-      height: calc(100vh - 163px);
+      height: calc(100vh - 152px);
       margin-top: 0;
 
       & > section {
@@ -114,6 +141,19 @@
       .tbl-details {
         height: 165px;
         margin-top: 10px;
+
+        &.h-auto {
+          height: auto;
+
+          tbody {
+            tr:last-child {
+              th,
+              td {
+                padding-bottom: 15px;
+              }
+            }
+          }
+        }
 
         table {
           height: 100%;
@@ -153,9 +193,9 @@
   /org/eqpmn/cameraSwCrdntMng.html
 -----------------------------------------------------------------*/
 .camera-sw-crdnt-mng-container {
-  .monitoring-content {
-    height: calc(100vh - 260px) !important;
-  }
+  // .monitoring-content {
+  //   height: calc(100vh - 260px) !important;
+  // }
 
   .ly-right {
     main {
@@ -190,7 +230,7 @@
       }
 
       .tbl-bind {
-        height: calc(100vh - 440px);
+        height: calc(100vh - 464px);
       }
 
       .tbl-centered {
@@ -245,21 +285,41 @@
     margin-bottom: 10px;
   }
 
-  .state-onoff {
-    font-size: 16px;
+  .state-btn-group {
+    @include flexbox(row, center, flex-start);
+    gap: 0 15px;
 
-    em {
-      &.active {
-        &:first-child {
-          color: $c-blue4;
-        }
+    button {
+      min-width: 90px;
+      line-height: 25px;
+      border-radius: 30px;
+      font-size: 16px;
+      color: $c-white0;
+      background: #d2d2d2;
+      box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.25) inset;
 
-        &:last-child {
-          color: $c-red2;
-        }
+      &.on {
+        background: #5388f4;
+        box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.25) inset;
       }
     }
   }
+
+  // .state-onoff {
+  //   font-size: 16px;
+
+  //   em {
+  //     &.active {
+  //       &:first-child {
+  //         color: $c-blue4;
+  //       }
+
+  //       &:last-child {
+  //         color: $c-red2;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 /*---------------------------------------------------------------
@@ -381,7 +441,7 @@
 .spotlight-oper-time-mng-container,
 .voice-volume-mng-container {
   .list-container main {
-    height: calc(100vh - 182px);
+    height: calc(100vh - 183px);
   }
 }
 
@@ -394,6 +454,10 @@
     .opt {
       width: 200px;
     }
+  }
+
+  .list-container main {
+    height: calc(100vh - 281px) !important;
   }
 
   .ly-right {
@@ -418,7 +482,7 @@
 
     .tbl-bind {
       overflow-y: auto;
-      height: calc(100vh - 475px);
+      height: calc(100vh - 464px);
       margin-top: 8px;
       border-bottom: 1px solid $c-gray7;
 
@@ -446,11 +510,17 @@
     }
   }
 
+  .ly-left {
+    .list-container > main {
+      height: calc(100vh - 281px) !important;
+    }
+  }
+
   .ly-right {
     margin-top: 16px !important;
 
     .view-container main {
-      height: calc(100vh - 249px) !important;
+      height: calc(100vh - 237px) !important;
       margin-top: 0;
       border-bottom: 1px solid $c-gray7;
     }
@@ -527,6 +597,6 @@
 -----------------------------------------------------------------*/
 .envrn-setup-mng-container {
   .list-container main {
-    height: calc(100vh - 182px);
+    height: calc(100vh - 183px);
   }
 }
