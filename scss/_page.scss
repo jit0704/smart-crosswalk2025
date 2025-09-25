@@ -5,7 +5,7 @@
 .monitoring-container {
   .tbl-bind {
     overflow-y: auto;
-    height: 292px;
+    height: 300px;
     border-bottom: 1px solid $c-black2;
   }
 
@@ -59,7 +59,7 @@
     }
 
     .view-container .tbl-details {
-      height: calc(100vh - 533px);
+      height: calc(100vh - 541px);
 
       table {
         height: 100%;
@@ -597,6 +597,6 @@
 -----------------------------------------------------------------*/
 .envrn-setup-mng-container {
   .list-container main {
-    height: calc(100vh - 183px);
+    height: calc(100vh - 281px) !important;
   }
 }

@@ -1206,6 +1206,18 @@ dialog {
 }
 
 /*---------------------------------------------------------------
+  [기타]
+-----------------------------------------------------------------*/
+.bordered {
+  height: 45px;
+  line-height: 45px;
+  padding: 6px 20px;
+  border-radius: 5px;
+  border: 1px solid #ced4dd;
+  box-sizing: border-box;
+}
+
+/*---------------------------------------------------------------
   [버튼]
 -----------------------------------------------------------------*/
 .btn {
@@ -1740,7 +1752,7 @@ table tr.no-data {
   line-height: 43px;
 }
 .txt-field::placeholder {
-  color: #aeaeae;
+  color: #272727;
 }
 .txt-field:disabled, .txt-field:read-only {
   background: rgba(247, 248, 249, 0.96);
@@ -1916,7 +1928,7 @@ table tr.no-data {
 -----------------------------------------------------------------*/
 .monitoring-container .tbl-bind {
   overflow-y: auto;
-  height: 292px;
+  height: 300px;
   border-bottom: 1px solid #394250;
 }
 .monitoring-container .tbl-centered tbody tr:last-child td {
@@ -1946,7 +1958,7 @@ table tr.no-data {
   cursor: pointer;
 }
 .mntr-information-wrapper .ly-right .view-container .tbl-details {
-  height: calc(100vh - 533px);
+  height: calc(100vh - 541px);
 }
 .mntr-information-wrapper .ly-right .view-container .tbl-details table {
   height: 100%;
@@ -2315,7 +2327,7 @@ table tr.no-data {
   org\setup\envrnSetupMng.html
 -----------------------------------------------------------------*/
 .envrn-setup-mng-container .list-container main {
-  height: calc(100vh - 183px);
+  height: calc(100vh - 281px) !important;
 }
 
 .is-edge-browser {

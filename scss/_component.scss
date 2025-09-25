@@ -676,3 +676,15 @@
   background: $c-white0;
   box-sizing: border-box;
 }
+
+/*---------------------------------------------------------------
+  [기타]
+-----------------------------------------------------------------*/
+.bordered {
+  height: 45px;
+  line-height: 45px;
+  padding: 6px 20px;
+  border-radius: 5px;
+  border: 1px solid $c-gray5;
+  box-sizing: border-box;
+}
