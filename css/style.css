@@ -186,6 +186,18 @@ dialog {
   vertical-align: middle !important;
 }
 
+.txt-left {
+  text-align: left !important;
+}
+
+.txt-right {
+  text-align: right !important;
+}
+
+.txt-center {
+  text-align: center !important;
+}
+
 /*---------------------------------------------------------------
   [화면 레이아웃 정의]
 -----------------------------------------------------------------*/
@@ -506,13 +518,11 @@ dialog {
 /*---------------------------------------------------------------
   [모니터링 영상]
 -----------------------------------------------------------------*/
+/* 개발에서 추가한 style */
 .monitoring-content {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 3px;
   flex-wrap: wrap;
+  gap: 3px;
   height: calc(100vh - 201px);
   margin-top: 8px;
   padding: 10px;
@@ -520,10 +530,55 @@ dialog {
   background: #cfd4da;
   box-sizing: border-box;
 }
+
+/* 각 셀: 2×2, 내부 패딩으로 캔버스를 3px 인셋 */
 .monitoring-video-bind {
-  flex: calc(50% - 3px);
+  position: relative;
+  flex: 0 0 calc(50% - 3px); /* ← flex: calc(...) 는 문법상 잘못이라 0 0 basis로 수정 */
   height: calc(50% - 3px);
+  padding: 3px; /* ← 이 패딩만큼 내부 캔버스가 동일하게 줄어듦 */
+  box-sizing: border-box;
   font-size: 0;
+  overflow: hidden; /* 리사이즈 중 넘침 방지 */
+}
+
+/* 확대 */
+.monitoring-video-bind.fullscreen {
+  flex: 0 0 100% !important;
+  height: 100% !important;
+}
+
+/* 숨김 */
+.monitoring-video-bind.hidden {
+  display: none !important;
+}
+
+/* 비디오 캔버스: 부모(패딩 제외) 영역을 꽉 채움 */
+.monitoring-video-bind .video-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 드로우 캔버스: 비디오와 정확히 동일한 영역을 오버레이 */
+.monitoring-video-bind .draw-canvas {
+  position: absolute;
+  top: 3px; /* 부모 패딩과 동일하게 */
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  width: auto;
+  height: auto;
+  pointer-events: none; /* ROI 보기 전용일 때 */
+}
+
+/* ROI 전체 표시/숨김 토글 (컨테이너에 클래스로 제어) */
+.monitoring-content.roi-hidden .draw-canvas {
+  display: none !important;
+}
+
+.monitoring-content.roi-visible .draw-canvas {
+  display: block !important;
 }
 
 /*---------------------------------------------------------------
