@@ -107,6 +107,16 @@
   .txt-field.sm {
     line-height: 35px;
     border: 0;
+
+    &:disabled {
+      color: $c-gray3 !important;
+      background: $c-gray1;
+    }
+
+    &:read-only {
+      color: $c-black1;
+      background: $c-gray1;
+    }
   }
 
   .opt.sm {

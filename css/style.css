@@ -616,6 +616,14 @@ dialog {
   line-height: 35px;
   border: 0;
 }
+.filter-key-value-container .txt-field.sm:disabled {
+  color: #aeaeae !important;
+  background: #f1f2f5;
+}
+.filter-key-value-container .txt-field.sm:read-only {
+  color: #000;
+  background: #f1f2f5;
+}
 .filter-key-value-container .opt.sm {
   border: 0;
 }
