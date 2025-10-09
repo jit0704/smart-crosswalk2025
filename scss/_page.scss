@@ -43,7 +43,7 @@
     }
 
     .tbl-bind {
-      height: 322px;
+      height: calc(100vh - 632px);
     }
   }
 }
@@ -62,8 +62,6 @@
       height: calc(100vh - 541px);
 
       table {
-        height: 100%;
-
         tr:last-child {
           th,
           td {
@@ -84,23 +82,34 @@
   org\mntr\scanning.html
 -----------------------------------------------------------------*/
 .scanning-container {
+  @include flexbox(column, flex-start, flex-start);
+  gap: 41px 0;
+  height: calc(100vh - 193px);
+
   .tbl-bind {
-    height: calc(100vh - 651px);
     border-top: 1px solid $c-black2;
   }
 
   & > .view-container {
+    flex: 1;
+
     &:first-child {
       .administer-header {
         margin: 16px 0 10px;
       }
+
+      .tbl-bind {
+        min-height: calc(100% - 61px);
+      }
     }
 
     &:last-child {
-      margin-top: 41px;
-
       .administer-header {
         margin: 0 0 15px;
+      }
+
+      .tbl-bind {
+        min-height: calc(100% - 50px);
       }
     }
   }

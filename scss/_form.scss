@@ -141,7 +141,17 @@
 
   &:disabled,
   &:read-only {
-    background: rgba(247, 248, 249, 0.96);
+    color: $c-gray3;
+    background: $c-white0;
+  }
+
+  // disabled시 bg가 회색인 케이스 추가(개발 요청 사항)
+  &.disabled-bg-gray {
+    &:disabled,
+    &:read-only {
+      color: $c-gray3;
+      background: $c-gray1;
+    }
   }
 }
 

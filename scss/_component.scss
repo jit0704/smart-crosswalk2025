@@ -108,15 +108,16 @@
     line-height: 35px;
     border: 0;
 
-    &:disabled {
-      color: $c-gray3 !important;
-      background: $c-gray1;
-    }
+    // 개발 요청 사항이 변경되어서 공통으로 처리하기 위해 일단 주석 처리함
+    // &:disabled {
+    //   color: $c-gray3 !important;
+    //   background: $c-gray1;
+    // }
 
-    &:read-only {
-      color: $c-black1;
-      background: $c-gray1;
-    }
+    // &:read-only {
+    //   color: $c-black1;
+    //   background: $c-gray1;
+    // }
   }
 
   .opt.sm {
@@ -676,7 +677,12 @@
 
   .chart-container {
     width: 100%;
-    height: 350px;
+    height: 345px;
+
+    &.no-data {
+      align-content: center;
+      text-align: center;
+    }
   }
 }
 

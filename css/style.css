@@ -616,14 +616,6 @@ dialog {
   line-height: 35px;
   border: 0;
 }
-.filter-key-value-container .txt-field.sm:disabled {
-  color: #aeaeae !important;
-  background: #f1f2f5;
-}
-.filter-key-value-container .txt-field.sm:read-only {
-  color: #000;
-  background: #f1f2f5;
-}
 .filter-key-value-container .opt.sm {
   border: 0;
 }
@@ -1203,7 +1195,11 @@ dialog {
 }
 .chart-body .chart-container {
   width: 100%;
-  height: 350px;
+  height: 345px;
+}
+.chart-body .chart-container.no-data {
+  align-content: center;
+  text-align: center;
 }
 
 .chart-container {
@@ -1763,7 +1759,12 @@ table tr.no-data {
   color: #272727;
 }
 .txt-field:disabled, .txt-field:read-only {
-  background: rgba(247, 248, 249, 0.96);
+  color: #aeaeae;
+  background: #fff;
+}
+.txt-field.disabled-bg-gray:disabled, .txt-field.disabled-bg-gray:read-only {
+  color: #aeaeae;
+  background: #f1f2f5;
 }
 
 .txt-field-group {
@@ -1959,7 +1960,7 @@ table tr.no-data {
   margin-top: 29px;
 }
 .information-container.roi .view-container .tbl-bind {
-  height: 322px;
+  height: calc(100vh - 632px);
 }
 
 .mntr-information-wrapper .ly-right .tbl-bind tr:not(.no-data) td {
@@ -1967,9 +1968,6 @@ table tr.no-data {
 }
 .mntr-information-wrapper .ly-right .view-container .tbl-details {
   height: calc(100vh - 541px);
-}
-.mntr-information-wrapper .ly-right .view-container .tbl-details table {
-  height: 100%;
 }
 .mntr-information-wrapper .ly-right .view-container .tbl-details table tr:last-child th,
 .mntr-information-wrapper .ly-right .view-container .tbl-details table tr:last-child td {
@@ -1983,18 +1981,31 @@ table tr.no-data {
   [모니터링 - 검지 현황]
   org\mntr\scanning.html
 -----------------------------------------------------------------*/
+.scanning-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 41px 0;
+  height: calc(100vh - 193px);
+}
 .scanning-container .tbl-bind {
-  height: calc(100vh - 651px);
   border-top: 1px solid #394250;
+}
+.scanning-container > .view-container {
+  flex: 1;
 }
 .scanning-container > .view-container:first-child .administer-header {
   margin: 16px 0 10px;
 }
-.scanning-container > .view-container:last-child {
-  margin-top: 41px;
+.scanning-container > .view-container:first-child .tbl-bind {
+  min-height: calc(100% - 61px);
 }
 .scanning-container > .view-container:last-child .administer-header {
   margin: 0 0 15px;
+}
+.scanning-container > .view-container:last-child .tbl-bind {
+  min-height: calc(100% - 50px);
 }
 
 /*---------------------------------------------------------------
@@ -2340,4 +2351,35 @@ table tr.no-data {
 
 .is-edge-browser {
   overflow-x: hidden;
+}
+
+/*---------------------------------------------------------------
+  [디폴트 (1920 X 1080) 해상도 보다 화면이 클 경우 style 정의]
+-----------------------------------------------------------------*/
+@media (min-width: 1921px) {
+  .main-container .administer .ly-left {
+    flex: 1;
+    width: auto;
+  }
+  .main-container .administer .ly-right {
+    width: 760px;
+    flex: none;
+  }
+  .chart-body {
+    height: calc(100% - 22px);
+  }
+  .chart-body.min-siz3 {
+    overflow-y: auto;
+  }
+  .chart-body.min-siz3 .chart-container {
+    height: calc(50% - 14px);
+    flex: 0 0 auto;
+  }
+  .chart-body .chart-container {
+    flex: 1 1 50%;
+  }
+  .administer.rtu-advn-mng-container .ly-right {
+    flex: 1;
+    width: auto;
+  }
 }/*# sourceMappingURL=style.css.map */

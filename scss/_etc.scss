@@ -1,3 +1,49 @@
 .is-edge-browser {
   overflow-x: hidden;
 }
+
+/*---------------------------------------------------------------
+  [디폴트 (1920 X 1080) 해상도 보다 화면이 클 경우 style 정의]
+-----------------------------------------------------------------*/
+@media (min-width: 1921px) {
+  // 목록, 상세
+  .main-container {
+    .administer {
+      .ly-left {
+        flex: 1;
+        width: auto;
+      }
+
+      .ly-right {
+        width: 760px;
+        flex: none;
+      }
+    }
+  }
+
+  // 차트
+  .chart-body {
+    height: calc(100% - 22px);
+
+    &.min-siz3 {
+      overflow-y: auto;
+
+      .chart-container {
+        height: calc(50% - 14px);
+        flex: 0 0 auto;
+      }
+    }
+
+    .chart-container {
+      flex: 1 1 50%;
+    }
+  }
+
+  // RTU 고급 관리 화면
+  .administer.rtu-advn-mng-container {
+    .ly-right {
+      flex: 1;
+      width: auto;
+    }
+  }
+}
