@@ -199,6 +199,19 @@ dialog {
 }
 
 /*---------------------------------------------------------------
+  [로딩 style]
+-----------------------------------------------------------------*/
+.loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/images/bars-rotate-fade.svg) no-repeat 50% 50% transparent;
+  background-size: 80px;
+}
+
+/*---------------------------------------------------------------
   [화면 레이아웃 정의]
 -----------------------------------------------------------------*/
 .ly-container {
@@ -534,9 +547,7 @@ dialog {
 /* 각 셀: 2×2, 내부 패딩으로 캔버스를 3px 인셋 */
 .monitoring-video-bind {
   position: relative;
-  flex: 0 0 calc(50% - 3px); /* ← flex: calc(...) 는 문법상 잘못이라 0 0 basis로 수정 */
-  height: calc(50% - 3px);
-  padding: 3px; /* ← 이 패딩만큼 내부 캔버스가 동일하게 줄어듦 */
+  flex: 0 0 calc(50% - 1.5px); /* ← flex: calc(...) 는 문법상 잘못이라 0 0 basis로 수정 */
   box-sizing: border-box;
   font-size: 0;
   overflow: hidden; /* 리사이즈 중 넘침 방지 */
@@ -1313,6 +1324,23 @@ dialog {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+
+.btn-group.channel {
+  max-width: 908px;
+}
+.btn-group.channel button {
+  width: 65px;
+  line-height: 35px;
+  border-radius: 5px;
+  background: #768fca;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+.btn-group.channel button:disabled {
+  font-weight: 400;
+  background: #d5ddef;
 }
 
 /*---------------------------------------------------------------

@@ -36,9 +36,7 @@
 /* 각 셀: 2×2, 내부 패딩으로 캔버스를 3px 인셋 */
 .monitoring-video-bind {
   position: relative;
-  flex: 0 0 calc(50% - 3px); /* ← flex: calc(...) 는 문법상 잘못이라 0 0 basis로 수정 */
-  height: calc(50% - 3px);
-  padding: 3px; /* ← 이 패딩만큼 내부 캔버스가 동일하게 줄어듦 */
+  flex: 0 0 calc(50% - 1.5px); /* ← flex: calc(...) 는 문법상 잘못이라 0 0 basis로 수정 */
   box-sizing: border-box;
   font-size: 0;
   overflow: hidden; /* 리사이즈 중 넘침 방지 */
