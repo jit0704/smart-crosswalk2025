@@ -6,8 +6,24 @@
   [디폴트 (1920 X 1080) 해상도 보다 화면이 클 경우 style 정의]
 -----------------------------------------------------------------*/
 @media (min-width: 1921px) {
-  // 목록, 상세
   .main-container {
+    // 모니터링
+    .monitoring-container {
+      .ly-left {
+        flex: 2.1;
+        width: auto;
+      }
+
+      // ROI설정 화면 및 카메라SW 위경도 관리 화면
+      &.type2 {
+        .ly-left {
+          flex: 1.8;
+          width: auto;
+        }
+      }
+    }
+
+    // 목록, 상세
     .administer {
       .ly-left {
         flex: 1;

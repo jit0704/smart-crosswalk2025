@@ -147,6 +147,9 @@
     }
 
     .sw-setup-view {
+      overflow-y: auto;
+      max-height: 227px;
+
       .tbl-details {
         height: 165px;
         margin-top: 10px;
