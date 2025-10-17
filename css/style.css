@@ -1327,23 +1327,6 @@ dialog {
   background-size: contain;
 }
 
-.btn-group.channel {
-  max-width: 908px;
-}
-.btn-group.channel button {
-  width: 65px;
-  line-height: 35px;
-  border-radius: 5px;
-  background: #768fca;
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-}
-.btn-group.channel button:disabled {
-  font-weight: 400;
-  background: #d5ddef;
-}
-
 /*---------------------------------------------------------------
   [아이콘]
 -----------------------------------------------------------------*/
@@ -2004,6 +1987,21 @@ table tr.no-data {
 }
 .mntr-information-wrapper .ly-right .view-container .tbl-details::after {
   width: 130px;
+}
+
+.monitoring-channel-bind .btn-bind {
+  max-width: 908px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 10px;
+}
+.monitoring-channel-bind .btn-bind .btn {
+  justify-content: center;
+  width: 65px;
+  padding: 0;
+  line-height: 35px;
 }
 
 /*---------------------------------------------------------------

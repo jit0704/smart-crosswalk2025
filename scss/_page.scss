@@ -77,6 +77,21 @@
   }
 }
 
+.monitoring-channel-bind {
+  .btn-bind {
+    max-width: 908px;
+    @include flexbox(row, flex-start, center);
+    gap: 0 10px;
+
+    .btn {
+      justify-content: center;
+      width: 65px;
+      padding: 0;
+      line-height: 35px;
+    }
+  }
+}
+
 /*---------------------------------------------------------------
   [모니터링 - 검지 현황]
   org\mntr\scanning.html
