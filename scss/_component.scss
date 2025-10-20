@@ -37,6 +37,8 @@
 .monitoring-video-bind {
   position: relative;
   flex: 0 0 calc(50% - 1.5px); /* ← flex: calc(...) 는 문법상 잘못이라 0 0 basis로 수정 */
+  height: calc(50% - 1.5px);
+  padding: 1.5px;
   box-sizing: border-box;
   font-size: 0;
   overflow: hidden; /* 리사이즈 중 넘침 방지 */

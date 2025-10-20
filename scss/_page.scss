@@ -59,6 +59,7 @@
     }
 
     .view-container .tbl-details {
+      overflow-y: auto;
       height: calc(100vh - 541px);
 
       table {
@@ -167,6 +168,7 @@
 
       .tbl-details {
         height: 165px;
+        min-height: 180px;
         margin-top: 10px;
 
         &.h-auto {

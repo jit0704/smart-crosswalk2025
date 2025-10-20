@@ -549,6 +549,8 @@ dialog {
 .monitoring-video-bind {
   position: relative;
   flex: 0 0 calc(50% - 1.5px); /* ← flex: calc(...) 는 문법상 잘못이라 0 0 basis로 수정 */
+  height: calc(50% - 1.5px);
+  padding: 1.5px;
   box-sizing: border-box;
   font-size: 0;
   overflow: hidden; /* 리사이즈 중 넘침 방지 */
@@ -1608,7 +1610,7 @@ table tr.no-data {
   top: 0;
   bottom: 0;
   z-index: -1;
-  width: 174px;
+  width: 210px;
   background: #e6e9ee;
 }
 .tbl-emphasis {
@@ -1979,6 +1981,7 @@ table tr.no-data {
   cursor: pointer;
 }
 .mntr-information-wrapper .ly-right .view-container .tbl-details {
+  overflow-y: auto;
   height: calc(100vh - 541px);
 }
 .mntr-information-wrapper .ly-right .view-container .tbl-details table tr:last-child th,
@@ -2068,6 +2071,7 @@ table tr.no-data {
 }
 .camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details {
   height: 165px;
+  min-height: 180px;
   margin-top: 10px;
 }
 .camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details.h-auto {
