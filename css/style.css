@@ -1544,6 +1544,7 @@ table tr.no-data {
   font-size: 18px;
   text-align: center;
   border-bottom: 1px solid #ced4dd;
+  word-break: break-word;
 }
 .tbl-centered tbody tr.active {
   background: #f4f7ff;
@@ -1989,7 +1990,7 @@ table tr.no-data {
   padding-bottom: 15px;
 }
 .mntr-information-wrapper .ly-right .view-container .tbl-details::after {
-  width: 130px;
+  width: 140px;
 }
 
 .monitoring-channel-bind .btn-bind {
@@ -2073,6 +2074,9 @@ table tr.no-data {
   height: 165px;
   min-height: 180px;
   margin-top: 10px;
+}
+.camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details::after {
+  display: none;
 }
 .camera-sw-setup-mng-container .ly-right .sw-setup-view .tbl-details.h-auto {
   height: auto;
@@ -2263,6 +2267,10 @@ table tr.no-data {
   width: 200px;
 }
 
+.cteq-oper-time-mng-container .ly-right .tbl-details::after {
+  width: 175px;
+}
+
 /*---------------------------------------------------------------
   [제어관리 - , 신호 연장 운영 시간 관리, 집중조명 운영 시간 관리, 음성안내 음량 관리]
   org\ctrl\pseOperTimeMng.html,
@@ -2272,6 +2280,10 @@ table tr.no-data {
 .spotlight-oper-time-mng-container .list-container main,
 .voice-volume-mng-container .list-container main {
   height: calc(100vh - 183px);
+}
+.spotlight-oper-time-mng-container .ly-right .tbl-details::after,
+.voice-volume-mng-container .ly-right .tbl-details::after {
+  width: 175px;
 }
 
 /*---------------------------------------------------------------

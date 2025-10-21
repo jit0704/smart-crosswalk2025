@@ -72,7 +72,7 @@
       }
 
       &::after {
-        width: 130px;
+        width: 140px;
       }
     }
   }
@@ -170,6 +170,10 @@
         height: 165px;
         min-height: 180px;
         margin-top: 10px;
+
+        &::after {
+          display: none;
+        }
 
         &.h-auto {
           height: auto;
@@ -447,10 +451,14 @@
       width: 200px;
     }
   }
+}
 
-  // .view-container main .tbl-details {
-  //   height: auto;
-  // }
+.cteq-oper-time-mng-container {
+  .ly-right {
+    .tbl-details::after {
+      width: 175px;
+    }
+  }
 }
 
 /*---------------------------------------------------------------
@@ -459,18 +467,16 @@
   org\ctrl\spotlightOperTimeMng.html,
   org\ctrl\voiceVolumeMng.html
 -----------------------------------------------------------------*/
-// .pse-oper-time-mng-container,
-// .spotlight-oper-time-mng-container,
-// .voice-volume-mng-container {
-//   .view-container main .tbl-details {
-//     height: auto;
-//   }
-// }
-
 .spotlight-oper-time-mng-container,
 .voice-volume-mng-container {
   .list-container main {
     height: calc(100vh - 183px);
+  }
+
+  .ly-right {
+    .tbl-details::after {
+      width: 175px;
+    }
   }
 }
 
