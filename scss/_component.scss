@@ -611,7 +611,7 @@
     margin-top: 10px;
 
     .tbl-details {
-      overflow: hidden;
+      overflow-y: auto;
       height: 100%;
 
       &.h-auto {

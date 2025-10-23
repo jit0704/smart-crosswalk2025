@@ -1148,7 +1148,7 @@ dialog {
   margin-top: 10px;
 }
 .view-container main .tbl-details {
-  overflow: hidden;
+  overflow-y: auto;
   height: 100%;
 }
 .view-container main .tbl-details.h-auto {
@@ -2369,6 +2369,8 @@ table tr.no-data {
   color: #707070;
 }
 .cteq-intrlck-mng-container .movement-select-container {
+  overflow-y: auto;
+  height: calc(100vh - 652px);
   margin-top: 5px;
 }
 

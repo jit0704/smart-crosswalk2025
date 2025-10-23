@@ -602,6 +602,8 @@
   }
 
   .movement-select-container {
+    overflow-y: auto;
+    height: calc(100vh - 652px);
     margin-top: 5px;
   }
 }
