@@ -2439,4 +2439,27 @@ table tr.no-data {
     flex: 1;
     width: auto;
   }
+}
+/*---------------------------------------------------------------
+  [ 1024 X 768 해상도에 대한 style 정의]
+-----------------------------------------------------------------*/
+@media (max-height: 800px) {
+  .main-container > section {
+    height: auto;
+  }
+  .main-container .monitoring-container .ly-left .monitoring-content {
+    height: 100%;
+  }
+  .mntr-information-wrapper .information-container > .tbl-bind {
+    height: 317px;
+  }
+  .mntr-information-wrapper .information-container .view-container .tbl-details {
+    height: auto;
+  }
+  .information-container.roi .view-container .tbl-bind {
+    height: 327px;
+  }
+  .camera-sw-crdnt-mng-container .ly-right .sec2 .tbl-bind {
+    height: 495px;
+  }
 }/*# sourceMappingURL=style.css.map */

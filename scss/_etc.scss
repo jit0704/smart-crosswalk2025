@@ -63,3 +63,46 @@
     }
   }
 }
+
+/*---------------------------------------------------------------
+  [ 1024 X 768 해상도에 대한 style 정의]
+-----------------------------------------------------------------*/
+@media (max-height: 800px) {
+  // 공통
+  .main-container {
+    & > section {
+      height: auto;
+    }
+
+    .monitoring-container .ly-left .monitoring-content {
+      height: 100%;
+    }
+  }
+
+  // 모니터링
+  .mntr-information-wrapper {
+    .information-container {
+      & > .tbl-bind {
+        height: 317px;
+      }
+
+      .view-container .tbl-details {
+        height: auto;
+      }
+    }
+  }
+
+  // roi
+  .information-container.roi {
+    .view-container .tbl-bind {
+      height: 327px;
+    }
+  }
+
+  // 카메라sw 위경도 관리
+  .camera-sw-crdnt-mng-container {
+    .ly-right .sec2 .tbl-bind {
+      height: 495px;
+    }
+  }
+}
