@@ -1505,6 +1505,9 @@ dialog {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  animation: blinkPedestrian 0.5s ease-in-out infinite alternate;
 }
 .roi-mark .pedestrian.c-gray::before {
   width: 16px;
@@ -1515,6 +1518,14 @@ dialog {
   background-size: contain;
 }
 
+@keyframes blinkPedestrian {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 /*---------------------------------------------------------------
   [테이블]
 -----------------------------------------------------------------*/
@@ -2444,7 +2455,7 @@ table tr.no-data {
   [ 1024 X 768 해상도에 대한 style 정의]
 -----------------------------------------------------------------*/
 @media (max-height: 800px) {
-  .main-container > section {
+  .main-container > section, .main-container > .administer.filter {
     height: auto;
   }
   .main-container .monitoring-container .ly-left .monitoring-content {
@@ -2461,5 +2472,24 @@ table tr.no-data {
   }
   .camera-sw-crdnt-mng-container .ly-right .sec2 .tbl-bind {
     height: 495px;
+  }
+  .cteq-lem-mng-container .list-container main {
+    height: 343px !important;
+  }
+  .cteq-lem-mng-container .ly-right .tbl-bind {
+    height: auto;
+    max-height: 160px;
+  }
+  .cteq-intrlck-mng-container .ly-left .list-container > main {
+    height: 623px !important;
+  }
+  .cteq-intrlck-mng-container .movement-select-container {
+    height: auto;
+  }
+  .cteq-intrlck-mng-container .ly-right .view-container main {
+    height: auto !important;
+  }
+  .cteq-intrlck-mng-container .ly-right .view-container main .tbl-centered thead {
+    position: static;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -70,7 +70,8 @@
 @media (max-height: 800px) {
   // 공통
   .main-container {
-    & > section {
+    & > section,
+    & > .administer.filter {
       height: auto;
     }
 
@@ -103,6 +104,42 @@
   .camera-sw-crdnt-mng-container {
     .ly-right .sec2 .tbl-bind {
       height: 495px;
+    }
+  }
+
+  // 제어장비 항목 관리
+  .cteq-lem-mng-container {
+    .list-container main {
+      height: 343px !important;
+      // min-height: 343px;
+    }
+
+    .ly-right {
+      .tbl-bind {
+        height: auto;
+        max-height: 160px;
+      }
+    }
+  }
+
+  // 제어장비 연동 관리
+  .cteq-intrlck-mng-container {
+    .ly-left .list-container > main {
+      height: 623px !important;
+    }
+
+    .movement-select-container {
+      height: auto;
+    }
+
+    .ly-right .view-container main {
+      height: auto !important;
+
+      .tbl-centered {
+        thead {
+          position: static;
+        }
+      }
     }
   }
 }
