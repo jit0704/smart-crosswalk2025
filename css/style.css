@@ -1505,6 +1505,14 @@ dialog {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+.roi-mark .pedestrian.c-yellow-green-flash::before {
+  width: 16px;
+  height: 25px;
+  background-image: url("/images/icon_pedestrian_yellowgreen.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
   display: inline-block;
   vertical-align: middle;
   animation: blinkPedestrian 0.5s ease-in-out infinite alternate;

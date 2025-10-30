@@ -105,6 +105,10 @@
 
     &.c-yellow-green::before {
       @include bgurl($w: 16px, $h: 25px, $img: 'icon_pedestrian_yellowgreen.png');
+    }
+
+    &.c-yellow-green-flash::before {
+      @include bgurl($w: 16px, $h: 25px, $img: 'icon_pedestrian_yellowgreen.png');
       display: inline-block;
       vertical-align: middle;
       animation: blinkPedestrian 0.5s ease-in-out infinite alternate;
