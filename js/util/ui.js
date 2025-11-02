@@ -36,12 +36,12 @@ const commonUi = {
       // let targetMenu = target.querySelector('.gnb-depth-2');
       // let targetHeight = targetMenu.getBoundingClientRect().height;
       target.classList.add('active');
-      targetItem.style.height = '400px';
+      if (targetItem && targetItem.style) targetItem.style.height = '400px';
     };
     const gnbClose = (target) => {
       let targetItem = target.querySelector('.depth-item');
       target.classList.remove('active');
-      targetItem.style.height = '0px';
+      if (targetItem && targetItem.style) targetItem.style.height = '0px';
     };
   },
 };
